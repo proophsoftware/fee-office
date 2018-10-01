@@ -1,0 +1,53 @@
+{
+  "name": "feeoffice/realty-registration",
+  "description": "Realty Registration context of the Building Fee Office",
+  "homepage": "http://prooph.de/",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Alexander Miertsch",
+      "email": "contact@prooph.de",
+      "homepage": "http://www.prooph.de"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "roave/security-advisories": "dev-master",
+    "proophsoftware/event-machine": "^v0.18",
+    "proophsoftware/postgres-document-store": "^0.3",
+    "prooph/pdo-event-store": "^1.0",
+    "prooph/humus-amqp-producer": "^2.0",
+    "zendframework/zend-stdlib": "^3.1.0",
+    "zendframework/zend-config-aggregator": "^1.0",
+    "zendframework/zend-stratigility": "^3.0",
+    "zendframework/zend-expressive-helpers": "^5.0",
+    "nikic/fast-route": "^1.0",
+    "psr/log": "^1.0",
+    "monolog/monolog": "^1.21",
+    "psr/http-server-middleware": "^1.0",
+    "zendframework/zend-problem-details": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "FeeOffice\\RealtyRegistration\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "FeeOfficeTest\\ReatltyRegistration\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "extra": {
+    "zf": {
+      "config-provider": "FeeOffice\\RealtyRegistration\\ConfigProvider"
+    }
+  }
+}
