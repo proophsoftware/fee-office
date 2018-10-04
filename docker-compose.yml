@@ -31,16 +31,16 @@ services:
 #    env_file:
 #      - ./app.env
 
-  rabbit:
-    image: prooph/rabbitmq
-    ports:
-      - 8081:15671
-      - 15691:15691
-    volumes:
-      - ./env/rabbit/broker_definitions.json:/opt/definitions.json:ro
-      - ./env/rabbit/rabbitmq.config:/etc/rabbitmq/rabbitmq-prooph.config
-    env_file:
-      - ./app.env
+#  rabbit:
+#    image: prooph/rabbitmq
+#    ports:
+#      - 8081:15671
+#      - 15691:15691
+#    volumes:
+#      - ./env/rabbit/broker_definitions.json:/opt/definitions.json:ro
+#      - ./env/rabbit/rabbitmq.config:/etc/rabbitmq/rabbitmq-prooph.config
+#    env_file:
+#      - ./app.env
 
   postgres:
     image: postgres:alpine

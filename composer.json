@@ -1,6 +1,6 @@
 {
     "name": "feeoffice/gateway",
-    "description": "Building Fee Office API Gateway based on zend expressive",
+    "description": "Fee Office API Gateway based on zend expressive",
     "type": "project",
     "homepage": "https://github.com/zendframework/zend-expressive-skeleton",
     "license": "BSD-3-Clause",

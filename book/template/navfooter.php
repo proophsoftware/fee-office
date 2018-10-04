@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 /**
- * tobiju
+ * This file is part of the proophsoftware/fee-office.
+ * (c) 2018 prooph software GmbH <contact@prooph.de>
  *
- * @link      https://github.com/tobiju/bookdown-bootswatch-templates for the canonical source repository
- * @copyright Copyright (c) 2015 Tobias Jüschke
- * @license   https://github.com/tobiju/bookdown-bootswatch-templates/blob/master/LICENSE.txt New BSD License
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 $prev = $this->page->getPrev();
