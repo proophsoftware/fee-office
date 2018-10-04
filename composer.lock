@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "661d586e35ff8df269401116dcbb0aa0",
+    "content-hash": "4590daf0d3a8470a40e0fc438f970fb3",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -1683,17 +1683,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "8605f2e74f558d3e349b219e58414b75b0adc30e"
+                "reference": "67643fa62d521fb76855b0a4cc9a3de7ba38f85b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/8605f2e74f558d3e349b219e58414b75b0adc30e",
-                "reference": "8605f2e74f558d3e349b219e58414b75b0adc30e",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/67643fa62d521fb76855b0a4cc9a3de7ba38f85b",
+                "reference": "67643fa62d521fb76855b0a4cc9a3de7ba38f85b",
                 "shasum": ""
             },
             "conflict": {
                 "3f/pygmentize": "<1.2",
                 "adodb/adodb-php": "<5.20.12",
+                "alterphp/easyadmin-extension-bundle": ">=1.2,<1.2.11|>=1.3,<1.3.1",
                 "amphp/artax": "<1.0.6|>=2,<2.0.6",
                 "amphp/http": "<1.0.1",
                 "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
@@ -1861,7 +1862,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-09-17T20:20:31+00:00"
+            "time": "2018-10-02T16:19:22+00:00"
         },
         {
             "name": "spatie/array-to-xml",
@@ -2867,6 +2868,284 @@
     ],
     "packages-dev": [
         {
+            "name": "aura/cli",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Cli.git",
+                "reference": "d69cfa6d81e94e13d831e38ad9e3d53aa0f08a8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Cli/zipball/d69cfa6d81e94e13d831e38ad9e3d53aa0f08a8b",
+                "reference": "d69cfa6d81e94e13d831e38ad9e3d53aa0f08a8b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "aura/di": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library",
+                    "config": {
+                        "common": "Aura\\Cli\\_Config\\Common"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Cli\\": "src/",
+                    "Aura\\Cli\\_Config\\": "config/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Cli Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Cli/contributors"
+                }
+            ],
+            "description": "Provides the equivalent of request (Context) and response (Stdio) classes for a command line environment, including Getopt support.",
+            "homepage": "https://github.com/auraphp/Aura.Cli",
+            "keywords": [
+                "cli",
+                "command",
+                "command line",
+                "getopt",
+                "options",
+                "stdio"
+            ],
+            "time": "2017-02-09T17:14:27+00:00"
+        },
+        {
+            "name": "aura/html",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Html.git",
+                "reference": "eda14b491f45fe2e1d1fec3364b1c783d7b7da31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Html/zipball/eda14b491f45fe2e1d1fec3364b1c783d7b7da31",
+                "reference": "eda14b491f45fe2e1d1fec3364b1c783d7b7da31",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "aura/di": "~2.0",
+                "phpunit/phpunit": "~5.7 || ~4.8"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library",
+                    "config": {
+                        "common": "Aura\\Html\\_Config\\Common"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Html\\": "src/",
+                    "Aura\\Html\\_Config\\": "config/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Html Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Html/contributors"
+                }
+            ],
+            "description": "Provides HTML escapers and helpers, including form input helpers.",
+            "homepage": "https://github.com/auraphp/Aura.Html",
+            "keywords": [
+                "Escape",
+                "escaper",
+                "escapers",
+                "escaping",
+                "form",
+                "helper",
+                "helpers",
+                "html",
+                "input"
+            ],
+            "time": "2017-07-21T06:56:56+00:00"
+        },
+        {
+            "name": "aura/view",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.View.git",
+                "reference": "58dbc0361c040019be72cf410e693583c469b084"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.View/zipball/58dbc0361c040019be72cf410e693583c469b084",
+                "reference": "58dbc0361c040019be72cf410e693583c469b084",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "aura/di": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library",
+                    "config": {
+                        "common": "Aura\\View\\_Config\\Common"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\View\\": "src/",
+                    "Aura\\View\\_Config\\": "config/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.View Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.View/contributors"
+                }
+            ],
+            "description": "Provides an implementation of the TemplateView and TwoStepView patterns, with support for helpers and for closures as templates, using PHP itself as the templating language.",
+            "homepage": "https://github.com/auraphp/Aura.View",
+            "keywords": [
+                "Escape",
+                "escaper",
+                "escaping",
+                "template",
+                "template view",
+                "two step view",
+                "two-step view",
+                "twostep view",
+                "view"
+            ],
+            "time": "2017-07-21T05:15:05+00:00"
+        },
+        {
+            "name": "bookdown/bookdown",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bookdown/Bookdown.Bookdown.git",
+                "reference": "0a27c7614f432c356813ecf03ef7483c3f0b7126"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bookdown/Bookdown.Bookdown/zipball/0a27c7614f432c356813ecf03ef7483c3f0b7126",
+                "reference": "0a27c7614f432c356813ecf03ef7483c3f0b7126",
+                "shasum": ""
+            },
+            "require": {
+                "aura/cli": "~2.0",
+                "aura/html": "~2.0",
+                "aura/view": "~2.0",
+                "bookdown/themes": "~1.0",
+                "league/commonmark": "~0.0",
+                "php": ">=5.6.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "pds/skeleton": "~1.0",
+                "phpunit/phpunit": "~5.0",
+                "webuni/commonmark-attributes-extension": "~0.5",
+                "webuni/commonmark-table-extension": "~0.6"
+            },
+            "bin": [
+                "bin/bookdown"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bookdown\\Bookdown\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bookdown.Bookdown Contributors",
+                    "homepage": "https://github.com/bookdown/Bookdown.Bookdown/contributors"
+                }
+            ],
+            "description": "Provides DocBook-like rendering of Markdown files.",
+            "homepage": "https://github.com/bookdown/Bookdown.Bookdown",
+            "keywords": [
+                "docbook",
+                "documentation",
+                "manual",
+                "markdown",
+                "static site"
+            ],
+            "time": "2018-05-28T19:16:48+00:00"
+        },
+        {
+            "name": "bookdown/themes",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bookdown/Bookdown.Themes.git",
+                "reference": "cf4986fcef40df4db1504bb62369d37a9e8bf6e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bookdown/Bookdown.Themes/zipball/cf4986fcef40df4db1504bb62369d37a9e8bf6e7",
+                "reference": "cf4986fcef40df4db1504bb62369d37a9e8bf6e7",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Bookdown Bootswatch Templates Contributors",
+                    "homepage": "https://github.com/bookdown/Bookdown.Themes/contributors"
+                }
+            ],
+            "description": "Bookdown.io With Bootswatch Styles And Prism Syntax Highlighting",
+            "homepage": "https://github.com/bookdown/Bookdown.Themes",
+            "keywords": [
+                "bookdown",
+                "docbook",
+                "docs",
+                "documentation",
+                "highlighting",
+                "manual",
+                "markdown",
+                "static site",
+                "syntax",
+                "templates"
+            ],
+            "time": "2018-08-10T15:21:32+00:00"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "1.1.0",
             "source": {
@@ -2980,6 +3259,75 @@
                 "whoops"
             ],
             "time": "2018-06-30T13:14:06+00:00"
+        },
+        {
+            "name": "league/commonmark",
+            "version": "0.15.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/commonmark.git",
+                "reference": "36d82f166e441dfa28643f8d01dd8bdd3a579adf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/36d82f166e441dfa28643f8d01dd8bdd3a579adf",
+                "reference": "36d82f166e441dfa28643f8d01dd8bdd3a579adf",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.4.8"
+            },
+            "replace": {
+                "colinodell/commonmark-php": "*"
+            },
+            "require-dev": {
+                "cebe/markdown": "~1.0",
+                "erusev/parsedown": "~1.0",
+                "jgm/commonmark": "0.28",
+                "michelf/php-markdown": "~1.4",
+                "mikehaertl/php-shellcommand": "~1.2.0",
+                "phpunit/phpunit": "~4.3|~5.0",
+                "scrutinizer/ocular": "~1.1",
+                "symfony/finder": "~2.3|~3.0"
+            },
+            "suggest": {
+                "league/commonmark-extras": "Library of useful extensions including smart punctuation"
+            },
+            "bin": [
+                "bin/commonmark"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.16-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\CommonMark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "https://www.colinodell.com",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Markdown parser for PHP based on the CommonMark spec",
+            "homepage": "https://github.com/thephpleague/commonmark",
+            "keywords": [
+                "commonmark",
+                "markdown",
+                "parser"
+            ],
+            "time": "2017-10-26T15:41:07+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3397,16 +3745,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "6.0.7",
+            "version": "6.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "865662550c384bc1db7e51d29aeda1c2c161d69a"
+                "reference": "848f78b3309780fef7ec8c4666b7ab4e6b09b22f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/865662550c384bc1db7e51d29aeda1c2c161d69a",
-                "reference": "865662550c384bc1db7e51d29aeda1c2c161d69a",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/848f78b3309780fef7ec8c4666b7ab4e6b09b22f",
+                "reference": "848f78b3309780fef7ec8c4666b7ab4e6b09b22f",
                 "shasum": ""
             },
             "require": {
@@ -3456,7 +3804,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-06-01T07:51:50+00:00"
+            "time": "2018-10-04T03:41:23+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4374,16 +4722,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.1.4",
+            "version": "v4.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "ca80b8ced97cf07390078b29773dc384c39eee1f"
+                "reference": "dc7122fe5f6113cfaba3b3de575d31112c9aa60b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/ca80b8ced97cf07390078b29773dc384c39eee1f",
-                "reference": "ca80b8ced97cf07390078b29773dc384c39eee1f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/dc7122fe5f6113cfaba3b3de575d31112c9aa60b",
+                "reference": "dc7122fe5f6113cfaba3b3de575d31112c9aa60b",
                 "shasum": ""
             },
             "require": {
@@ -4438,7 +4786,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:24:31+00:00"
+            "time": "2018-10-03T08:15:46+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -4588,6 +4936,121 @@
                 "validate"
             ],
             "time": "2018-01-29T19:49:41+00:00"
+        },
+        {
+            "name": "webuni/commonmark-attributes-extension",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webuni/commonmark-attributes-extension.git",
+                "reference": "509144909429bc1919d6451ae0982ac674c40656"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webuni/commonmark-attributes-extension/zipball/509144909429bc1919d6451ae0982ac674c40656",
+                "reference": "509144909429bc1919d6451ae0982ac674c40656",
+                "shasum": ""
+            },
+            "require": {
+                "league/commonmark": "^0.14|^0.15",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.3|^5.0",
+                "sllh/php-cs-fixer-styleci-bridge": "^2.0",
+                "symfony/var-dumper": "^2.8|^3.0",
+                "webuni/commonmark-table-extension": "~0.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webuni\\CommonMark\\AttributesExtension\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Hasoň",
+                    "email": "martin.hason@gmail.com",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "The attributes extension adds a syntax to define attributes on the various HTML elements in CommonMark PHP implementation.",
+            "homepage": "https://github.com/webuni/commonmark-attributes-extension",
+            "keywords": [
+                "attributes",
+                "commonmark",
+                "markdown"
+            ],
+            "time": "2016-09-26T08:18:40+00:00"
+        },
+        {
+            "name": "webuni/commonmark-table-extension",
+            "version": "0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webuni/commonmark-table-extension.git",
+                "reference": "ebbd69b63436283ec726658835b213ec634485e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webuni/commonmark-table-extension/zipball/ebbd69b63436283ec726658835b213ec634485e8",
+                "reference": "ebbd69b63436283ec726658835b213ec634485e8",
+                "shasum": ""
+            },
+            "require": {
+                "league/commonmark": "^0.14|^0.15",
+                "php": "^5.5|^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.3|^5.0",
+                "sllh/php-cs-fixer-styleci-bridge": "^2.0",
+                "symfony/var-dumper": "^2.7|^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webuni\\CommonMark\\TableExtension\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Hasoň",
+                    "email": "martin.hason@gmail.com",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Webuni s.r.o.",
+                    "homepage": "https://www.webuni.cz"
+                }
+            ],
+            "description": "The table extension for CommonMark PHP implementation",
+            "homepage": "https://github.com/webuni/commonmark-table-extension",
+            "keywords": [
+                "commonmark",
+                "markdown",
+                "table"
+            ],
+            "time": "2017-01-11T14:52:17+00:00"
         },
         {
             "name": "zendframework/zend-code",
@@ -4869,7 +5332,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "roave/security-advisories": 20
+        "roave/security-advisories": 20,
+        "bookdown/bookdown": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
