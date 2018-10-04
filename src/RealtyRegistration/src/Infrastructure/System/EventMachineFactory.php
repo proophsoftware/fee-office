@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace FeeOffice\RealtyRegistration\Infrastructure\System;
 
-use FeeOffice\RealtyRegistration\Infrastructure;
+use App\Infrastructure;
 use Prooph\EventMachine\Container\ReflectionBasedContainer;
 use Prooph\EventMachine\EventMachine;
 use Psr\Container\ContainerInterface;

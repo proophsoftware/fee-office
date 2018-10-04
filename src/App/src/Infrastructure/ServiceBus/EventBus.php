@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace FeeOffice\RealtyRegistration\Infrastructure\ServiceBus;
+namespace App\Infrastructure\ServiceBus;
 
 use Prooph\EventMachine\Messaging\GenericJsonSchemaMessage;
 use Prooph\ServiceBus\EventBus as ProophEventBus;

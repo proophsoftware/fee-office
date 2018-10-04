@@ -11,7 +11,6 @@ use Prooph\EventMachine\JsonSchema\JsonSchema;
 class Event implements EventMachineDescription
 {
     const BUILDING_ADDED = 'BuildingAdded';
-    const USER_CHECKED_IN = 'UserCheckedIn';
 
     /**
      * @param EventMachine $eventMachine
@@ -26,14 +25,6 @@ class Event implements EventMachineDescription
                     Payload::NAME => Schema::buildingName(),
                 ]
             )
-        );
-
-        $eventMachine->registerEvent(
-            self::USER_CHECKED_IN,
-            JsonSchema::object([
-                Payload::BUILDING_ID => Schema::buildingId(),
-                Payload::NAME => Schema::username(),
-            ])
         );
     }
 }

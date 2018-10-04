@@ -5,10 +5,10 @@ namespace FeeOffice\RealtyRegistration\Infrastructure\System;
 
 use Codeliner\ArrayReader\ArrayReader;
 use FeeOffice\RealtyRegistration\Http\MessageSchemaMiddleware;
-use FeeOffice\RealtyRegistration\Infrastructure\ServiceBus\CommandBus;
-use FeeOffice\RealtyRegistration\Infrastructure\ServiceBus\ErrorHandler;
-use FeeOffice\RealtyRegistration\Infrastructure\ServiceBus\EventBus;
-use FeeOffice\RealtyRegistration\Infrastructure\ServiceBus\QueryBus;
+use App\Infrastructure\ServiceBus\CommandBus;
+use App\Infrastructure\ServiceBus\ErrorHandler;
+use App\Infrastructure\ServiceBus\EventBus;
+use App\Infrastructure\ServiceBus\QueryBus;
 use Prooph\Common\Event\ProophActionEventEmitter;
 use Prooph\EventMachine\Container\ContainerChain;
 use Prooph\EventMachine\Container\EventMachineContainer;

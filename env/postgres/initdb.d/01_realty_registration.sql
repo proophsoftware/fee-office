@@ -10,6 +10,8 @@ CREATE TABLE realty.event_streams (
   UNIQUE (stream_name)
 );
 
+INSERT INTO realty.event_streams (real_stream_name, stream_name, metadata) VALUES ('event_stream', '_4228e4a00331b5d5e751db0481828e22a2c3c8ef', '[]');
+
 CREATE TABLE realty.projections (
   no BIGSERIAL,
   name VARCHAR(150) NOT NULL,
@@ -23,13 +25,13 @@ CREATE TABLE realty.projections (
 
 CREATE INDEX on realty.event_streams (category);
 
-create table if not exists "realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef"
+create table if not exists realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef
 (
 	no bigserial not null
-		constraint "realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef_pkey"
+		constraint _4228e4a00331b5d5e751db0481828e22a2c3c8ef_pkey
 			primary key,
 	event_id uuid not null
-		constraint "realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef_event_id_key"
+		constraint _4228e4a00331b5d5e751db0481828e22a2c3c8ef_event_id_key
 			unique,
 	event_name varchar(100) not null,
 	payload json not null,
@@ -44,12 +46,12 @@ create table if not exists "realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef"
 )
 ;
 
-create unique index if not exists "realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef_expr_expr1_expr2_idx"
-	on "realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef" ((metadata ->> '_aggregate_type'::text), (metadata ->> '_aggregate_id'::text), (metadata ->> '_aggregate_version'::text))
+create unique index if not exists _4228e4a00331b5d5e751db0481828e22a2c3c8ef_expr_expr1_expr2_idx
+	on realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef ((metadata ->> '_aggregate_type'::text), (metadata ->> '_aggregate_id'::text), (metadata ->> '_aggregate_version'::text))
 ;
 
-create index if not exists "realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef_expr_expr1_no_idx"
-	on "realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef" ((metadata ->> '_aggregate_type'::text), (metadata ->> '_aggregate_id'::text), no)
+create index if not exists _4228e4a00331b5d5e751db0481828e22a2c3c8ef_expr_expr1_no_idx
+	on realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef ((metadata ->> '_aggregate_type'::text), (metadata ->> '_aggregate_id'::text), no)
 ;
 
 CREATE USER realty WITH PASSWORD 'changeme';
@@ -59,3 +61,5 @@ ALTER USER realty SET search_path TO realty;
 GRANT ALL PRIVILEGES ON SCHEMA realty to realty;
 
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA realty to realty;
+
+GRANT ALL PRIVILEGES ON SEQUENCE realty._4228e4a00331b5d5e751db0481828e22a2c3c8ef_no_seq TO realty;

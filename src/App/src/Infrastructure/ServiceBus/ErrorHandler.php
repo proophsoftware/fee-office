@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace FeeOffice\RealtyRegistration\Infrastructure\ServiceBus;
+namespace App\Infrastructure\ServiceBus;
 
 use Prooph\Common\Event\ActionEvent;
+use Prooph\ServiceBus\Exception\MessageDispatchException;
 use Prooph\ServiceBus\MessageBus;
 use Prooph\ServiceBus\Plugin\Plugin;
 use Prooph\ServiceBus\QueryBus;
@@ -23,8 +24,6 @@ final class ErrorHandler implements Plugin
                     $actionEvent->setParam(MessageBus::EVENT_PARAM_EXCEPTION, null);
                     return;
                 }
-
-                throw $exception;
             }
         }, QueryBus::PRIORITY_PROMISE_REJECT + 100);
     }

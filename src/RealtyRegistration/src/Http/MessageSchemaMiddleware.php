@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 namespace FeeOffice\RealtyRegistration\Http;
 
+use App\Util\Swagger;
 use Prooph\Common\Messaging\Message;
 use Prooph\EventMachine\EventMachine;
 use Psr\Http\Message\ResponseInterface;
@@ -51,7 +52,7 @@ final class MessageSchemaMiddleware implements RequestHandlerInterface
         }
         $componentSchemas = [];
         foreach ($eventMachineSchema['definitions'] ?? [] as $componentName => $componentSchema) {
-            $componentSchemas[$componentName] = $this->jsonSchemaToOpenApiSchema($componentSchema);
+            $componentSchemas[$componentName] = Swagger::jsonSchemaToOpenApiSchema($componentSchema);
         }
         $schema = [
             'openapi' => '3.0.0',
@@ -94,7 +95,7 @@ final class MessageSchemaMiddleware implements RequestHandlerInterface
                 'description' => $messageSchema['response']['description'] ?? $messageName,
                 'content' => [
                     'application/json' => [
-                        'schema' => $this->jsonSchemaToOpenApiSchema($messageSchema['response'])
+                        'schema' => Swagger::jsonSchemaToOpenApiSchema($messageSchema['response'])
                     ]
                 ]
             ];
@@ -131,7 +132,7 @@ final class MessageSchemaMiddleware implements RequestHandlerInterface
                                 'schema' => [
                                     'type' => 'object',
                                     'properties' => [
-                                        'payload' => $this->jsonSchemaToOpenApiSchema($messageSchema)
+                                        'payload' => Swagger::jsonSchemaToOpenApiSchema($messageSchema)
                                     ],
                                     'required' => ['payload']
                                 ]
@@ -142,39 +143,5 @@ final class MessageSchemaMiddleware implements RequestHandlerInterface
                 ]
             ]
         ];
-    }
-
-    private function jsonSchemaToOpenApiSchema(array $jsonSchema): array
-    {
-        if(isset($jsonSchema['type']) && is_array($jsonSchema['type'])) {
-            $type = null;
-            $containsNull = false;
-            foreach ($jsonSchema['type'] as $possibleType) {
-                if(mb_strtolower($possibleType) !== 'null') {
-                    if($type) {
-                        throw new \RuntimeException("Got JSON Schema type defined as an array with more than one type + NULL set. " . json_encode($jsonSchema));
-                    }
-                    $type = $possibleType;
-                } else {
-                    $containsNull = true;
-                }
-            }
-            $jsonSchema['type'] = $type;
-            if($containsNull) {
-                $jsonSchema['nullable'] = true;
-            }
-        }
-        if(isset($jsonSchema['properties']) && is_array($jsonSchema['properties'])) {
-            foreach ($jsonSchema['properties'] as $propName => $propSchema) {
-                $jsonSchema['properties'][$propName] = $this->jsonSchemaToOpenApiSchema($propSchema);
-            }
-        }
-        if(isset($jsonSchema['items']) && is_array($jsonSchema['items'])) {
-            $jsonSchema['items'] = $this->jsonSchemaToOpenApiSchema($jsonSchema['items']);
-        }
-        if(isset($jsonSchema['$ref'])) {
-            $jsonSchema['$ref'] = str_replace('definitions', 'components/schemas', $jsonSchema['$ref']);
-        }
-        return $jsonSchema;
     }
 }

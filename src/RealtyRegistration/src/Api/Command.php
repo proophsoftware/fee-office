@@ -11,7 +11,6 @@ use Prooph\EventMachine\JsonSchema\JsonSchema;
 class Command implements EventMachineDescription
 {
     const ADD_BUILDING = 'AddBuilding';
-    const CHECK_IN_USER = 'CheckInUser';
 
     /**
      * @param EventMachine $eventMachine
@@ -26,14 +25,6 @@ class Command implements EventMachineDescription
                     Payload::NAME => Schema::buildingName(),
                 ]
             )
-        );
-
-        $eventMachine->registerCommand(
-            Command::CHECK_IN_USER,
-            JsonSchema::object([
-                Payload::BUILDING_ID => Schema::buildingId(),
-                Payload::NAME => Schema::username(),
-            ])
         );
     }
 }

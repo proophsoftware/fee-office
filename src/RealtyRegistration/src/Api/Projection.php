@@ -23,9 +23,7 @@ class Projection implements EventMachineDescription
      */
     public static function describe(EventMachine $eventMachine): void
     {
-        /*
         $eventMachine->watch(Stream::ofWriteModel())
             ->withAggregateProjection(Aggregate::BUILDING);
-        */
     }
 }

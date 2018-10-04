@@ -8,6 +8,7 @@ use FeeOffice\RealtyRegistration\Infrastructure\System\EventMachineFactory;
 use FeeOffice\RealtyRegistration\Infrastructure\System\MessageBoxFactory;
 use FeeOffice\RealtyRegistration\Infrastructure\System\MessageSchemaMiddlewareFactory;
 use Prooph\EventMachine\EventMachine;
+use Zend\Expressive\Helper\BodyParams\BodyParamsMiddleware;
 
 final class ConfigProvider
 {
@@ -19,6 +20,15 @@ final class ConfigProvider
     {
         return [
             'realty' => $this->realtyConfig(),
+            'middleware_pipeline' => [
+                [
+                    // required:
+                    'middleware' => BodyParamsMiddleware::class,
+                    // optional:
+                    'path'  => '/realty', // for path-segregated middleware
+                    'priority' => 1,             // integer; to ensure specific order
+                ]
+            ],
             'routes' => [
                 [
                     'path' => '/realty/messagebox',
