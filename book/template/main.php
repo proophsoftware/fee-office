@@ -10,7 +10,7 @@
 
 putenv('MENU_LOGO=http://getprooph.org/images/prooph-logo.svg');
 
-$templatePath = __DIR__ . '/../vendor/bookdown/themes/templates';
+$templatePath = __DIR__ . '/../../vendor/bookdown/themes/templates';
 
 require_once $templatePath . '/helper/tocList.php';
 require_once __DIR__ . '/helper/forkOnGithub.php';

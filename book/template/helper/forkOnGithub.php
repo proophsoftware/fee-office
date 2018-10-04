@@ -2,7 +2,7 @@
 
 final class forkOnGithub
 {
-    private $githubRepo = 'https://github.com/proophsoftware/event-machine-docs';
+    private $githubRepo = 'https://github.com/proophsoftware/fee-office';
 
     public function __construct(\Bookdown\Bookdown\Config\IndexConfig $config)
     {

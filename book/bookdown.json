@@ -1,5 +1,5 @@
 {
-    "title": "Event Machine Docs",
+    "title": "Fee Office Docs",
     "content": [
         {"intro": "intro/bookdown.json"}
     ],
@@ -9,10 +9,9 @@
         }
     },
     "tocDepth": 1,
-    "template": "../template/main.php",
-    "target": "./html",
+    "template": "template/main.php",
+    "target": "../docs",
     "numbering": false,
-    "rootHref": "https://proophsoftware.github.io/fee-office/",
     "extensions": {
         "commonmark": [
             "Webuni\\CommonMark\\TableExtension\\TableExtension",
