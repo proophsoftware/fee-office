@@ -1,7 +1,9 @@
 {
   "title": "Introduction",
   "content": [
-    {"about": "about.md"}
+    {"about": "about.md"},
+    {"installation": "installation.md"},
+    {"module_system": "module_system.md"}
   ],
   "tocDepth": 1
 }

@@ -532,6 +532,14 @@
     <a href="https://proophsoftware.github.io/fee-office/intro/about.html">About The Fee Office</a>
 
     </li>
+                        <li>
+    <a href="https://proophsoftware.github.io/fee-office/intro/installation.html">Installation</a>
+
+    </li>
+                        <li>
+    <a href="https://proophsoftware.github.io/fee-office/intro/module_system.html">Autonomous Modules</a>
+
+    </li>
             </ul>
 
     </li>
@@ -555,12 +563,75 @@
                                 <li>
                 <a href="#1-1" title="About&#x20;The&#x20;Fee&#x20;Office">About The Fee Office</a>
             </li>
-            </ul>
+                                <li>
+                <a href="#1-1-1" title="What&#x27;s&#x20;insight&#x3F;">What's insight?</a>
+            </li>
+                                <li>
+                <a href="#1-1-2" title="Architecture">Architecture</a>
+            </li>
+                                <li>
+                <a href="#1-1-3" title="Technology">Technology</a>
+            </li>
+                                                                                    </ul>
 </nav>
         </div>
                 <div class="col-md-9">
 <div id="section-main"><h1 id="1-1">About The Fee Office</h1>
-<p>tbd</p>
+<p>The Fee Office is a demo application based on the <em>es-emergency-call</em> <a href="https://github.com/proophsoftware/es-emergency-call/issues/7">Need help with finding aggregates and bounded contexts in our domain</a> by <a href="https://github.com/enumag">@enumag</a>.</p>
+<p>It is a prototype implementation showing the result of a model exploration and knowledge crunching process.</p>
+<h2 id="1-1-1">What's insight?</h2>
+<p>An online book summarizes and documents the process of crunching knowledge and how we used the knowledge to identify bounded contexts and aggregates as well as
+a good architecture for each bounded context and the system as a large.</p>
+<p><em>Note: The book and the prototype are both work in progress.</em></p>
+<h2 id="1-1-2">Architecture</h2>
+<p>The system is split into 5 contexts and each context is implemented as an <strong>autonomous module</strong> within a monolithic application. Think of those modules
+as (mico)services deployed together. That said, we combine autonomy of bounded contexts (implemented as modules) with the ease of deploying and operating a monolithic system.
+Because we keep modules separated (even on database level) we are able to split the system later and scale up individual modules if needed.
+We also keep the <strong>model</strong> of each context decoupled from the other models - a very important property of a system that is constantly improved and reshaped.</p>
+<h2 id="1-1-3">Technology</h2>
+<h3 id="1-1-3-1">Infrastructure</h3>
+<ul>
+<li>
+<a href="https://www.docker.com/">Docker</a> &amp; <a href="https://docs.docker.com/compose/">Docker Compose</a>
+</li>
+<li>
+<a href="https://www.nginx.com/">Nginx</a>
+</li>
+<li>
+<a href="https://www.postgresql.org/">PostgreSQL</a>
+</li>
+</ul>
+<h3 id="1-1-3-2">Programming Language</h3>
+<ul>
+<li>
+<a href="http://php.net/">PHP 7.x</a>
+</li>
+</ul>
+<h3 id="1-1-3-3">API Gateway &amp; Module System</h3>
+<ul>
+<li>
+<a href="https://docs.zendframework.com/zend-expressive/">zend/expressive</a>
+</li>
+</ul>
+<h3 id="1-1-3-4">Dependency Mgmt</h3>
+<ul>
+<li>
+<a href="https://getcomposer.org/">composer</a>
+</li>
+</ul>
+<h3 id="1-1-3-5">Event Sourcing</h3>
+<ul>
+<li>
+<a href="https://proophsoftware.github.io/event-machine/">Event Machine</a>
+</li>
+</ul>
+<h3 id="1-1-3-6">State Persistence</h3>
+<ul>
+<li>
+<a href="https://github.com/proophsoftware/postgres-document-store">PostgreSQL Document Store</a>
+</li>
+</ul>
+<p><em>Continue with setting up the demo application using Docker. You'll find instructions on the next page.</em></p>
 </div>        </div>
     </div>
 </div>
@@ -572,7 +643,7 @@
                 <div class="prev col-xs-6">
                                             <a href="https://proophsoftware.github.io/fee-office/intro/">Previous</a>                                    </div>
                 <div class="next col-xs-6">
-                                    </div>
+                                            <a href="https://proophsoftware.github.io/fee-office/intro/installation.html">Next</a>                                    </div>
             </div>
         </div>
     </div>
