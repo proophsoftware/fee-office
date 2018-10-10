@@ -2,12 +2,13 @@
     "name": "feeoffice/gateway",
     "description": "Fee Office API Gateway based on zend expressive",
     "type": "project",
-    "homepage": "https://github.com/zendframework/zend-expressive-skeleton",
+    "homepage": "https://proophsoftware.github.io/fee-office/",
     "license": "BSD-3-Clause",
     "keywords": [
-        "skeleton",
-        "middleware",
-        "psr",
+        "DDD",
+        "CQRS",
+        "EventSourcing",
+        "Demo",
         "psr-7",
         "psr-11",
         "psr-15",
@@ -30,11 +31,9 @@
         }
     },
     "support": {
-        "issues": "https://github.com/zendframework/zend-expressive-skeleton/issues",
-        "source": "https://github.com/zendframework/zend-expressive-skeleton",
-        "rss": "https://github.com/zendframework/zend-expressive-skeleton/releases.atom",
-        "slack": "https://zendframework-slack.herokuapp.com",
-        "forum": "https://discourse.zendframework.com/c/questions/expressive"
+        "issues": "https://github.com/proophsoftware/fee-office/issues",
+        "source": "https://github.com/proophsoftware/fee-office",
+        "gitter": "https://gitter.im/prooph/improoph"
     },
     "repositories": [
         {

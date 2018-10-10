@@ -566,6 +566,12 @@
                                 <li>
                 <a href="#1-3-1" title="The&#x20;Rules">The Rules</a>
             </li>
+                                <li>
+                <a href="#1-3-2" title="Application&#x20;Layer">Application Layer</a>
+            </li>
+                                <li>
+                <a href="#1-3-3" title="Modules">Modules</a>
+            </li>
             </ul>
 </nav>
         </div>
@@ -595,6 +601,49 @@ as well as between the modules "talking" to each other.</p>
 <p>If we later want to deploy one or more modules separated from the others (turn a module into a microservice), we can "easily" do that by deploying
 the module together with the application layer and globally defined dependencies provided by the application layer.</p>
 <p><img src="https://proophsoftware.github.io/fee-office/intro/img/modules_two_deployments.png" alt="Modules Multiple Deployments"></p>
+<h2 id="1-3-2">Application Layer</h2>
+<p>We've installed the <a href="https://github.com/zendframework/zend-expressive-skeleton">zend/expressive-skeleton</a> with <a href="https://github.com/nikic/FastRoute">Fastroute</a>,
+<a href="https://github.com/zendframework/zend-servicemanager">zend/servicemanager</a>, no template engine and the <a href="https://github.com/filp/whoops">Whoops</a> error handler.
+We've also enabled the module system of expressive.</p>
+<p>The application takes over a few tasks:</p>
+<ol>
+<li>It uses the <a href="https://github.com/zendframework/zend-component-installer">zend-component-installer</a> to install our modules.
+The installer is a composer plugin registered in the root <code>composer.json</code> of the application layer.</li>
+<li>It merges module config and provides env vars via <code>app.env</code>
+</li>
+<li>It performs routing of http requests using Fastroute</li>
+<li>It provides an error handler (Whoops) and could also include authentication and authorization (not included in the demo)</li>
+<li>It provides client libraries available for all modules, f.e. a logger, a service bus + basic message classes, etc.</li>
+</ol>
+<p>The application layer uses the <code>App</code> namespace.</p>
+<h2 id="1-3-3">Modules</h2>
+<p>A module has its own namespace. For example the <em>RealtyRegistration</em> module uses the namespace <code>FeeOffice\RealtyRegistration</code>.
+The namespace maps to the path <code>src/RealtyRegistration/src</code>.</p>
+<p>A module also has its own <code>composer.json</code> where all dependencies of the module should be defined.</p>
+<p class="alert alert-warning">A module is not allowed to use dependencies that are not defined in its own composer.json. The only exception are global dependencies (client libraries)
+provided or imported by the application layer. At the moment this is a convention and needs to be ensured by code reviews. In the future we might
+add a tool that performs automated code scans to ensure that rule.</p>
+<p>In the application's root <code>composer.json</code> each module is included as local package:</p>
+<pre><code class="language-json">"repositories": [
+        {
+            "type": "path",
+            "url": "src/RealtyRegistration"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "feeoffice/realty-registration": "*",
+</code></pre>
+<p><em>Example of importing the RealtyRegistration module as package in the root composer.json</em></p>
+<p>We use composer to manage module dependencies and add the module namespace to the autoloader. That said, each module can require its own dependencies
+but as long as modules are deployed together, composer makes sure that different dependency versions don't conflict with each other.</p>
+<p class="alert alert-info">Defining module dependencies per module makes it much easier to deploy them independently later.</p>
+<p>Each module has a <a href="https://github.com/mtymek/expressive-config-manager#config-providers">config provider</a> and the <code>zend-component-installer</code> composer plugin
+automatically adds each config provider to the <code>expressive config manager</code> of the application layer. This way, modules provide their own
+routing and middleware pipe configuration as well as module specific DI definitions.</p>
+<p class="alert alert-success">Clean and nice separation of concern which makes it very very easy
+to build a true modularized application with the option to turn it into microservices if needed.</p>
+<p><em>That's enough technical detail for now. On the next page you'll get a first overview of the domain.</em></p>
 </div>        </div>
     </div>
 </div>

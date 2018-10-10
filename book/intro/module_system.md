@@ -34,5 +34,64 @@ the module together with the application layer and globally defined dependencies
 
 ![Modules Multiple Deployments](../img/modules_two_deployments.png)
 
+## Application Layer
+
+We've installed the [zend/expressive-skeleton](https://github.com/zendframework/zend-expressive-skeleton) with [Fastroute](https://github.com/nikic/FastRoute),
+[zend/servicemanager](https://github.com/zendframework/zend-servicemanager), no template engine and the [Whoops](https://github.com/filp/whoops) error handler.
+We've also enabled the module system of expressive.
+
+The application takes over a few tasks:
+
+1. It uses the [zend-component-installer](https://github.com/zendframework/zend-component-installer) to install our modules.
+The installer is a composer plugin registered in the root `composer.json` of the application layer.
+2. It merges module config and provides env vars via `app.env`
+3. It performs routing of http requests using Fastroute
+4. It provides an error handler (Whoops) and could also include authentication and authorization (not included in the demo)
+5. It provides client libraries available for all modules, f.e. a logger, a service bus + basic message classes, etc.
+
+The application layer uses the `App` namespace.
+
+## Modules
+
+A module has its own namespace. For example the *RealtyRegistration* module uses the namespace `FeeOffice\RealtyRegistration`.
+The namespace maps to the path `src/RealtyRegistration/src`.
+
+A module also has its own `composer.json` where all dependencies of the module should be defined.
+
+{.alert .alert-warning}
+A module is not allowed to use dependencies that are not defined in its own composer.json. The only exception are global dependencies (client libraries)
+provided or imported by the application layer. At the moment this is a convention and needs to be ensured by code reviews. In the future we might
+add a tool that performs automated code scans to ensure that rule.
+
+In the application's root `composer.json` each module is included as local package:
+
+```json
+"repositories": [
+        {
+            "type": "path",
+            "url": "src/RealtyRegistration"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "feeoffice/realty-registration": "*",
+```
+*Example of importing the RealtyRegistration module as package in the root composer.json*
+
+We use composer to manage module dependencies and add the module namespace to the autoloader. That said, each module can require its own dependencies
+but as long as modules are deployed together, composer makes sure that different dependency versions don't conflict with each other.
+
+{.alert .alert-info}
+Defining module dependencies per module makes it much easier to deploy them independently later.
+
+Each module has a [config provider](https://github.com/mtymek/expressive-config-manager#config-providers) and the `zend-component-installer` composer plugin
+automatically adds each config provider to the `expressive config manager` of the application layer. This way, modules provide their own
+routing and middleware pipe configuration as well as module specific DI definitions.
+
+{.alert .alert-success}
+Clean and nice separation of concern which makes it very very easy
+to build a true modularized application with the option to turn it into microservices if needed.
+
+*That's enough technical detail for now. On the next page you'll get a first overview of the domain.*
 
 
