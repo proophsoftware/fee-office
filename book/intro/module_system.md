@@ -40,7 +40,7 @@ We've installed the [zend/expressive-skeleton](https://github.com/zendframework/
 [zend/servicemanager](https://github.com/zendframework/zend-servicemanager), no template engine and the [Whoops](https://github.com/filp/whoops) error handler.
 We've also enabled the module system of expressive.
 
-The application takes over a few tasks:
+The application layer takes over a few tasks:
 
 1. It uses the [zend-component-installer](https://github.com/zendframework/zend-component-installer) to install our modules.
 The installer is a composer plugin registered in the root `composer.json` of the application layer.
