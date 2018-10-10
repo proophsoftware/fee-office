@@ -3,7 +3,8 @@
   "content": [
     {"about": "about.md"},
     {"installation": "installation.md"},
-    {"module_system": "module_system.md"}
+    {"module_system": "module_system.md"},
+    {"the_domain": "the_domain.md"}
   ],
   "tocDepth": 1
 }

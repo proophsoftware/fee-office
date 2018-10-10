@@ -89,7 +89,7 @@ automatically adds each config provider to the `expressive config manager` of th
 routing and middleware pipe configuration as well as module specific DI definitions.
 
 {.alert .alert-success}
-Clean and nice separation of concern which makes it very very easy
+Clean and nice separation of concern which makes it very easy
 to build a true modularized application with the option to turn it into microservices if needed.
 
 *That's enough technical detail for now. On the next page you'll get a first overview of the domain.*
