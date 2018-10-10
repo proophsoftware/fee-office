@@ -58,7 +58,7 @@ The namespace maps to the path `src/RealtyRegistration/src`.
 
 A module also has its own `composer.json` where all dependencies of the module should be defined.
 
-{.alert .alert-warning}
+{.alert .alert-danger}
 A module is not allowed to use dependencies that are not defined in its own composer.json. The only exception are global dependencies (client libraries)
 provided or imported by the application layer. At the moment this is a convention and needs to be ensured by code reviews. In the future we might
 add a tool that performs automated code scans to ensure that rule.
