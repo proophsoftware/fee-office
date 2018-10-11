@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 <meta name="HandheldFriendly" content="True"/>
-<title>The Domain</title>
+<title>Domain-Driven Design</title>
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/prooph-logo@0.5x.png">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/apple-touch-icon-114-precomposed.png">
@@ -567,49 +567,15 @@
 <div class="container">
     <ol class="breadcrumb">
                         <li><a href="https://proophsoftware.github.io/fee-office/">Fee Office Book</a></li>
-                                <li><a href="https://proophsoftware.github.io/fee-office/intro/">Introduction</a></li>
-                                <li class="active">The Domain</li>
+                                <li class="active">Domain-Driven Design</li>
             </ol>
     <div class="row">
 
-                <div class="col-md-3">
-            <nav class="nav-left hidden-xs hidden-sm" id="sideNav">
-    <ul class="nav nav-stacked" data-spy="affix" data-offset-top="59" role="tablist">
-                                <li>
-                <a href="#1-4" title="The&#x20;Domain">The Domain</a>
-            </li>
-            </ul>
-</nav>
-        </div>
-                <div class="col-md-9">
-<div id="section-main"><h1 id="1-4">The Domain</h1>
-<p>As stated in the introduction, the Fee Office is based on an "es-emergency-call" and therefor
-represents the prototype implementation of a real domain.</p>
-<p>What follows is an introduction of the problem space given by <a href="https://github.com/enumag">@enumag</a>:</p>
-<blockquote>
-<p>The business is about providing accountancy services to the owners of large buildings or organizations that take care of the building when each apartment is owned by a different person.</p>
-<p>First let's say the database is empty so we need to add some data. The first thing to add is a building, it's entrances (each entrance has a different address) and the apartments in the building. Then we need to add the contracts - who owns and who lives in each apartment. These people need to pay some fees every months which is where our company comes in - to help determine what fees they should pay and observe if they are indeed paying them. When adding a new building, most of the data about apartments, contracts and people are loaded from an external database or an import file.</p>
-<p>Next we need to tell the system what fees should the people pay and how to calculate the exact amounts (since they can differ each month but can be calculated). This is represented by the FeeRecipe entity. Each contract usually has around 5-10 FeeRecipes. As you can see in the diagram there is a FinancialAccount entity between Contract and FeeRecipe. Most often each contract only has one FinancialAccount but in some edge cases there can be more. This is required because the Fees on different FinancialAccounts are treated a bit differently in some cases based on the attributes of the FinancialAccount but the details are unimportant.</p>
-</blockquote>
-<p><img src="https://proophsoftware.github.io/fee-office/intro/img/uml_relations.png" alt="UML Diagram Relations"></p>
-<blockquote>
-<p>In the draw.io representation I went for something close to an UML diagram, but focusing just on the relations. The diagram represents what a relational schema would look like - in fact this is pretty much what our PostgreSQL projection looks like. I did cut a few less important things here and there such as that each ContactCard hold some addresses, phones, emails etc - these details are not important for this issue in my opinion.</p>
-<p>At the end of each month an automated process takes each (still active) FeeRecipe and generates a new Fee for it for that month. The calculation requires the formula from the FeeRecipe and the current ApartmentAttributeValues on the related Appartment. ApartmentAttributes are properties of the apartment such as bodycount (how many people live in the apartment at the time) which can change every now and then. Each change is represented by a new ApartmentAttributeValue.</p>
-<p>Next looking from the other side of the diagram there is an AccountingOrganization. In most cases an AccountingOrganizations is 1:1 with Building but there are exceptions with one AccountingOrganization handling multiple buildings and also exceptions with one building being split to multiple AccountingOrganizations. Therefore we made them completely independent.</p>
-<p>FinancialAccountGroup is actually a brand new entity we came up with just this morning after discovering some serious problems in our PaymentAllocations process. Basically it's a group of FinancialAccounts that holds some options how should the Payments be allocated to Fees. FinancialAccountGroup is actually the scope for the PaymentAllocations process - take all not-fully-allocated Payments and FeeItems related to the FinancialAccountGroup and do the process described in the previous issue.</p>
-<p>PaymentPreference holds a reference number that we can use to match a given payment from the import to a specific person and FinancialAccountGroup. The process of matching imported payments to people converts UnassignedPayment to Payment.</p>
-<p>Finally the ContactCard represents a Person or Company and can be referenced pretty much anywhere in the system. It can be an employee of our company, an owner of an apartment, an organization managing a building, a contractor our company cooperates with etc.</p>
-</blockquote>
-<p class="alert alert-warning">That's a lot of information, isn't it? The team has some struggle with identifying the "right" bounded contexts and aggregates.
-@enumag summarizes it like this:</p>
-<blockquote>
-<p>Our struggle mostly comes down to the uncertainty of "how big should an aggregate be" - where the answer is of course "it depends" but I'm unsure "what exactly it depends on". Should each of the entities in the diagram be an aggregate? If not then how far should one aggregate go? Is there some limit to how much data should an aggregate hold or how many different methods, related commands and events it should have? For now most of the things on the diagram are actually aggregates (with a few more aggregates planned to oversee the automated processes) with the structure being split to around 5 bounded contexts. Is that too many?</p>
-<p>Another problem is that some parts of the structure are pretty much pure CRUD - Building, Entrance, Apartment, ApartmentAttributeValue, Contract, FinancialAccount, FeeRecipe, ContactCard - all of that is pretty pure CRUD, albait some parts are automated with imports. The reason why we chose to use DDD are the processes around generating fees, finding out which payment was payed by who and which payment pays which fees (the last process is explained a bit more in #6). Also having the entire event sourced history will be beneficial in some of the processes and also other parts that are not yet represented on the diagram (such as calculating penalties for late payments). This puts us in a not very good position where we need to deal with CRUD in ES/CQRS while knowing that ES/CQRS is not really the best thing for CRUD.</p>
-</blockquote>
-<p class="alert alert-warning">Two common problems for teams using DDD, CQRS and Event Sourcing for the first time. Let's see if we can help the team with some guidance and a prototype
-of a modularized application with each module representing a bounded context of the domain.</p>
-<p><em>On the next page we'll sort the information given above and take a first look at the bounded contexts.</em></p>
-</div>        </div>
+                <div class="col-md-12">
+
+<h1>2. Domain-Driven Design</h1>
+
+<ul class="list-toc"><li class="list-group-item"><div class="row clearfix"><div class="col-sm-3"><span class="text-number">2.1.</span></div><div class="col-sm-9"><a href="https://proophsoftware.github.io/fee-office/ddd/interview.html#2-1">Interviewing Domain Experts</a></div></div></li></ul><div id="section-main"></div>        </div>
     </div>
 </div>
 
@@ -618,9 +584,9 @@ of a modularized application with each module representing a bounded context of 
         <div class="container">
             <div class="row">
                 <div class="prev col-xs-6">
-                                            <a href="https://proophsoftware.github.io/fee-office/intro/module_system.html">Previous</a>                                    </div>
+                                            <a href="https://proophsoftware.github.io/fee-office/intro/the_domain.html">Previous</a>                                    </div>
                 <div class="next col-xs-6">
-                                            <a href="https://proophsoftware.github.io/fee-office/ddd/">Next</a>                                    </div>
+                                            <a href="https://proophsoftware.github.io/fee-office/ddd/interview.html">Next</a>                                    </div>
             </div>
         </div>
     </div>

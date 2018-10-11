@@ -1,0 +1,7 @@
+{
+  "title": "Domain-Driven Design",
+  "content": [
+    {"interview": "interviewing_domain_experts.md"}
+  ],
+  "tocDepth": 1
+}
