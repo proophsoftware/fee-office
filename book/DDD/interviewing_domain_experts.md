@@ -6,6 +6,11 @@ that's a common scenario in the real world, too. Often developers working for th
 time are the best domain experts. They've built the legacy systems and dealt with the business logic for
 many years. They know all the edge cases.
 
+{.alert .alert-warning}
+It doesn't mean you should only talk to developers.
+Their view of the business is often driven by a technical mindset. Find a way to get access to real domain experts
+as often as possible. Usually they are very busy, but try it anyway.
+
 And like a true domain expert @enumag provided a lot of information in one go. When talking to domain experts
 you need to be prepared. One good question can cause a long discussion. You can get access to very important knowledge
 but the domain experts will use their language and you probably won't understand everything right away.
