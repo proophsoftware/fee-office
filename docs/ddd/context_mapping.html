@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 <meta name="HandheldFriendly" content="True"/>
-<title>Autonomous Modules</title>
+<title>Context Mapping</title>
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/prooph-logo@0.5x.png">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/apple-touch-icon-114-precomposed.png">
@@ -571,8 +571,8 @@
 <div class="container">
     <ol class="breadcrumb">
                         <li><a href="https://proophsoftware.github.io/fee-office/">Fee Office Book</a></li>
-                                <li><a href="https://proophsoftware.github.io/fee-office/intro/">Introduction</a></li>
-                                <li class="active">Autonomous Modules</li>
+                                <li><a href="https://proophsoftware.github.io/fee-office/ddd/">Domain-Driven Design</a></li>
+                                <li class="active">Context Mapping</li>
             </ol>
     <div class="row">
 
@@ -580,89 +580,97 @@
             <nav class="nav-left hidden-xs hidden-sm" id="sideNav">
     <ul class="nav nav-stacked" data-spy="affix" data-offset-top="59" role="tablist">
                                 <li>
-                <a href="#1-3" title="Autonomous&#x20;Modules">Autonomous Modules</a>
+                <a href="#2-2" title="Context&#x20;Mapping">Context Mapping</a>
             </li>
                                 <li>
-                <a href="#1-3-1" title="The&#x20;Rules">The Rules</a>
+                <a href="#2-2-1" title="Rinse&#x20;And&#x20;Repeat">Rinse And Repeat</a>
             </li>
                                 <li>
-                <a href="#1-3-2" title="Application&#x20;Layer">Application Layer</a>
+                <a href="#2-2-2" title="First&#x20;Map">First Map</a>
             </li>
                                 <li>
-                <a href="#1-3-3" title="Modules">Modules</a>
+                <a href="#2-2-3" title="Considerations">Considerations</a>
             </li>
-            </ul>
+                                                                                                        <li>
+                <a href="#2-2-4" title="Context&#x20;Relationships">Context Relationships</a>
+            </li>
+                                                                                    </ul>
 </nav>
         </div>
                 <div class="col-md-9">
-<div id="section-main"><h1 id="1-3">Autonomous Modules</h1>
-<p>The Fee Office is split into 5 bounded contexts. Each context is represented as a software module in
-our system. But we don't use a monolithic MVC module approach like you know from ZendFramework 2 modules or Symfony bundles.
-Instead we use the lightweight <a href="https://docs.zendframework.com/zend-expressive/v3/features/modular-applications/">module system</a>
-provided by Zend Expressive.</p>
-<p class="alert alert-info">The technique used in the demo is not bound to zend expressive. We've picked it because expressive uses
-PSR standards and has a module system that works the way we need it. Anyway, you can achieve the same
-project structure using any existing PHP framework and composer. We recommend asking the respective framework
-community if you're not sure how to do it with your framework of choice.</p>
-<h2 id="1-3-1">The Rules</h2>
-<p class="alert alert-warning">Each module should be completely independent of any other module even if all modules are deployed on the same server.</p>
-<p>To achieve module autonomy we use a special set up. It is a combination of Expressive modules which are also composer packages.
-More on that in a minute. Furthermore, an application layer acts as the glue layer to coordinate communication between users/clients and modules
-as well as between the modules "talking" to each other.</p>
-<ol>
-<li>Each module has its own URL root path, f.e. the <em>RealtyRegistration</em> module uses the path <code>/realty/...</code>.</li>
-<li>Each module has its own <code>composer.json</code> and only uses dependencies defined in that <code>composer.json</code> OR provided by the application layer.</li>
-<li>Each module has at least a dedicated database schema assigned to it, if not its own database(s).</li>
-<li>No module is allowed to use a class or function defined in another module.</li>
-</ol>
-<p>The following diagram illustrates the architecture:</p>
-<p><img src="https://proophsoftware.github.io/fee-office/intro/img/modules_monolith.png" alt="Modules One Deployment"></p>
-<p>If we later want to deploy one or more modules separated from the others (turn a module into a microservice), we can "easily" do that by deploying
-the module together with the application layer and globally defined dependencies provided by the application layer.</p>
-<p><img src="https://proophsoftware.github.io/fee-office/intro/img/modules_two_deployments.png" alt="Modules Multiple Deployments"></p>
-<h2 id="1-3-2">Application Layer</h2>
-<p>We've installed the <a href="https://github.com/zendframework/zend-expressive-skeleton">zend/expressive-skeleton</a> with <a href="https://github.com/nikic/FastRoute">Fastroute</a>,
-<a href="https://github.com/zendframework/zend-servicemanager">zend/servicemanager</a>, no template engine and the <a href="https://github.com/filp/whoops">Whoops</a> error handler.
-We've also enabled the module system of expressive.</p>
-<p>The application layer takes over a few tasks:</p>
-<ol>
-<li>It uses the <a href="https://github.com/zendframework/zend-component-installer">zend-component-installer</a> to install our modules.
-The installer is a composer plugin registered in the root <code>composer.json</code> of the application layer.</li>
-<li>It merges module config and provides env vars via <code>app.env</code>
-</li>
-<li>It performs routing of http requests using Fastroute</li>
-<li>It provides an error handler (Whoops) and could also include authentication and authorization (not included in the demo)</li>
-<li>It provides client libraries available for all modules, f.e. a logger, a service bus + basic message classes, etc.</li>
-</ol>
-<p>The application layer uses the <code>App</code> namespace.</p>
-<h2 id="1-3-3">Modules</h2>
-<p>A module has its own namespace. For example the <em>RealtyRegistration</em> module uses the namespace <code>FeeOffice\RealtyRegistration</code>.
-The namespace maps to the path <code>src/RealtyRegistration/src</code>.</p>
-<p>A module also has its own <code>composer.json</code> where all dependencies of the module should be defined.</p>
-<p class="alert alert-danger">A module is not allowed to use dependencies that are not defined in its own composer.json. The only exception are global dependencies (client libraries)
-provided or imported by the application layer. At the moment this is a convention and needs to be ensured by code reviews. In the future we might
-add a tool that performs automated code scans to ensure that rule.</p>
-<p>In the application's root <code>composer.json</code> each module is included as local package:</p>
-<pre><code class="language-json">"repositories": [
-        {
-            "type": "path",
-            "url": "src/RealtyRegistration"
-        }
-    ],
-    "require": {
-        "php": "^7.1",
-        "feeoffice/realty-registration": "*",
-</code></pre>
-<p><em>Example of importing the RealtyRegistration module as package in the root composer.json</em></p>
-<p>We use composer to manage module dependencies and add the module namespace to the autoloader. That said, each module can require its own dependencies
-but as long as modules are deployed together, composer makes sure that different dependency versions don't conflict with each other.</p>
-<p class="alert alert-info">Defining module dependencies per module makes it much easier to deploy them independently later.</p>
-<p>Each module has a <a href="https://github.com/mtymek/expressive-config-manager#config-providers">config provider</a> and the <code>zend-component-installer</code> composer plugin
-automatically adds each config provider to the <code>expressive config manager</code> of the application layer. This way, modules provide their own
-routing and middleware pipe configuration as well as module specific DI definitions.</p>
-<p class="alert alert-success">Clean and nice separation of concern which makes it very easy
-to build a true modularized application with the option to turn it into microservices if needed.</p>
-<p><em>That's enough technical detail for now. On the next page you'll get a first overview of the domain.</em></p>
+<div id="section-main"><h1 id="2-2">Context Mapping</h1>
+<p class="alert alert-info">Instead of giving an introduction about context mapping myself I think it's better to link
+to existing sources. That said, please read the <a class="alert-link" href="https://www.infoq.com/articles/ddd-contextmapping">Strategic Domain Driven Design with Context Mapping</a>
+article on InfoQ.</p>
+<p>We need to gather information about the company's structure as well as the system landscape.
+Therefor I've asked a few questions and @enumag answered them:</p>
+<p><strong>Where do you get the data from?</strong></p>
+<blockquote>
+<p>When possible the data are imported from a file (let's say XML) or from an external database. When not possible they are added in manually by our employees.</p>
+<p>Later modifications are all done manually as far as I know.</p>
+</blockquote>
+<p><strong>Who is responsible for the data?</strong></p>
+<blockquote>
+<p>Our emloyees, although I'm not sure if that's what you're asking.</p>
+</blockquote>
+<p><strong>How often does the data change?</strong></p>
+<blockquote>
+<p>Not too often. Usually just when an apartment is sold. Other than that people can report changes in their contacts, addresses etc.</p>
+</blockquote>
+<p><strong>What data changes influence the fee generation process and how?</strong></p>
+<blockquote>
+<p>Any change on FeeRecipe and any change on ApartmentAttributeValue. Possibly something on Apartment but that should be all.</p>
+</blockquote>
+<blockquote>
+<p>Change on FeeRecipe usually means change to the formula to calculate the fee. Change on ApartmentAttributeValue means a change to the variables used in that formula. We're using Symfony/ExpressionLanguage to calculate the actual fee amounts from this data.</p>
+</blockquote>
+<p><strong>Which departments of your company work with the system and what specific part do they use or are responsible for?</strong></p>
+<p><strong>Is only one developer team working on the software or do you have multiple teams? If so, who works on which part?</strong></p>
+<p><strong>Do you integrate with third-party services or provide an API for foreign systems?</strong></p>
+<blockquote>
+<p>The company is not too large so 1 dev team, couple of employees who work with the system, each taking care of a few buildings. We will surely integrate with 3rd party APIs to import some data and the plan is to also provide our own API in the future - that's why the backend is GraphQL application with frontend being a JS client running in the browser.</p>
+</blockquote>
+<h2 id="2-2-1">Rinse And Repeat</h2>
+<p>The context map we are drawing is not a final thing. Whenever new concepts arise for example integration of external systems, growing company, new software modules ....
+You have to revisit the context map and check if it needs to be aligned. Same is true for the implementation itself.
+Hence, we start with a modularized monolith and only turn modules into independent (micro)services if we are:</p>
+<p>a) relatively sure the context boundary is right and
+b) need to scale that module</p>
+<h2 id="2-2-2">First Map</h2>
+<p>For now a simple context map is all we need because only one team is working on the system and the company structure is also relatively flat with
+a few people working with the system.</p>
+<p><img src="https://proophsoftware.github.io/fee-office/ddd/img/context_map.png" alt="Context Map"></p>
+<h2 id="2-2-3">Considerations</h2>
+<h3 id="2-2-3-1">RealtyRegistration</h3>
+<p>Adding a realty and all the details about the apartments and people is the first thing you need to do in the system. It can be done manually or by some import. It made sense to separate this from the rest of the logic in the system.</p>
+<p>With that said the border between RealtyRegistration and FeeCalculating is really unclear for now.</p>
+<h3 id="2-2-3-2">FeeCalculating</h3>
+<p>This context is supposed take care of the second part where we need to generate the fees every month.</p>
+<p>The main struggle here is that to generate those fees we need some data from RealtyRegistration so we're unsure if those data should be in RealtyRegistration or in FeeCalculating or somehow in both. I'm mainly talking about the ApatrmentAttributeValues (such as body count and area). This is the weakest point in the current structure.</p>
+<h3 id="2-2-3-3">PaymentCollecting</h3>
+<p>We need to collect payments from multiple sources (files, external APIs, manual registration) so again we wanted to separate this from the rest.</p>
+<p>But then, as you know, we need to allocate the payments to generated fees so it's unclear what's correct here.</p>
+<h3 id="2-2-3-4">Accounting</h3>
+<p>At the moment this BC only contains AccountingOrganization. It feels empty to be honest but putting this aggregate inside PaymentCollecting doesn't feel right either because it will also be needed for other things than payments. Again this is one of the weak points in the current structure and most likely it's wrong.</p>
+<h3 id="2-2-3-5">ContactAdministration</h3>
+<p>This one I'm quite satisfied with for now. It separates the contact information from everything else since each contact can be used for several different purposes.</p>
+<p>One thing I'm note quite sure about here is how to handle deletion because you should not be able to delete a contact that is used somewhere else. But this BC doesn't know if a contact is used and where. Should it be aware of it or not?</p>
+<h3 id="2-2-3-6">FeeRecipe</h3>
+<p>FeeRecipe is not a bounded context. It's an aggregate inside FeeCalculating bounded context.</p>
+<h2 id="2-2-4">Context Relationships</h2>
+<h3 id="2-2-4-1">RealtyRegistration - FeeCalculating</h3>
+<p>FeeCalculating needs some data from RealtyRegistration to perform its tasks.</p>
+<h3 id="2-2-4-2">FeeCalculating - PaymentCollecting</h3>
+<p>Fees and Payments need to be allocated to each other.</p>
+<h3 id="2-2-4-3">PaymentCollecting - Accounting</h3>
+<p>Each entity in PaymentCollecting belongs to one AccountingOrganization. I've explained the reason why AccountingOrganization is separate above.</p>
+<h3 id="2-2-4-4">ContactAdministration - RealtyRegistration</h3>
+<p>Each building has several employees of our company assigned to it. Those employees are taking care of whatever is needed to be done regarding that building.</p>
+<h3 id="2-2-4-5">ContactAdministration - PaymentCollecting</h3>
+<p>Each payment needs to be assigned to the person who paid it. Or more exactly to a FinancialAccountGroup that belongs to that person. Each FinancialAccountGroup holds an id of a ContactCard.</p>
+<h3 id="2-2-4-6">ContactAdministration - Accounting</h3>
+<p>AccountingOrganization is a corporate body and as such it holds id of a ContactCard that holds the information about it.</p>
+<p><em>With a first context map in place we can move on and use event storming to dive deeper into the domain, verify our context boundaries and get an idea of the model. Head over to the next page for more.</em></p>
 </div>        </div>
     </div>
 </div>
@@ -672,9 +680,9 @@ to build a true modularized application with the option to turn it into microser
         <div class="container">
             <div class="row">
                 <div class="prev col-xs-6">
-                                            <a href="https://proophsoftware.github.io/fee-office/intro/installation.html">Previous</a>                                    </div>
+                                            <a href="https://proophsoftware.github.io/fee-office/ddd/interview.html">Previous</a>                                    </div>
                 <div class="next col-xs-6">
-                                            <a href="https://proophsoftware.github.io/fee-office/intro/the_domain.html">Next</a>                                    </div>
+                                    </div>
             </div>
         </div>
     </div>
