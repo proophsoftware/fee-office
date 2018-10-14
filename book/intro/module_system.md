@@ -92,6 +92,24 @@ routing and middleware pipe configuration as well as module specific DI definiti
 Clean and nice separation of concern which makes it very easy
 to build a true modularized application with the option to turn it into microservices if needed.
 
+## Benefits
+
+When using a module approach for the first time you'll probably think it is overengineerd because you need some extra effort to access data owned by another module.
+I'll highlight this when we implement the modules. It's recommended to use modules when you're relatively sure that the context boundaries are right.
+Therefor, you should start with a single module and use strategic Domain-Driven Design iteratively to explore the problem space and identify context boundaries.
+As your domain knowledge grows, the code base will grow, too. Context boundaries become clearer and you can use that to your advantage.
+Autonomous modules help you to keep control. They avoid [accidental complexity](https://medium.com/swlh/how-to-avoid-accidental-complexity-in-software-design-2792ad99fddc)
+by ensuring context boundaries and therefor a clear focus on a specific problem.
+
+Systems that neither use modules nor microservices often end up in numerous layers which are hard to understand and debug.
+Software layers also have the negative effect that all parts of the system are coupled with each other. Again, missing boundaries are the reason.
+At the beginning of a new project you don't recognize the problem but one or two years later you'll end up with an unmaintainable mess.
+
+{.alert .alert-info}
+To be able to refactor parts of the system at any given point in time - be it after 3 months or 3 years - it is essential to not fear the deletion of code.
+[@gregoryyoung](https://github.com/gregoryyoung){: class="alert-link"} addresses the topic in a great talk: [The art of destroying software](https://vimeo.com/108441214){: class="alert-link"}.
+Autonomous modules and microservices both give you the freedom to delete code and start from scratch whenever new requirements force you to reshape the model.
+
 *That's enough technical detail for now. On the next page you'll get a first overview of the domain.*
 
 

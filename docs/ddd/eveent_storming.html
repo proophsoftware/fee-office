@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 <meta name="HandheldFriendly" content="True"/>
-<title>Installation</title>
+<title>Event Storming</title>
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/prooph-logo@0.5x.png">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://raw.githubusercontent.com/prooph/proophessor/gh-pages/images/ico/apple-touch-icon-114-precomposed.png">
@@ -575,8 +575,8 @@
 <div class="container">
     <ol class="breadcrumb">
                         <li><a href="https://proophsoftware.github.io/fee-office/">Fee Office Book</a></li>
-                                <li><a href="https://proophsoftware.github.io/fee-office/intro/">Introduction</a></li>
-                                <li class="active">Installation</li>
+                                <li><a href="https://proophsoftware.github.io/fee-office/ddd/">Domain-Driven Design</a></li>
+                                <li class="active">Event Storming</li>
             </ol>
     <div class="row">
 
@@ -584,35 +584,31 @@
             <nav class="nav-left hidden-xs hidden-sm" id="sideNav">
     <ul class="nav nav-stacked" data-spy="affix" data-offset-top="59" role="tablist">
                                 <li>
-                <a href="#1-2" title="Installation">Installation</a>
+                <a href="#2-3" title="Event&#x20;Storming">Event Storming</a>
             </li>
                                 <li>
-                <a href="#1-2-1" title="Troubleshooting">Troubleshooting</a>
+                <a href="#2-3-1" title="Basics">Basics</a>
             </li>
-                                    </ul>
+            </ul>
 </nav>
         </div>
                 <div class="col-md-9">
-<div id="section-main"><h1 id="1-2">Installation</h1>
-<p>Docker is the only supported way to run the demo application. The commands shown here work on a Linux system
-with <a href="https://git-scm.com/">Git</a>, <a href="https://www.docker.com/">Docker</a> and <a href="https://docs.docker.com/compose/">Docker Compose</a> installed.</p>
-<pre><code class="language-bash">git clone https://github.com/proophsoftware/fee-office.git
-cd fee-office
-docker run --rm -it -v $(pwd):/app prooph/composer:7.2 install
-sudo chown $(id -u -n):$(id -g -n) . -R
-docker-compose up -d
-</code></pre>
-<h2 id="1-2-1">Troubleshooting</h2>
-<p>With the command <code>docker-compose ps</code> you can list the running containers.
-Make sure that all required ports are available on your machine. If not you can modify port mapping in the <code>docker-compose.yml</code>.</p>
-<h3 id="1-2-1-1">Have you tried turning it off and on again?</h3>
-<p>If something does not work as expected try to restart the containers first:</p>
-<pre><code class="language-bash">$ docker-compose down
-$ docker-compose up -d
-</code></pre>
-<h3 id="1-2-1-2">Projection reset</h3>
-<p>TODO</p>
-<p><em>To better understand the system read about "autonomous modules" on the next page.</em></p>
+<div id="section-main"><h1 id="2-3">Event Storming</h1>
+<p>We already learned a lot about the Fee Office. What's missing is a better understanding of the processes.</p>
+<p><strong>What happens when?</strong></p>
+<p><strong>What are the preconditions for certain actions?</strong></p>
+<p><strong>How does the happy path look like?</strong></p>
+<p><strong>And do we need to take care of some unhappy paths as well?</strong></p>
+<p class="alert alert-info">Many questions, right? Fortunately, <a class="alert-link" href="https://github.com/ziobrando">@ziobrando</a> has developed a flexible workshop format
+called <a class="alert-link" href="https://www.eventstorming.com/resources/">EventStorming</a>. Follow the link for a comprehensive list of resources regarding the topic.</p>
+<h2 id="2-3-1">Basics</h2>
+<p>EventStorming is really easy to learn and all sessions I did myself had amazing results. I can only recommend to read about it, watch a few presentations and
+buy the book <a href="https://www.eventstorming.com/book/">Introducing EventStorming</a> by Alberto Brandolini (@ziobrando).</p>
+<p>For the Fee Office we started simple again. EventStorming works best with all people in one room and unlimited modeling space.
+However, we tried remote EventStorming using a <a href="https://realtimeboard.com/app/board/o9J_kzYG5GQ=/">realtimeboard</a>.
+Obviously, you can't achieve the same quality results in a remote session, especially when communication happens asynchronous via chat (or github issue in our case).</p>
+<p>But it's still a great way for collaboration and for sharing ideas. Here are the basic colors for different types of sticky notes:</p>
+<p><a href="../img/event_storming_colors.png">Event Storming Note Types</a></p>
 </div>        </div>
     </div>
 </div>
@@ -622,9 +618,9 @@ $ docker-compose up -d
         <div class="container">
             <div class="row">
                 <div class="prev col-xs-6">
-                                            <a href="https://proophsoftware.github.io/fee-office/intro/about.html">Previous</a>                                    </div>
+                                            <a href="https://proophsoftware.github.io/fee-office/ddd/context_mapping.html">Previous</a>                                    </div>
                 <div class="next col-xs-6">
-                                            <a href="https://proophsoftware.github.io/fee-office/intro/module_system.html">Next</a>                                    </div>
+                                    </div>
             </div>
         </div>
     </div>

@@ -2,7 +2,8 @@
   "title": "Domain-Driven Design",
   "content": [
     {"interview": "interviewing_domain_experts.md"},
-    {"context_mapping": "context_mapping.md"}
+    {"context_mapping": "context_mapping.md"},
+    {"eveent_storming": "event_storming.md"}
   ],
   "tocDepth": 1
 }

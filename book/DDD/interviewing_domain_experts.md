@@ -78,8 +78,7 @@ PaymentPreference holds a **reference number** that we can use to **match a give
 I've grouped the information by context. Please keep in mind that this grouping is only based on my very
 first understanding of the domain. It's not the final result. In the demo you find a slightly different set of contexts.
 Anyway, it's a starting point to gain knowledge and connect the dots. I've highlighted phrases and words that seem important.
-They are part of the [Ubiquitous Language](https://martinfowler.com/bliki/UbiquitousLanguage.html).
-A good basis for further questions. I also tried to categorize contexts into **supporting** and **core**.
+They are part of the [Ubiquitous Language](https://martinfowler.com/bliki/UbiquitousLanguage.html) and a good basis for further questions. I also tried to categorize contexts into **supporting** and **core**.
 The core domain is the context of the system that makes it unique and generates money. The core should get the most attention.
 Supporting contexts - well - support the core. We'll see that in action when implementing prototypes of each context.
 I also used question and exclamation marks to highlight hot spots (topics I want to clarify).
