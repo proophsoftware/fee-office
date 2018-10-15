@@ -31,7 +31,7 @@ With this basic set of colors we just started modeling. The first sticky note is
 puts the focus on events or more precise on domain events. I've asked @enumag to put a few high level events on the board.
 Here is the result:
 
-![High level events](../img/01_high_level_events.jpg)
+![High level events](../img/01_high_level_events.png)
 
 That's a really good way to start. Now you can ask questions related to each of those events and zoom into the processes centered around them.
 I asked the following two questions:
