@@ -71,6 +71,6 @@ And of course we added new sticky notes to the board:
 {.alert .alert-info}
 You might notice that two notes are a copy of already existing notes. The "developer DRY thinking" isn't really useful for EventStorming. Use the same notes as often as needed.
 Move them around, rearrange and try different grouping. It is much cheaper to move stickies around and develop an idea of the system on the wall than starting to write code
-just to realize two weeks later that your assumptions were wrong! For a short insight of a real world event storming session check this [tweet](https://twitter.com/mariuszgil/status/1052179034065522693) by [@mariuszgil](https://github.com/mariuszgil){: class="alert-link"}.
+just to realize two weeks later that your assumptions were wrong! For a short insight of a real world event storming session check this [tweet](https://twitter.com/mariuszgil/status/1052179034065522693){: class="alert-link"} by [@mariuszgil](https://github.com/mariuszgil){: class="alert-link"}.
 
 **We got a lot of domain knowledge. Now it's time for the first development iteration. We'll start with a prototype. Head over to the next page for details.**
