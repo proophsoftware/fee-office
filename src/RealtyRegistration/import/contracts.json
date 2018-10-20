@@ -1,0 +1,1100 @@
+[
+  {
+    "id": "e51fd16b-5ec2-4630-9dd8-f26583a54fa1",
+    "apartmentId": "d5a63426-99c0-47c6-9805-5930f017027a",
+    "accountingOrganizationId": "a60ecc59-0f77-4a3c-baab-9bc20d6086a7",
+    "superiorPartyId": "328a2b34-8408-4c50-9953-8559e991bfd0",
+    "subordinatePartyId": "22c74f8a-b67f-46a7-89e5-b27fdaff2c29",
+    "since": "2013-10-27T07:29:44+01:00",
+    "until": "2014-02-04T07:29:44+01:00"
+  },
+  {
+    "id": "531b1f9c-d4d4-4326-99af-28a81de46ec9",
+    "apartmentId": "d5a63426-99c0-47c6-9805-5930f017027a",
+    "accountingOrganizationId": "a60ecc59-0f77-4a3c-baab-9bc20d6086a7",
+    "superiorPartyId": "328a2b34-8408-4c50-9953-8559e991bfd0",
+    "subordinatePartyId": "355425bf-c5c2-464e-a1e7-a42f4ff2506c",
+    "since": "2014-02-05T07:29:44+01:00",
+    "until": "2015-07-31T07:29:44+02:00"
+  },
+  {
+    "id": "44b1eab8-05d7-4d75-bfb2-81b374d8b5d3",
+    "apartmentId": "d5a63426-99c0-47c6-9805-5930f017027a",
+    "accountingOrganizationId": "a60ecc59-0f77-4a3c-baab-9bc20d6086a7",
+    "superiorPartyId": "328a2b34-8408-4c50-9953-8559e991bfd0",
+    "subordinatePartyId": "3fb90ee3-9b03-4c6d-a8c6-4285982e303e",
+    "since": "2015-08-01T07:29:44+02:00",
+    "until": null
+  },
+  {
+    "id": "64b84581-f70a-4c75-8527-85b81eadb365",
+    "apartmentId": "fe48f477-4942-4681-8fb8-107e0db20c1b",
+    "accountingOrganizationId": "a60ecc59-0f77-4a3c-baab-9bc20d6086a7",
+    "superiorPartyId": "328a2b34-8408-4c50-9953-8559e991bfd0",
+    "subordinatePartyId": "86cee464-1952-4287-859d-5cc26cf233e8",
+    "since": "2015-12-13T22:05:23+01:00",
+    "until": "2017-07-18T22:05:23+02:00"
+  },
+  {
+    "id": "979e5ae6-7a79-4600-9388-781401607358",
+    "apartmentId": "fe48f477-4942-4681-8fb8-107e0db20c1b",
+    "accountingOrganizationId": "a60ecc59-0f77-4a3c-baab-9bc20d6086a7",
+    "superiorPartyId": "328a2b34-8408-4c50-9953-8559e991bfd0",
+    "subordinatePartyId": "a2d3b2aa-aa17-4bd2-893c-0ef64b73b815",
+    "since": "2017-07-19T22:05:23+02:00",
+    "until": "2018-03-28T22:05:23+02:00"
+  },
+  {
+    "id": "c44137fd-194f-4f84-b0f5-1732ba458393",
+    "apartmentId": "fe48f477-4942-4681-8fb8-107e0db20c1b",
+    "accountingOrganizationId": "a60ecc59-0f77-4a3c-baab-9bc20d6086a7",
+    "superiorPartyId": "328a2b34-8408-4c50-9953-8559e991bfd0",
+    "subordinatePartyId": "ad15d350-f309-421b-9010-5458dea0f19b",
+    "since": "2018-03-29T22:05:23+02:00",
+    "until": null
+  },
+  {
+    "id": "18e11480-cf77-49aa-98e6-26a48512c998",
+    "apartmentId": "43e60daa-5d6a-4d39-a858-ac98d59537ef",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "0446345e-ef80-4078-a2a4-b6f7d80daa09",
+    "since": "2014-09-11T19:37:05+02:00",
+    "until": "2015-05-18T19:37:05+02:00"
+  },
+  {
+    "id": "50fcb694-dfad-4ac5-9409-c30379695abc",
+    "apartmentId": "43e60daa-5d6a-4d39-a858-ac98d59537ef",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "e1624b6d-91bf-48a6-b246-4f747c69e552",
+    "since": "2015-05-19T19:37:05+02:00",
+    "until": null
+  },
+  {
+    "id": "5e42472b-e5ca-4d45-9cfe-61486d4eb75e",
+    "apartmentId": "be937e4e-d849-4478-a93f-e7e44cd61d0d",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "867fff2f-37f0-41d6-855f-822a633c71f2",
+    "since": "2016-08-07T22:46:23+02:00",
+    "until": null
+  },
+  {
+    "id": "ce577534-12e2-4b38-93c8-bec2afac8e57",
+    "apartmentId": "96998521-1671-4704-80ff-efb6e17bba9f",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "867fff2f-37f0-41d6-855f-822a633c71f2",
+    "since": "2015-07-10T16:02:59+02:00",
+    "until": "2015-10-13T16:02:59+02:00"
+  },
+  {
+    "id": "1a73c540-12d2-4501-930f-2b33f542ae70",
+    "apartmentId": "96998521-1671-4704-80ff-efb6e17bba9f",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "09a3139e-a4b6-4503-9e88-fd7e60ab98a7",
+    "since": "2015-10-14T16:02:59+02:00",
+    "until": "2016-02-27T16:02:59+01:00"
+  },
+  {
+    "id": "b52923d9-88ba-4188-865f-302fe9139a64",
+    "apartmentId": "96998521-1671-4704-80ff-efb6e17bba9f",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "4815067b-e7fa-4ed4-86bf-85c076bd0d35",
+    "since": "2016-02-28T16:02:59+01:00",
+    "until": null
+  },
+  {
+    "id": "c20fefd2-c142-47a5-826f-215511183a37",
+    "apartmentId": "bf6730ee-fee5-467f-a3d0-9511eb536504",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "4815067b-e7fa-4ed4-86bf-85c076bd0d35",
+    "since": "2014-04-09T16:57:24+02:00",
+    "until": "2014-10-16T16:57:24+02:00"
+  },
+  {
+    "id": "c4acfd88-f82c-4969-baad-0c76e010794c",
+    "apartmentId": "bf6730ee-fee5-467f-a3d0-9511eb536504",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "b08f017f-fdcd-4caa-b912-cddc7f147cb6",
+    "since": "2014-10-17T16:57:24+02:00",
+    "until": "2015-06-21T16:57:24+02:00"
+  },
+  {
+    "id": "2b6c5bd8-0e51-4e83-90e1-e1539785b75f",
+    "apartmentId": "bf6730ee-fee5-467f-a3d0-9511eb536504",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "2b006b88-ae6b-43bc-8710-41fcd386d03c",
+    "since": "2015-06-22T16:57:24+02:00",
+    "until": null
+  },
+  {
+    "id": "eb727b8c-7bed-4acc-ae17-28299bc6b374",
+    "apartmentId": "56f21309-509f-45b1-94f9-75013651a3d7",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "f973bed1-326e-4f54-827d-c93941e48b75",
+    "since": "2015-02-22T02:03:22+01:00",
+    "until": null
+  },
+  {
+    "id": "927651b3-03f1-4f97-b1e3-c92235293f85",
+    "apartmentId": "d96255fa-7c1e-4fed-a827-07d563223f7e",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "f3aca708-ffab-4bdc-900f-73d0e1992825",
+    "since": "2016-05-20T14:21:28+02:00",
+    "until": "2017-05-02T14:21:28+02:00"
+  },
+  {
+    "id": "83b1c3a8-ec6b-4237-9888-f4745f77a6e9",
+    "apartmentId": "d96255fa-7c1e-4fed-a827-07d563223f7e",
+    "accountingOrganizationId": "c1940ef0-af57-456b-8f37-eda2384b7814",
+    "superiorPartyId": "b8ad965e-d233-48ad-8132-26c0a6c2d58a",
+    "subordinatePartyId": "8a1f1063-b054-420b-a36f-7525e76747d6",
+    "since": "2017-05-03T14:21:28+02:00",
+    "until": null
+  },
+  {
+    "id": "0989e391-fd6e-4738-886d-ff11c0df1406",
+    "apartmentId": "509e4f56-cb14-49ca-b796-48d443555052",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "c5a30227-ce67-477f-97a1-9ab3e5e78807",
+    "since": "2015-08-30T02:11:29+02:00",
+    "until": null
+  },
+  {
+    "id": "17cbd90c-47d9-48b8-b24c-3fef77645bca",
+    "apartmentId": "85874d04-3d40-4e83-9cc3-46612deb1143",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "519c2c07-8d0e-4456-ba1b-77eb5b17ab64",
+    "since": "2015-04-27T16:22:06+02:00",
+    "until": null
+  },
+  {
+    "id": "9397ff2b-37bb-4e81-acb4-2ec12546daad",
+    "apartmentId": "016e81e5-2a37-46a7-ac41-dec8062d82ad",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "97be2a77-2482-470e-9068-4e1c17687414",
+    "since": "2015-11-13T12:58:27+01:00",
+    "until": null
+  },
+  {
+    "id": "3c0125e3-2852-498d-ac88-db059d9cd5d8",
+    "apartmentId": "c0e875a1-7e6e-4e93-be1b-ac5f783ed0dd",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "de04d8ae-e9a2-4a2f-898b-62cb08f2f48a",
+    "since": "2014-07-15T01:12:59+02:00",
+    "until": "2015-06-11T01:12:59+02:00"
+  },
+  {
+    "id": "073f7b5b-eac3-45cc-bc32-2a4d29c2c88f",
+    "apartmentId": "c0e875a1-7e6e-4e93-be1b-ac5f783ed0dd",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "dbc7ccb6-12a5-45d3-84aa-f3f112ea825b",
+    "since": "2015-06-12T01:12:59+02:00",
+    "until": null
+  },
+  {
+    "id": "606bde7b-e858-4857-93d8-b596a7cd82a3",
+    "apartmentId": "f18946c4-2197-4db1-ad6d-69b6f26e9e2c",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "e1543aea-683d-421b-b175-98f622f54f89",
+    "since": "2014-05-19T07:08:05+02:00",
+    "until": "2014-10-10T07:08:05+02:00"
+  },
+  {
+    "id": "07a1feee-5564-4f13-96ec-0260adeebf1c",
+    "apartmentId": "f18946c4-2197-4db1-ad6d-69b6f26e9e2c",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "d7edbf2c-bceb-46b5-b4ce-c11e67bc4b7d",
+    "since": "2014-10-11T07:08:05+02:00",
+    "until": null
+  },
+  {
+    "id": "94aee4c1-7d68-4fff-8923-5bbc3fab6490",
+    "apartmentId": "40a99180-03b4-422d-8c99-0d40f8b3a5c8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "97be2a77-2482-470e-9068-4e1c17687414",
+    "since": "2015-09-12T09:27:01+02:00",
+    "until": "2016-03-01T09:27:01+01:00"
+  },
+  {
+    "id": "664c8d6e-b124-499b-86b4-8d44c5bab9e3",
+    "apartmentId": "40a99180-03b4-422d-8c99-0d40f8b3a5c8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "ec4f23e3-a48a-4724-83cc-4fc5bf5b95f6",
+    "since": "2016-03-02T09:27:01+01:00",
+    "until": "2016-07-14T09:27:01+02:00"
+  },
+  {
+    "id": "34fdd7c9-bd2f-4721-b561-591d2554c665",
+    "apartmentId": "40a99180-03b4-422d-8c99-0d40f8b3a5c8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "f8b51086-ed65-4f52-9ba4-a71616eaf746",
+    "since": "2016-07-15T09:27:01+02:00",
+    "until": null
+  },
+  {
+    "id": "d854dee8-6aec-40db-9722-789afdfbf335",
+    "apartmentId": "0b28a546-a772-4ecb-b1d5-c5f0d3db5abb",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "e1543aea-683d-421b-b175-98f622f54f89",
+    "since": "2014-08-19T00:03:28+02:00",
+    "until": "2014-12-11T00:03:28+01:00"
+  },
+  {
+    "id": "29421fb7-6542-4f66-821c-99df21d70cff",
+    "apartmentId": "0b28a546-a772-4ecb-b1d5-c5f0d3db5abb",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "3032c5ce-77e6-4333-8576-a9758bae5bae",
+    "since": "2014-12-12T00:03:28+01:00",
+    "until": null
+  },
+  {
+    "id": "acf978b6-f894-44c2-b38d-69766a7ce271",
+    "apartmentId": "524c3981-9585-4471-bbf6-65656cdf3fd3",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "16353d8b-8df7-4c23-8e9e-1c7eddc59084",
+    "since": "2014-09-23T10:39:40+02:00",
+    "until": "2015-12-15T10:39:40+01:00"
+  },
+  {
+    "id": "cad2979d-d2f1-41e0-aa4e-a96348bc6dde",
+    "apartmentId": "524c3981-9585-4471-bbf6-65656cdf3fd3",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "0628cb3f-601e-4a11-bad0-51169785dcee",
+    "since": "2015-12-16T10:39:40+01:00",
+    "until": null
+  },
+  {
+    "id": "eb97d2b4-5261-487e-b196-a12b322d5eb2",
+    "apartmentId": "9ea91e66-aba6-46cc-a80f-44f82c486d78",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "f8b51086-ed65-4f52-9ba4-a71616eaf746",
+    "since": "2015-08-22T03:13:22+02:00",
+    "until": "2016-10-13T03:13:22+02:00"
+  },
+  {
+    "id": "99102495-c86c-4e8a-b710-1c6119bf1484",
+    "apartmentId": "9ea91e66-aba6-46cc-a80f-44f82c486d78",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "992473c7-351f-4511-abac-384572058f90",
+    "since": "2016-10-14T03:13:22+02:00",
+    "until": "2017-10-19T03:13:22+02:00"
+  },
+  {
+    "id": "91176481-d1eb-4c71-849b-31f6c0640c8f",
+    "apartmentId": "9ea91e66-aba6-46cc-a80f-44f82c486d78",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "a0c3c4cf-a7d3-405d-a582-31d0407bfa2e",
+    "since": "2017-10-20T03:13:22+02:00",
+    "until": null
+  },
+  {
+    "id": "35528155-29c3-4d98-9395-68cb195d39c8",
+    "apartmentId": "a96160e2-695d-4a87-8508-d5f3c61d08e8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "198883af-5530-4e9f-91eb-47c7f071cd54",
+    "since": "2014-05-04T13:33:10+02:00",
+    "until": "2015-04-07T13:33:10+02:00"
+  },
+  {
+    "id": "e5fdfb5f-1351-4136-8954-3c93f9df48bf",
+    "apartmentId": "a96160e2-695d-4a87-8508-d5f3c61d08e8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "3996acc3-a62a-4e1e-a1e3-c1ee2b470d3b",
+    "since": "2015-04-08T13:33:10+02:00",
+    "until": "2015-09-08T13:33:10+02:00"
+  },
+  {
+    "id": "8c1b81af-962f-41d5-8954-995489802084",
+    "apartmentId": "a96160e2-695d-4a87-8508-d5f3c61d08e8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "f8b51086-ed65-4f52-9ba4-a71616eaf746",
+    "since": "2015-09-09T13:33:10+02:00",
+    "until": null
+  },
+  {
+    "id": "c783798a-64a3-4faa-928d-360185642cfe",
+    "apartmentId": "732e3982-4ea2-460f-8e78-a4421f080717",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "af11ad71-8f5b-46e1-8621-37a9fbcfdefc",
+    "since": "2015-03-07T03:17:21+01:00",
+    "until": "2015-11-09T03:17:21+01:00"
+  },
+  {
+    "id": "7304ff08-b029-4c3f-bb05-7dc52f22b8f7",
+    "apartmentId": "732e3982-4ea2-460f-8e78-a4421f080717",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "b93030ce-e52c-4ff4-a22d-1ea21c3bf3c1",
+    "since": "2015-11-10T03:17:21+01:00",
+    "until": "2015-12-15T03:17:21+01:00"
+  },
+  {
+    "id": "db5eb411-4d7b-453a-9371-8a22dbaf4cb6",
+    "apartmentId": "732e3982-4ea2-460f-8e78-a4421f080717",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "a3e8bc93-0886-4152-a9f6-54537664e7ef",
+    "since": "2015-12-16T03:17:21+01:00",
+    "until": null
+  },
+  {
+    "id": "3d7bca4a-2bd6-4d43-bc56-cce71772e621",
+    "apartmentId": "4484f556-da5b-41d6-921f-ae24602b2ae2",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "8101784b-4d87-4cf6-9eca-b2310fea56a0",
+    "since": "2014-03-31T01:34:15+02:00",
+    "until": null
+  },
+  {
+    "id": "b1080b26-7708-4519-b4c4-7fd2a0fb2691",
+    "apartmentId": "e401ada5-03ce-4094-8378-933a911f2ba8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "2ca77844-50e3-4d7d-a74a-33dda80dec35",
+    "since": "2016-08-29T17:05:24+02:00",
+    "until": "2017-03-29T17:05:24+02:00"
+  },
+  {
+    "id": "adad9b8a-8b4b-415a-a39c-158c0e0ac65e",
+    "apartmentId": "e401ada5-03ce-4094-8378-933a911f2ba8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "753f812e-408f-42ad-8a7e-63194bd6a11c",
+    "since": "2017-03-30T17:05:24+02:00",
+    "until": "2018-07-01T17:05:24+02:00"
+  },
+  {
+    "id": "115b32d6-513b-4e13-bab0-1273cb448de5",
+    "apartmentId": "e401ada5-03ce-4094-8378-933a911f2ba8",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "fc858c1e-e0b2-4563-a198-cc0fad32f3d2",
+    "since": "2018-07-02T17:05:24+02:00",
+    "until": null
+  },
+  {
+    "id": "38eac629-9d62-4b27-a2ca-b155827ed772",
+    "apartmentId": "6d2ba19d-87d5-473f-b317-48e074d0cc4b",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "3032c5ce-77e6-4333-8576-a9758bae5bae",
+    "since": "2015-09-01T13:03:49+02:00",
+    "until": "2016-04-02T13:03:49+02:00"
+  },
+  {
+    "id": "b766cfe1-b23c-4c68-bc26-15139a936f7a",
+    "apartmentId": "6d2ba19d-87d5-473f-b317-48e074d0cc4b",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "fed5dc78-44bf-4266-a55b-9b9173b8bfbe",
+    "since": "2016-04-03T13:03:49+02:00",
+    "until": "2017-09-22T13:03:49+02:00"
+  },
+  {
+    "id": "4211fe97-c54b-4adb-bc0b-9fe409f0acaf",
+    "apartmentId": "6d2ba19d-87d5-473f-b317-48e074d0cc4b",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "c5a30227-ce67-477f-97a1-9ab3e5e78807",
+    "since": "2017-09-23T13:03:49+02:00",
+    "until": null
+  },
+  {
+    "id": "474605c2-b9eb-4b29-a588-4adb907ee8c4",
+    "apartmentId": "b289c48a-0e93-411b-82e2-82d1334e7896",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "d3b90b7b-37e2-417c-8fde-d87fec5ef56a",
+    "since": "2015-09-09T13:14:38+02:00",
+    "until": "2016-10-09T13:14:38+02:00"
+  },
+  {
+    "id": "9cb46579-f193-4f81-b2fc-d874dadd4521",
+    "apartmentId": "b289c48a-0e93-411b-82e2-82d1334e7896",
+    "accountingOrganizationId": "a44a4274-dbf5-401f-947c-ccaab4ca1791",
+    "superiorPartyId": "fef1380c-2cf5-47d1-9c73-3b72f6ad83b4",
+    "subordinatePartyId": "c1063043-d767-434d-8977-6dd87870e14f",
+    "since": "2016-10-10T13:14:38+02:00",
+    "until": null
+  },
+  {
+    "id": "889a2840-092f-48fe-8384-bef10f3f5c36",
+    "apartmentId": "05033719-d9f2-40a7-8f2f-40d0e06ec836",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "4e369d74-5ab3-4480-ba91-8384a2cb26dc",
+    "since": "2014-08-29T15:06:37+02:00",
+    "until": "2015-08-22T15:06:37+02:00"
+  },
+  {
+    "id": "6e925f78-2168-48d0-a2e9-cb37eca94e27",
+    "apartmentId": "05033719-d9f2-40a7-8f2f-40d0e06ec836",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "26540466-6990-4df3-8393-1e7b770096b5",
+    "since": "2015-08-23T15:06:37+02:00",
+    "until": null
+  },
+  {
+    "id": "2b6a43e0-1dcf-42f4-a54a-631ffd8184ee",
+    "apartmentId": "b19b0b8d-cc76-4ade-9d3d-372bd854ce0e",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "f06ac083-6f28-4cd4-8ff3-6812b322226c",
+    "since": "2016-08-04T03:28:43+02:00",
+    "until": "2017-09-07T03:28:43+02:00"
+  },
+  {
+    "id": "48240cae-8d53-4a79-b7cb-8f7b4ceb5873",
+    "apartmentId": "b19b0b8d-cc76-4ade-9d3d-372bd854ce0e",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "2058b7c7-dd66-46d7-83a3-b04df62fbce9",
+    "since": "2017-09-08T03:28:43+02:00",
+    "until": "2019-03-20T03:28:43+01:00"
+  },
+  {
+    "id": "7bbcd9a5-d224-44ff-8db9-4d5ace7292da",
+    "apartmentId": "b19b0b8d-cc76-4ade-9d3d-372bd854ce0e",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "11b599bb-9910-4dfa-9ab8-1a3c03ecb100",
+    "since": "2019-03-21T03:28:43+01:00",
+    "until": null
+  },
+  {
+    "id": "a938b789-f1aa-43ce-bd22-f85eee3b8290",
+    "apartmentId": "b91a98d3-1d2a-4f00-a8d4-b8c9601a58fe",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "e17262e8-cd0e-4c1f-83d1-7596b8eee1a9",
+    "since": "2015-12-25T06:15:04+01:00",
+    "until": "2016-05-25T06:15:04+02:00"
+  },
+  {
+    "id": "cb116396-d4fb-4fa0-a8c3-1aa19d3f7ada",
+    "apartmentId": "b91a98d3-1d2a-4f00-a8d4-b8c9601a58fe",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "06917b56-a6ab-4b2d-b7eb-d43557b704bf",
+    "since": "2016-05-26T06:15:04+02:00",
+    "until": null
+  },
+  {
+    "id": "f6dc5f41-ca28-4ab3-a1f1-aef192bddcc3",
+    "apartmentId": "f1b8aa77-7ede-4fd4-9195-4d72caeca60d",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "6fd99719-c629-4234-99aa-0a1a87f4bbad",
+    "since": "2015-11-26T17:38:48+01:00",
+    "until": null
+  },
+  {
+    "id": "178b07b6-e125-4cc2-a5ad-4a58b13c31c5",
+    "apartmentId": "d80e4a0e-4e09-4dcc-9c1f-1436a2e9b51c",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "7ca44207-70fc-49bf-ae99-71b5a5099720",
+    "since": "2014-09-07T15:02:44+02:00",
+    "until": "2016-02-22T15:02:44+01:00"
+  },
+  {
+    "id": "33d8c984-df85-46ee-ad35-40d611bf528c",
+    "apartmentId": "d80e4a0e-4e09-4dcc-9c1f-1436a2e9b51c",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "f710f9f4-0b07-45dd-a934-b0e02bb3d4da",
+    "since": "2016-02-23T15:02:44+01:00",
+    "until": "2017-02-13T15:02:44+01:00"
+  },
+  {
+    "id": "bf9ec0e8-2f9d-4e4e-a82c-321ee84b5aa0",
+    "apartmentId": "d80e4a0e-4e09-4dcc-9c1f-1436a2e9b51c",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "a0162fd0-01bb-44fb-9f54-7c4f84a9bac5",
+    "since": "2017-02-14T15:02:44+01:00",
+    "until": null
+  },
+  {
+    "id": "0e725e03-0384-4180-8523-c6cb23c426bc",
+    "apartmentId": "88fa6f08-3ccf-475c-99e3-55fa68effa0d",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "7bc48859-5ca6-4ba0-94d0-87de5cc4cb36",
+    "since": "2015-09-18T13:31:08+02:00",
+    "until": "2016-06-05T13:31:08+02:00"
+  },
+  {
+    "id": "08e14f79-a991-4f64-a874-291101011832",
+    "apartmentId": "88fa6f08-3ccf-475c-99e3-55fa68effa0d",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "bc7e4058-73d0-413a-8970-1d3d825591a9",
+    "since": "2016-06-06T13:31:08+02:00",
+    "until": "2017-01-10T13:31:08+01:00"
+  },
+  {
+    "id": "3d0a75ed-eac6-471d-be56-8932229b9b4a",
+    "apartmentId": "88fa6f08-3ccf-475c-99e3-55fa68effa0d",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "666b0d7e-8c5e-425c-b7a7-fb5bfc48c647",
+    "since": "2017-01-11T13:31:08+01:00",
+    "until": null
+  },
+  {
+    "id": "3b1f36e5-1705-4192-8a0e-e86248ad5e80",
+    "apartmentId": "f9ffaadb-d16d-44cc-9361-db67875d83ff",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "dfa7ca39-cb0f-4cd5-876a-4e784dc0040c",
+    "since": "2015-05-26T01:01:45+02:00",
+    "until": null
+  },
+  {
+    "id": "e6d17504-ca8e-4516-8207-edb56c394834",
+    "apartmentId": "c6d77e01-2312-424b-91ad-0c314cfcada7",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "7661d359-b454-41bb-94bd-3b3c3751d58e",
+    "since": "2013-12-08T08:10:09+01:00",
+    "until": null
+  },
+  {
+    "id": "804c88cd-7e99-428f-a69a-f9d8a9695f74",
+    "apartmentId": "3de7c6a2-4125-4fec-832d-516e3669c6cc",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "ead5d95b-acc2-4f6a-890c-76856ff42275",
+    "since": "2014-12-06T18:00:32+01:00",
+    "until": "2015-07-16T18:00:32+02:00"
+  },
+  {
+    "id": "03e09075-ddf0-407a-a18f-4363399891b0",
+    "apartmentId": "3de7c6a2-4125-4fec-832d-516e3669c6cc",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "688c0a44-2f28-44a5-8613-8b7d2dbf6584",
+    "since": "2015-07-17T18:00:32+02:00",
+    "until": null
+  },
+  {
+    "id": "703d929a-136c-42e2-bc66-9ed8594dc772",
+    "apartmentId": "17a47212-519d-4ca4-a17b-e45a61298725",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "eed6cdeb-6ad6-4bb6-bd44-3b8caaf8b201",
+    "since": "2015-11-12T03:38:36+01:00",
+    "until": null
+  },
+  {
+    "id": "8717caa0-bfe6-4c8f-af79-8d210d1750c4",
+    "apartmentId": "814f21bd-6a3d-42cc-ae94-a5ae4fbe855b",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "5a008eea-ed41-4671-967c-cd3c61daf72b",
+    "since": "2015-02-15T06:33:47+01:00",
+    "until": null
+  },
+  {
+    "id": "9f0e9453-e038-48f5-9a5a-817960f0bfd8",
+    "apartmentId": "62ceb048-a3b0-450e-a4c2-1cb123676882",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "6fd99719-c629-4234-99aa-0a1a87f4bbad",
+    "since": "2016-08-02T21:31:59+02:00",
+    "until": "2017-11-10T21:31:59+01:00"
+  },
+  {
+    "id": "7b5f11ad-ecf6-4fe0-8f84-e4ad077c05c8",
+    "apartmentId": "62ceb048-a3b0-450e-a4c2-1cb123676882",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "30baccee-8599-4cd3-b09a-d991d3f45dbf",
+    "since": "2017-11-11T21:31:59+01:00",
+    "until": "2018-01-04T21:31:59+01:00"
+  },
+  {
+    "id": "060cfeef-e376-47ce-a036-b490d6b0aec8",
+    "apartmentId": "62ceb048-a3b0-450e-a4c2-1cb123676882",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "eb2094c9-b2be-455c-af37-dff6bf367e17",
+    "since": "2018-01-05T21:31:59+01:00",
+    "until": null
+  },
+  {
+    "id": "750f0c0c-f615-4b80-a0f9-fa14f5541801",
+    "apartmentId": "5a27aa59-b6dd-4837-af8d-c56120d83a07",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "5b694d25-a9a4-4fab-897d-f3c4f7746214",
+    "since": "2016-08-18T05:11:55+02:00",
+    "until": "2018-01-30T05:11:55+01:00"
+  },
+  {
+    "id": "d5efd311-aa21-4bcb-a135-7b1b5b858964",
+    "apartmentId": "5a27aa59-b6dd-4837-af8d-c56120d83a07",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "7003c9f6-a21c-4d96-871d-26f4fc784d4d",
+    "since": "2018-01-31T05:11:55+01:00",
+    "until": "2018-11-18T05:11:55+01:00"
+  },
+  {
+    "id": "1ed47fd9-5792-4554-b89b-79806aef1284",
+    "apartmentId": "5a27aa59-b6dd-4837-af8d-c56120d83a07",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "bdf4828b-3cac-40d9-8c3a-3dc109ea523e",
+    "since": "2018-11-19T05:11:55+01:00",
+    "until": null
+  },
+  {
+    "id": "4b5bb4b3-e88e-4cd0-89f9-54b2c3aeda72",
+    "apartmentId": "d5e07fc2-f7bb-499b-b592-42e916955e85",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "a11af736-f407-4e28-8d55-50b39daa77d0",
+    "since": "2016-07-01T15:20:10+02:00",
+    "until": "2017-11-19T15:20:10+01:00"
+  },
+  {
+    "id": "25609e51-5e86-4c85-8e1c-ce13df18aa64",
+    "apartmentId": "d5e07fc2-f7bb-499b-b592-42e916955e85",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "579701e8-57ad-48e5-bbba-e1dc1eb38daf",
+    "since": "2017-11-20T15:20:10+01:00",
+    "until": null
+  },
+  {
+    "id": "5c1dc0db-56d9-4b84-9abe-2cdd21729a00",
+    "apartmentId": "deb1cc1b-1d3e-48fd-bbf5-a1ad899d12e1",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "d0f5a8e8-6bae-4ad9-9bd7-61e8202a6b51",
+    "since": "2015-10-11T02:54:28+02:00",
+    "until": "2017-03-14T02:54:28+01:00"
+  },
+  {
+    "id": "e8c6bd4b-0c4e-48af-bc59-563e7240b3af",
+    "apartmentId": "deb1cc1b-1d3e-48fd-bbf5-a1ad899d12e1",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "99bbc71f-9237-4a0c-873e-1bf9d6aba508",
+    "since": "2017-03-15T02:54:28+01:00",
+    "until": null
+  },
+  {
+    "id": "f4520ad0-93d3-48ae-bd2f-283f10d92c84",
+    "apartmentId": "e38c52f2-1216-4d25-a913-4f1bc2c523b6",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "26540466-6990-4df3-8393-1e7b770096b5",
+    "since": "2016-10-10T01:37:16+02:00",
+    "until": "2017-02-27T01:37:16+01:00"
+  },
+  {
+    "id": "a81684bd-9807-43f1-b225-f98136c45db6",
+    "apartmentId": "e38c52f2-1216-4d25-a913-4f1bc2c523b6",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "0c670a89-bbea-4ac7-9998-fec04f581f83",
+    "since": "2017-02-28T01:37:16+01:00",
+    "until": "2017-10-06T01:37:16+02:00"
+  },
+  {
+    "id": "fbcb688c-21c2-4621-bab2-5bc8a1fecffd",
+    "apartmentId": "e38c52f2-1216-4d25-a913-4f1bc2c523b6",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "1d20d3dc-9997-4818-a086-2878e7959b64",
+    "since": "2017-10-07T01:37:16+02:00",
+    "until": null
+  },
+  {
+    "id": "4314d49e-fdff-40bc-85eb-b88ac47b6af7",
+    "apartmentId": "2a86f847-4523-4fad-ad84-a5f7fd9df485",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "fc115daa-49c3-4e1c-9f72-de6d0645232d",
+    "since": "2014-05-23T19:21:24+02:00",
+    "until": "2015-08-15T19:21:24+02:00"
+  },
+  {
+    "id": "b4c0193f-9cea-448f-aa12-f898fde91765",
+    "apartmentId": "2a86f847-4523-4fad-ad84-a5f7fd9df485",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "0e640aac-4f6e-438f-99cf-f7b22b15397d",
+    "since": "2015-08-16T19:21:24+02:00",
+    "until": "2015-12-16T19:21:24+01:00"
+  },
+  {
+    "id": "06e663c3-0025-4706-80b9-b2dfa8a7afd2",
+    "apartmentId": "2a86f847-4523-4fad-ad84-a5f7fd9df485",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "0c670a89-bbea-4ac7-9998-fec04f581f83",
+    "since": "2015-12-17T19:21:24+01:00",
+    "until": null
+  },
+  {
+    "id": "f3db9376-e55d-4565-bcb2-359f05eb2675",
+    "apartmentId": "67061e3f-49d3-414c-a166-83bb9aa61b1a",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "3e5fe6be-0519-4cb7-b29d-a7764c6a5fa1",
+    "since": "2016-04-17T02:24:39+02:00",
+    "until": null
+  },
+  {
+    "id": "f7b292f7-654c-4115-8006-9a91da5c456b",
+    "apartmentId": "084036d9-b22f-4e75-86b1-99b4156a3989",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "5f18601d-cb69-4bb0-9575-4673b5e3c191",
+    "since": "2015-01-23T20:15:16+01:00",
+    "until": "2015-12-05T20:15:16+01:00"
+  },
+  {
+    "id": "fad3cab3-440b-4900-a1cc-764dbb53f620",
+    "apartmentId": "084036d9-b22f-4e75-86b1-99b4156a3989",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "ae8f391b-2087-4b30-a057-a05d7b299666",
+    "since": "2015-12-06T20:15:16+01:00",
+    "until": null
+  },
+  {
+    "id": "9930751b-c1b7-4b38-81dd-d838bf0802b4",
+    "apartmentId": "3f588341-c5ec-46f0-84b5-c91b86448b60",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "566f102c-d6af-446a-8519-aeef092f57db",
+    "since": "2013-11-19T09:21:14+01:00",
+    "until": "2015-06-28T09:21:14+02:00"
+  },
+  {
+    "id": "42df35cc-3a3c-4eba-94be-983336b09e8b",
+    "apartmentId": "3f588341-c5ec-46f0-84b5-c91b86448b60",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "4e369d74-5ab3-4480-ba91-8384a2cb26dc",
+    "since": "2015-06-29T09:21:14+02:00",
+    "until": null
+  },
+  {
+    "id": "0aa4640e-8645-4ced-9323-0ea1d16b533f",
+    "apartmentId": "4c00cce3-7ac0-4e76-9cde-4cb24e3adf3e",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "4ca83354-33d2-4b8b-9a9a-6957a388a78a",
+    "since": "2014-12-26T10:17:56+01:00",
+    "until": "2016-04-11T10:17:56+02:00"
+  },
+  {
+    "id": "f79d5930-7c13-463d-8ffa-1cc3658681f0",
+    "apartmentId": "4c00cce3-7ac0-4e76-9cde-4cb24e3adf3e",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "98be7d87-8fb5-4793-a342-9e209bfe1132",
+    "since": "2016-04-12T10:17:56+02:00",
+    "until": "2017-07-04T10:17:56+02:00"
+  },
+  {
+    "id": "6821d36f-af8b-47ba-b1c9-3c4715ce99f1",
+    "apartmentId": "4c00cce3-7ac0-4e76-9cde-4cb24e3adf3e",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "98be7d87-8fb5-4793-a342-9e209bfe1132",
+    "since": "2017-07-05T10:17:56+02:00",
+    "until": null
+  },
+  {
+    "id": "85636b1b-ff14-4dcf-8400-54ba8dfecec6",
+    "apartmentId": "d32a1ec7-8960-414e-9d0f-2364749c506d",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "e54eb68b-ac82-4439-bc57-5fba977c5f49",
+    "since": "2015-06-10T12:28:52+02:00",
+    "until": "2017-01-12T12:28:52+01:00"
+  },
+  {
+    "id": "a3be3f2e-b61f-4c6a-8a50-f60db8e783dc",
+    "apartmentId": "d32a1ec7-8960-414e-9d0f-2364749c506d",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "e54eb68b-ac82-4439-bc57-5fba977c5f49",
+    "since": "2017-01-13T12:28:52+01:00",
+    "until": "2017-02-22T12:28:52+01:00"
+  },
+  {
+    "id": "4089ae71-7db2-4ff8-b502-41cecb781342",
+    "apartmentId": "d32a1ec7-8960-414e-9d0f-2364749c506d",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "f922c935-e57b-4fcb-83c5-62e11c4a4e86",
+    "since": "2017-02-23T12:28:52+01:00",
+    "until": null
+  },
+  {
+    "id": "19d6300d-0e26-40ab-9b5e-980bc400a667",
+    "apartmentId": "8ce55ecc-2ba2-4830-9416-0915fa7ef654",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "bf61da89-6a1d-4cec-acdc-cb7587dee035",
+    "since": "2013-12-01T11:06:57+01:00",
+    "until": "2014-11-18T11:06:57+01:00"
+  },
+  {
+    "id": "f52152a9-1ec0-4fed-be3e-fb84735129d1",
+    "apartmentId": "8ce55ecc-2ba2-4830-9416-0915fa7ef654",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "c7c608c7-2701-4544-bc2f-51b5727750ad",
+    "since": "2014-11-19T11:06:57+01:00",
+    "until": "2015-05-26T11:06:57+02:00"
+  },
+  {
+    "id": "33a82817-e49e-4a00-a526-529d1033e7bf",
+    "apartmentId": "8ce55ecc-2ba2-4830-9416-0915fa7ef654",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "3a4e0f31-2e09-4553-9c79-4f8d23f0ca91",
+    "since": "2015-05-27T11:06:57+02:00",
+    "until": null
+  },
+  {
+    "id": "20009a02-bba4-4feb-98b8-4de114c0d008",
+    "apartmentId": "4ba21eb3-4869-4438-884f-1fe82ba9e37d",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "ae68eba1-30ae-48c0-acdd-2a875f76f7f1",
+    "since": "2014-07-02T21:34:09+02:00",
+    "until": null
+  },
+  {
+    "id": "3b88b243-a809-4c43-a8d6-bb4f2b2fec02",
+    "apartmentId": "42ee2853-da40-4cb2-b4ac-ec559534b2a6",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "3855fa3b-5dab-446a-a403-79c37fcf99a2",
+    "since": "2014-05-07T19:38:47+02:00",
+    "until": "2014-07-17T19:38:47+02:00"
+  },
+  {
+    "id": "fe74119e-acbc-4420-8d81-54ed07e87ade",
+    "apartmentId": "42ee2853-da40-4cb2-b4ac-ec559534b2a6",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "fba396b3-1700-406a-b2ab-58baa5593a12",
+    "since": "2014-07-18T19:38:47+02:00",
+    "until": "2015-11-12T19:38:47+01:00"
+  },
+  {
+    "id": "cb60752d-8667-4dce-9f30-1b78dc2a1f0c",
+    "apartmentId": "42ee2853-da40-4cb2-b4ac-ec559534b2a6",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "1665b890-512c-45bb-88b5-8479767e1a14",
+    "since": "2015-11-13T19:38:47+01:00",
+    "until": null
+  },
+  {
+    "id": "58fb7b3d-3a2a-4a6e-9f55-d1c7d0d1c846",
+    "apartmentId": "3d230aa2-d803-49ae-a65f-d8b3d467f916",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "93be14b8-48a2-4a77-919a-2e4e24b8a77f",
+    "since": "2015-01-03T21:07:31+01:00",
+    "until": "2016-06-22T21:07:31+02:00"
+  },
+  {
+    "id": "6b392c39-eb9a-4936-9aba-2c8a3afaa31b",
+    "apartmentId": "3d230aa2-d803-49ae-a65f-d8b3d467f916",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "0b311ce0-0741-43e2-8edc-58073c8d0c1f",
+    "since": "2016-06-23T21:07:31+02:00",
+    "until": null
+  },
+  {
+    "id": "8881f809-fab7-465b-95bc-8ab1481315e4",
+    "apartmentId": "8bc52787-6a80-4659-a704-709f4a284b69",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "06917b56-a6ab-4b2d-b7eb-d43557b704bf",
+    "since": "2014-10-08T17:10:12+02:00",
+    "until": "2015-04-15T17:10:12+02:00"
+  },
+  {
+    "id": "e97a2267-5938-4b8b-9e85-d75509a2646e",
+    "apartmentId": "8bc52787-6a80-4659-a704-709f4a284b69",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "bc45a106-5e1a-4c45-a7ef-801e50c3bbc1",
+    "since": "2015-04-16T17:10:12+02:00",
+    "until": "2016-04-16T17:10:12+02:00"
+  },
+  {
+    "id": "79abd7e7-c8c0-4fd5-9519-ed4b1b25aacd",
+    "apartmentId": "8bc52787-6a80-4659-a704-709f4a284b69",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "7c0c93cb-2f28-4cdd-b8bd-1fd7b68c6881",
+    "since": "2016-04-17T17:10:12+02:00",
+    "until": null
+  },
+  {
+    "id": "893dbee0-4bf8-4edb-be09-b790a5e852a8",
+    "apartmentId": "7a012ea1-bd10-48df-9bb6-b61a3b4a6cb7",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "dd5e1f92-6006-444c-85d9-def51e50dc76",
+    "since": "2014-12-29T19:05:30+01:00",
+    "until": "2015-04-29T19:05:30+02:00"
+  },
+  {
+    "id": "5723394b-df4e-4d6b-9696-25853e534883",
+    "apartmentId": "7a012ea1-bd10-48df-9bb6-b61a3b4a6cb7",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "96fbaea6-c4b8-48eb-a12e-68938a1f3977",
+    "since": "2015-04-30T19:05:30+02:00",
+    "until": "2015-06-07T19:05:30+02:00"
+  },
+  {
+    "id": "012a184f-5fea-4ab4-9915-a799a04d46ec",
+    "apartmentId": "7a012ea1-bd10-48df-9bb6-b61a3b4a6cb7",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "fb242b47-d2c0-4139-b0a8-3a3b0034d28a",
+    "since": "2015-06-08T19:05:30+02:00",
+    "until": null
+  },
+  {
+    "id": "a23d0017-4100-4ae3-981d-45ecfe70c579",
+    "apartmentId": "726f038f-3810-4c70-a5c9-275ce3b2af1c",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "d9fd4789-5925-4934-9fa3-d3d1f57241ce",
+    "since": "2015-10-26T12:13:48+01:00",
+    "until": "2017-04-07T12:13:48+02:00"
+  },
+  {
+    "id": "65314207-0e0b-43af-b872-598a890aa5bc",
+    "apartmentId": "726f038f-3810-4c70-a5c9-275ce3b2af1c",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "9c77bf8b-810b-4667-9800-bc5e7925f7d2",
+    "since": "2017-04-08T12:13:48+02:00",
+    "until": "2018-01-27T12:13:48+01:00"
+  },
+  {
+    "id": "04abd81f-91c4-4833-b95f-40d1a41f6925",
+    "apartmentId": "726f038f-3810-4c70-a5c9-275ce3b2af1c",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "a895ca90-24dd-4c1c-9ca1-17bd5c98877e",
+    "since": "2018-01-28T12:13:48+01:00",
+    "until": null
+  },
+  {
+    "id": "ac88790e-7b81-4172-9c7f-bee2d27243ab",
+    "apartmentId": "12985e8d-bae0-48f6-8a66-7cd6dc08b3cd",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "4959b6cd-248f-4477-8fcf-77d1db251574",
+    "since": "2013-11-06T15:55:12+01:00",
+    "until": "2014-06-05T15:55:12+02:00"
+  },
+  {
+    "id": "22c8dcf9-7f0a-4f97-9b0f-c4cada16a822",
+    "apartmentId": "12985e8d-bae0-48f6-8a66-7cd6dc08b3cd",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "f3f6520f-d8c9-4ef7-ae73-933193f3a9ca",
+    "since": "2014-06-06T15:55:12+02:00",
+    "until": null
+  },
+  {
+    "id": "e25345fd-540e-4ffc-80ff-15544f7a159c",
+    "apartmentId": "6013d55c-72cb-416d-917d-96d88d7b3bf6",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "d14502e8-48b0-4fe1-a9db-f9a1a3ac8127",
+    "since": "2016-10-01T09:20:20+02:00",
+    "until": null
+  },
+  {
+    "id": "b6cb1424-6b2e-46ae-a1f7-84b96d641224",
+    "apartmentId": "a9047c23-c2cd-4e67-9042-d7d76ccbfc66",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "db0c066b-595c-468f-bc4b-2f75806da611",
+    "since": "2016-03-28T20:55:18+02:00",
+    "until": "2017-08-07T20:55:18+02:00"
+  },
+  {
+    "id": "5530fde3-9fc5-44f5-8269-1bbff0a3afa5",
+    "apartmentId": "a9047c23-c2cd-4e67-9042-d7d76ccbfc66",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "01eccc66-e314-491d-8b9c-74f3c2f31fc2",
+    "since": "2017-08-08T20:55:18+02:00",
+    "until": null
+  },
+  {
+    "id": "f474e270-5b38-4f42-9c8c-67cf7b06ddcd",
+    "apartmentId": "030d7cbe-a961-4e6f-89db-0824117dd2cf",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "506b93ff-9284-4238-b355-75a5349f6c15",
+    "since": "2014-10-29T20:04:20+01:00",
+    "until": "2015-05-24T20:04:20+02:00"
+  },
+  {
+    "id": "ca009dbe-5e7d-4a0f-b4ff-e6bbedef1a8e",
+    "apartmentId": "030d7cbe-a961-4e6f-89db-0824117dd2cf",
+    "accountingOrganizationId": "f3963886-1d42-4c7f-8d15-dd003c0d3e04",
+    "superiorPartyId": "09bf32a5-5de5-448c-b4d0-35ccb67d710b",
+    "subordinatePartyId": "d9fd4789-5925-4934-9fa3-d3d1f57241ce",
+    "since": "2015-05-25T20:04:20+02:00",
+    "until": null
+  }
+]

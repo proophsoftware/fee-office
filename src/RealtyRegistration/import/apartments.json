@@ -1,0 +1,1409 @@
+[
+  {
+    "id": "d5a63426-99c0-47c6-9805-5930f017027a",
+    "entranceId": "b76b8675-92b2-46c0-938f-e1a2a831464a",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2013-10-27T07:29:44+01:00",
+        "value": 53
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2013-10-27T07:29:44+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "fe48f477-4942-4681-8fb8-107e0db20c1b",
+    "entranceId": "b76b8675-92b2-46c0-938f-e1a2a831464a",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-12-13T22:05:23+01:00",
+        "value": 84
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-12-13T22:05:23+01:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "43e60daa-5d6a-4d39-a858-ac98d59537ef",
+    "entranceId": "5b9807ad-7dfd-43be-87f8-da34e978b84d",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-09-11T19:37:05+02:00",
+        "value": 93
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-09-11T19:37:05+02:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-03-03T19:37:05+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-09-28T19:37:05+02:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "be937e4e-d849-4478-a93f-e7e44cd61d0d",
+    "entranceId": "5b9807ad-7dfd-43be-87f8-da34e978b84d",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-08-07T22:46:23+02:00",
+        "value": 79
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-08-07T22:46:23+02:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-07-09T22:46:23+02:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "96998521-1671-4704-80ff-efb6e17bba9f",
+    "entranceId": "5b9807ad-7dfd-43be-87f8-da34e978b84d",
+    "apartmentNumber": 3,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-07-10T16:02:59+02:00",
+        "value": 92
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-07-10T16:02:59+02:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "bf6730ee-fee5-467f-a3d0-9511eb536504",
+    "entranceId": "5b9807ad-7dfd-43be-87f8-da34e978b84d",
+    "apartmentNumber": 4,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-04-09T16:57:24+02:00",
+        "value": 77
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-04-09T16:57:24+02:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-12-14T16:57:24+01:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "56f21309-509f-45b1-94f9-75013651a3d7",
+    "entranceId": "5b9807ad-7dfd-43be-87f8-da34e978b84d",
+    "apartmentNumber": 5,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-02-22T02:03:22+01:00",
+        "value": 82
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-02-22T02:03:22+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-09-20T02:03:22+02:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-06-24T02:03:22+02:00",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "d96255fa-7c1e-4fed-a827-07d563223f7e",
+    "entranceId": "5b9807ad-7dfd-43be-87f8-da34e978b84d",
+    "apartmentNumber": 6,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-05-20T14:21:28+02:00",
+        "value": 82
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-05-20T14:21:28+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-12-26T14:21:28+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "509e4f56-cb14-49ca-b796-48d443555052",
+    "entranceId": "582bc90f-dd5a-4709-8771-bc183dae9e86",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-08-30T02:11:29+02:00",
+        "value": 52
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-08-30T02:11:29+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-03-15T02:11:29+01:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "85874d04-3d40-4e83-9cc3-46612deb1143",
+    "entranceId": "582bc90f-dd5a-4709-8771-bc183dae9e86",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-04-27T16:22:06+02:00",
+        "value": 80
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-04-27T16:22:06+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-10-04T16:22:06+02:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "016e81e5-2a37-46a7-ac41-dec8062d82ad",
+    "entranceId": "582bc90f-dd5a-4709-8771-bc183dae9e86",
+    "apartmentNumber": 3,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-11-13T12:58:27+01:00",
+        "value": 96
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-11-13T12:58:27+01:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-02-20T12:58:27+01:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-09-28T12:58:27+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-12-09T12:58:27+01:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "c0e875a1-7e6e-4e93-be1b-ac5f783ed0dd",
+    "entranceId": "582bc90f-dd5a-4709-8771-bc183dae9e86",
+    "apartmentNumber": 4,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-07-15T01:12:59+02:00",
+        "value": 71
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-07-15T01:12:59+02:00",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "f18946c4-2197-4db1-ad6d-69b6f26e9e2c",
+    "entranceId": "582bc90f-dd5a-4709-8771-bc183dae9e86",
+    "apartmentNumber": 5,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-05-19T07:08:05+02:00",
+        "value": 98
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-05-19T07:08:05+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-07-08T07:08:05+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-12-02T07:08:05+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "40a99180-03b4-422d-8c99-0d40f8b3a5c8",
+    "entranceId": "582bc90f-dd5a-4709-8771-bc183dae9e86",
+    "apartmentNumber": 6,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-09-12T09:27:01+02:00",
+        "value": 72
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-09-12T09:27:01+02:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-03-17T09:27:01+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "0b28a546-a772-4ecb-b1d5-c5f0d3db5abb",
+    "entranceId": "582bc90f-dd5a-4709-8771-bc183dae9e86",
+    "apartmentNumber": 7,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-08-19T00:03:28+02:00",
+        "value": 96
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-08-19T00:03:28+02:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-11-30T00:03:28+01:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "524c3981-9585-4471-bbf6-65656cdf3fd3",
+    "entranceId": "9c85069f-ec02-4d7c-88d3-60994d1dcb6a",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-09-23T10:39:40+02:00",
+        "value": 63
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-09-23T10:39:40+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-02-05T10:39:40+01:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-03-20T10:39:40+01:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "9ea91e66-aba6-46cc-a80f-44f82c486d78",
+    "entranceId": "9c85069f-ec02-4d7c-88d3-60994d1dcb6a",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-08-22T03:13:22+02:00",
+        "value": 92
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-08-22T03:13:22+02:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "a96160e2-695d-4a87-8508-d5f3c61d08e8",
+    "entranceId": "9c85069f-ec02-4d7c-88d3-60994d1dcb6a",
+    "apartmentNumber": 3,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-05-04T13:33:10+02:00",
+        "value": 64
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-05-04T13:33:10+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-10-23T13:33:10+02:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "732e3982-4ea2-460f-8e78-a4421f080717",
+    "entranceId": "9c85069f-ec02-4d7c-88d3-60994d1dcb6a",
+    "apartmentNumber": 4,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-03-07T03:17:21+01:00",
+        "value": 100
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-03-07T03:17:21+01:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-04-16T03:17:21+02:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-06-05T03:17:21+02:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "4484f556-da5b-41d6-921f-ae24602b2ae2",
+    "entranceId": "9c85069f-ec02-4d7c-88d3-60994d1dcb6a",
+    "apartmentNumber": 5,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-03-31T01:34:15+02:00",
+        "value": 55
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-03-31T01:34:15+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-07-10T01:34:15+02:00",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "e401ada5-03ce-4094-8378-933a911f2ba8",
+    "entranceId": "9c85069f-ec02-4d7c-88d3-60994d1dcb6a",
+    "apartmentNumber": 6,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-08-29T17:05:24+02:00",
+        "value": 57
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-08-29T17:05:24+02:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2018-04-03T17:05:24+02:00",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "6d2ba19d-87d5-473f-b317-48e074d0cc4b",
+    "entranceId": "9c85069f-ec02-4d7c-88d3-60994d1dcb6a",
+    "apartmentNumber": 7,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-09-01T13:03:49+02:00",
+        "value": 74
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-09-01T13:03:49+02:00",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "b289c48a-0e93-411b-82e2-82d1334e7896",
+    "entranceId": "9c85069f-ec02-4d7c-88d3-60994d1dcb6a",
+    "apartmentNumber": 8,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-09-09T13:14:38+02:00",
+        "value": 97
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-09-09T13:14:38+02:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-09-13T13:14:38+02:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-08-05T13:14:38+02:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "05033719-d9f2-40a7-8f2f-40d0e06ec836",
+    "entranceId": "16e9c542-6750-4950-ac4d-31e64a7a54f4",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-08-29T15:06:37+02:00",
+        "value": 82
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-08-29T15:06:37+02:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-06-08T15:06:37+02:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "b19b0b8d-cc76-4ade-9d3d-372bd854ce0e",
+    "entranceId": "16e9c542-6750-4950-ac4d-31e64a7a54f4",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-08-04T03:28:43+02:00",
+        "value": 83
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-08-04T03:28:43+02:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2018-01-22T03:28:43+01:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2019-01-11T03:28:43+01:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2020-03-05T03:28:43+01:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2021-06-19T03:28:43+02:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "b91a98d3-1d2a-4f00-a8d4-b8c9601a58fe",
+    "entranceId": "16e9c542-6750-4950-ac4d-31e64a7a54f4",
+    "apartmentNumber": 3,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-12-25T06:15:04+01:00",
+        "value": 83
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-12-25T06:15:04+01:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-03-18T06:15:04+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-07-04T06:15:04+02:00",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "f1b8aa77-7ede-4fd4-9195-4d72caeca60d",
+    "entranceId": "16e9c542-6750-4950-ac4d-31e64a7a54f4",
+    "apartmentNumber": 4,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-11-26T17:38:48+01:00",
+        "value": 56
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-11-26T17:38:48+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-01-09T17:38:48+01:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-06-30T17:38:48+02:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2019-01-11T17:38:48+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "d80e4a0e-4e09-4dcc-9c1f-1436a2e9b51c",
+    "entranceId": "16e9c542-6750-4950-ac4d-31e64a7a54f4",
+    "apartmentNumber": 5,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-09-07T15:02:44+02:00",
+        "value": 65
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-09-07T15:02:44+02:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-12-14T15:02:44+01:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "88fa6f08-3ccf-475c-99e3-55fa68effa0d",
+    "entranceId": "16e9c542-6750-4950-ac4d-31e64a7a54f4",
+    "apartmentNumber": 6,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-09-18T13:31:08+02:00",
+        "value": 72
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-09-18T13:31:08+02:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-02-09T13:31:08+01:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-11-05T13:31:08+01:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "f9ffaadb-d16d-44cc-9361-db67875d83ff",
+    "entranceId": "02edade5-e6c5-43a9-8510-1c8af422baa7",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-05-26T01:01:45+02:00",
+        "value": 80
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-05-26T01:01:45+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-10-13T01:01:45+02:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "c6d77e01-2312-424b-91ad-0c314cfcada7",
+    "entranceId": "02edade5-e6c5-43a9-8510-1c8af422baa7",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2013-12-08T08:10:09+01:00",
+        "value": 63
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2013-12-08T08:10:09+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-02-04T08:10:09+01:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-01-10T08:10:09+01:00",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "3de7c6a2-4125-4fec-832d-516e3669c6cc",
+    "entranceId": "02edade5-e6c5-43a9-8510-1c8af422baa7",
+    "apartmentNumber": 3,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-12-06T18:00:32+01:00",
+        "value": 89
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-12-06T18:00:32+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-04-22T18:00:32+02:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "17a47212-519d-4ca4-a17b-e45a61298725",
+    "entranceId": "02edade5-e6c5-43a9-8510-1c8af422baa7",
+    "apartmentNumber": 4,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-11-12T03:38:36+01:00",
+        "value": 64
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-11-12T03:38:36+01:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-02-20T03:38:36+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-02-22T03:38:36+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2018-01-18T03:38:36+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2018-09-10T03:38:36+02:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "814f21bd-6a3d-42cc-ae94-a5ae4fbe855b",
+    "entranceId": "02edade5-e6c5-43a9-8510-1c8af422baa7",
+    "apartmentNumber": 5,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-02-15T06:33:47+01:00",
+        "value": 98
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-02-15T06:33:47+01:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-01-06T06:33:47+01:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-07-01T06:33:47+02:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2018-01-31T06:33:47+01:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "62ceb048-a3b0-450e-a4c2-1cb123676882",
+    "entranceId": "02edade5-e6c5-43a9-8510-1c8af422baa7",
+    "apartmentNumber": 6,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-08-02T21:31:59+02:00",
+        "value": 88
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-08-02T21:31:59+02:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "5a27aa59-b6dd-4837-af8d-c56120d83a07",
+    "entranceId": "02edade5-e6c5-43a9-8510-1c8af422baa7",
+    "apartmentNumber": 7,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-08-18T05:11:55+02:00",
+        "value": 83
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-08-18T05:11:55+02:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-08-24T05:11:55+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2018-01-19T05:11:55+01:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "d5e07fc2-f7bb-499b-b592-42e916955e85",
+    "entranceId": "563f341e-66df-44f2-9096-93ee376b36f3",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-07-01T15:20:10+02:00",
+        "value": 60
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-07-01T15:20:10+02:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-07-22T15:20:10+02:00",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "deb1cc1b-1d3e-48fd-bbf5-a1ad899d12e1",
+    "entranceId": "563f341e-66df-44f2-9096-93ee376b36f3",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-10-11T02:54:28+02:00",
+        "value": 55
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-10-11T02:54:28+02:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-08-19T02:54:28+02:00",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "e38c52f2-1216-4d25-a913-4f1bc2c523b6",
+    "entranceId": "563f341e-66df-44f2-9096-93ee376b36f3",
+    "apartmentNumber": 3,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-10-10T01:37:16+02:00",
+        "value": 86
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-10-10T01:37:16+02:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-10-04T01:37:16+02:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "2a86f847-4523-4fad-ad84-a5f7fd9df485",
+    "entranceId": "563f341e-66df-44f2-9096-93ee376b36f3",
+    "apartmentNumber": 4,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-05-23T19:21:24+02:00",
+        "value": 87
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-05-23T19:21:24+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-12-30T19:21:24+01:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-04-20T19:21:24+02:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-10-06T19:21:24+02:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2018-01-17T19:21:24+01:00",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "67061e3f-49d3-414c-a166-83bb9aa61b1a",
+    "entranceId": "563f341e-66df-44f2-9096-93ee376b36f3",
+    "apartmentNumber": 5,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-04-17T02:24:39+02:00",
+        "value": 58
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-04-17T02:24:39+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-06-11T02:24:39+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-09-30T02:24:39+02:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "084036d9-b22f-4e75-86b1-99b4156a3989",
+    "entranceId": "563f341e-66df-44f2-9096-93ee376b36f3",
+    "apartmentNumber": 6,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-01-23T20:15:16+01:00",
+        "value": 87
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-01-23T20:15:16+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-04-09T20:15:16+02:00",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "3f588341-c5ec-46f0-84b5-c91b86448b60",
+    "entranceId": "563f341e-66df-44f2-9096-93ee376b36f3",
+    "apartmentNumber": 7,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2013-11-19T09:21:14+01:00",
+        "value": 96
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2013-11-19T09:21:14+01:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-11-23T09:21:14+01:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-03-18T09:21:14+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-09-17T09:21:14+02:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "4c00cce3-7ac0-4e76-9cde-4cb24e3adf3e",
+    "entranceId": "d552eb8d-8042-4e78-831a-8648f6a741ef",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-12-26T10:17:56+01:00",
+        "value": 82
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-12-26T10:17:56+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-05-19T10:17:56+02:00",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "d32a1ec7-8960-414e-9d0f-2364749c506d",
+    "entranceId": "d552eb8d-8042-4e78-831a-8648f6a741ef",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-06-10T12:28:52+02:00",
+        "value": 82
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-06-10T12:28:52+02:00",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "8ce55ecc-2ba2-4830-9416-0915fa7ef654",
+    "entranceId": "d552eb8d-8042-4e78-831a-8648f6a741ef",
+    "apartmentNumber": 3,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2013-12-01T11:06:57+01:00",
+        "value": 81
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2013-12-01T11:06:57+01:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-01-04T11:06:57+01:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-09-18T11:06:57+02:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "4ba21eb3-4869-4438-884f-1fe82ba9e37d",
+    "entranceId": "d552eb8d-8042-4e78-831a-8648f6a741ef",
+    "apartmentNumber": 4,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-07-02T21:34:09+02:00",
+        "value": 79
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-07-02T21:34:09+02:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-10-28T21:34:09+01:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-08-10T21:34:09+02:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "42ee2853-da40-4cb2-b4ac-ec559534b2a6",
+    "entranceId": "d552eb8d-8042-4e78-831a-8648f6a741ef",
+    "apartmentNumber": 5,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-05-07T19:38:47+02:00",
+        "value": 81
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-05-07T19:38:47+02:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-12-16T19:38:47+01:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-08-23T19:38:47+02:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-05-23T19:38:47+02:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-12-27T19:38:47+01:00",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "3d230aa2-d803-49ae-a65f-d8b3d467f916",
+    "entranceId": "d552eb8d-8042-4e78-831a-8648f6a741ef",
+    "apartmentNumber": 6,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-01-03T21:07:31+01:00",
+        "value": 95
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-01-03T21:07:31+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-11-04T21:07:31+01:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-01-23T21:07:31+01:00",
+        "value": 2
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-01-14T21:07:31+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "8bc52787-6a80-4659-a704-709f4a284b69",
+    "entranceId": "847976e0-eaec-458c-9b95-c43887edacfe",
+    "apartmentNumber": 1,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-10-08T17:10:12+02:00",
+        "value": 85
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-10-08T17:10:12+02:00",
+        "value": 3
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-01-16T17:10:12+01:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-11-08T17:10:12+01:00",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "7a012ea1-bd10-48df-9bb6-b61a3b4a6cb7",
+    "entranceId": "847976e0-eaec-458c-9b95-c43887edacfe",
+    "apartmentNumber": 2,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-12-29T19:05:30+01:00",
+        "value": 87
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-12-29T19:05:30+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "726f038f-3810-4c70-a5c9-275ce3b2af1c",
+    "entranceId": "847976e0-eaec-458c-9b95-c43887edacfe",
+    "apartmentNumber": 3,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2015-10-26T12:13:48+01:00",
+        "value": 94
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-10-26T12:13:48+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-10-05T12:13:48+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-10-04T12:13:48+02:00",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "12985e8d-bae0-48f6-8a66-7cd6dc08b3cd",
+    "entranceId": "847976e0-eaec-458c-9b95-c43887edacfe",
+    "apartmentNumber": 4,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2013-11-06T15:55:12+01:00",
+        "value": 98
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2013-11-06T15:55:12+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-06-10T15:55:12+02:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-12-07T15:55:12+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-02-21T15:55:12+01:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2018-02-05T15:55:12+01:00",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "6013d55c-72cb-416d-917d-96d88d7b3bf6",
+    "entranceId": "847976e0-eaec-458c-9b95-c43887edacfe",
+    "apartmentNumber": 5,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-10-01T09:20:20+02:00",
+        "value": 92
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-10-01T09:20:20+02:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-12-22T09:20:20+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "a9047c23-c2cd-4e67-9042-d7d76ccbfc66",
+    "entranceId": "847976e0-eaec-458c-9b95-c43887edacfe",
+    "apartmentNumber": 6,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2016-03-28T20:55:18+02:00",
+        "value": 58
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-03-28T20:55:18+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-10-07T20:55:18+02:00",
+        "value": 6
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2019-01-06T20:55:18+01:00",
+        "value": 1
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2020-01-03T20:55:18+01:00",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "030d7cbe-a961-4e6f-89db-0824117dd2cf",
+    "entranceId": "847976e0-eaec-458c-9b95-c43887edacfe",
+    "apartmentNumber": 7,
+    "attributeChanges": [
+      {
+        "apartmentAttributeId": "f1c7fabc-4685-4329-99d3-64af9a6a7cc9",
+        "date": "2014-10-29T20:04:20+01:00",
+        "value": 96
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2014-10-29T20:04:20+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2015-12-16T20:04:20+01:00",
+        "value": 5
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2016-08-07T20:04:20+02:00",
+        "value": 4
+      },
+      {
+        "apartmentAttributeId": "7489e2b5-42ee-4ae6-b023-8cf791188b13",
+        "date": "2017-12-07T20:04:20+01:00",
+        "value": 3
+      }
+    ]
+  }
+]

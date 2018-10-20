@@ -73,7 +73,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "AppTest\\": "test/AppTest/"
+            "AppTest\\": "test/AppTest/",
+            "FeeOfficeTest\\RealtyRegistration\\": "src/RealtyRegistration/tests/"
         }
     },
     "scripts": {

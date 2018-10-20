@@ -9,6 +9,9 @@ use App\Infrastructure\ServiceBus\CommandBus;
 use App\Infrastructure\ServiceBus\ErrorHandler;
 use App\Infrastructure\ServiceBus\EventBus;
 use App\Infrastructure\ServiceBus\QueryBus;
+use FeeOffice\RealtyRegistration\Infrastructure\Guard\AggregateExists;
+use FeeOffice\RealtyRegistration\Infrastructure\PreProcessor\AddEntrance;
+use FeeOffice\RealtyRegistration\Model\Building\BuildingExistsGuard;
 use Prooph\Common\Event\ProophActionEventEmitter;
 use Prooph\EventMachine\Container\ContainerChain;
 use Prooph\EventMachine\Container\EventMachineContainer;
@@ -23,6 +26,7 @@ use Prooph\EventStore\Pdo\PersistenceStrategy;
 use Prooph\EventStore\Pdo\PostgresEventStore;
 use Prooph\EventStore\Pdo\Projection\PostgresProjectionManager;
 use Prooph\EventStore\Projection\ProjectionManager;
+use Prooph\EventStore\StreamName;
 use Prooph\EventStore\TransactionalActionEventEmitterEventStore;
 use Psr\Container\ContainerInterface;
 
@@ -47,6 +51,27 @@ final class ServiceFactory
     public function setContainer(ContainerInterface $container): void
     {
         $this->container = $container;
+    }
+
+    //Command pre processor
+    public function addEntrancePreProcessor(): AddEntrance
+    {
+        return $this->makeSingleton(AddEntrance::class, function () {
+            return new AddEntrance($this->buildingExistsGuard());
+        });
+    }
+
+    //Guards
+    public function buildingExistsGuard(): BuildingExistsGuard
+    {
+        return $this->aggregateExistsGuard();
+    }
+
+    public function aggregateExistsGuard(): AggregateExists
+    {
+        return $this->makeSingleton(AggregateExists::class, function () {
+            return new AggregateExists($this->eventStore(), new StreamName($this->eventMachine()->writeModelStreamName()));
+        });
     }
 
     //HTTP endpoints

@@ -26,4 +26,8 @@ class Payload
 
     const BUILDING_ID = 'buildingId';
     const NAME = 'name';
+    const ENTRANCE_ID = 'entranceId';
+    const ADDRESS = 'address';
+    const APARTMENT_ID = 'apartmentId';
+    const APARTMENT_NUMBER = 'apartmentNumber';
 }

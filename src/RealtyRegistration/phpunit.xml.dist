@@ -5,7 +5,7 @@
          colors="true">
     <testsuites>
         <testsuite name="FeeOffice\\RealtyRegistration\\Tests">
-            <directory>./test</directory>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 

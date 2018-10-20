@@ -12,34 +12,24 @@ use Prooph\EventMachine\JsonSchema\Type\UuidType;
 
 class Schema
 {
-    /**
-     * This class acts as a central place for all schema related information.
-     * In event machine you use JSON Schema for message validation.
-     *
-     * It is a good idea to use static methods for schema definitions so that you don't need to repeat them when
-     * defining message payloads or query return types.
-     *
-     * //Wrap basic JSON schema types with validation rules by domain specific types that you use in other schema definitions
-     *
-     * public static function user(): TypeRef
-     * {
-     *      return JsonSchema::typeRef(Type::USER);
-     * }
-     *
-     * public static function userId(): UuidType
-     * {
-     *      return JsonSchema::uuid();
-     * }
-     *
-     * public static function username(): StringType
-     * {
-     *      return JsonSchema::string(['minLength' => 1])
-     * }
-     */
-
     public static function buildingId(): UuidType
     {
         return JsonSchema::uuid();
+    }
+
+    public static function entranceId(): UuidType
+    {
+        return JsonSchema::uuid();
+    }
+
+    public static function apartmentId(): UuidType
+    {
+        return JsonSchema::uuid();
+    }
+
+    public static function entranceAddress(): StringType
+    {
+        return JsonSchema::string();
     }
 
     public static function buildingName(): StringType
@@ -60,11 +50,6 @@ class Schema
     public static function buildingList(): ArrayType
     {
         return JsonSchema::array(self::building());
-    }
-
-    public static function username(): StringType
-    {
-        return JsonSchema::string()->withMinLength(1);
     }
 
     /**
