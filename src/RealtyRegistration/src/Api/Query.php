@@ -28,10 +28,11 @@ class Query implements EventMachineDescription
     /**
      * Default Query, used to perform health checks using the messagebox endpoint
      */
-    const HEALTH_CHECK = 'HealthCheck';
+    const HEALTH_CHECK = Message::CTX.'HealthCheck';
 
-    const BUILDING = 'Building';
-    const BUILDINGS = 'Buildings';
+    const BUILDING = Message::CTX.'Building';
+    const BUILDINGS = Message::CTX.'Buildings';
+    const APARTMENT_ATTRIBUTE_LABELS = Message::CTX.'ApartmentAttributeLabels';
 
     public static function describe(EventMachine $eventMachine): void
     {
@@ -46,6 +47,10 @@ class Query implements EventMachineDescription
         ]))
             ->resolveWith(Resolver\Building::class)
             ->setReturnType(Schema::building());
+
+        $eventMachine->registerQuery(self::APARTMENT_ATTRIBUTE_LABELS)
+            ->resolveWith(Resolver\ApartmentAttributeLabels::class)
+            ->setReturnType(Schema::apartmentAttributeLabelList());
 
         //Default query: can be used to check if service is up and running
         $eventMachine->registerQuery(self::HEALTH_CHECK) //<-- Payload schema is optional for queries

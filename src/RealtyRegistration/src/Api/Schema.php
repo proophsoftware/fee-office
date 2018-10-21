@@ -6,6 +6,7 @@ namespace FeeOffice\RealtyRegistration\Api;
 
 use Prooph\EventMachine\JsonSchema\JsonSchema;
 use Prooph\EventMachine\JsonSchema\Type\ArrayType;
+use Prooph\EventMachine\JsonSchema\Type\EnumType;
 use Prooph\EventMachine\JsonSchema\Type\StringType;
 use Prooph\EventMachine\JsonSchema\Type\TypeRef;
 use Prooph\EventMachine\JsonSchema\Type\UuidType;
@@ -61,6 +62,31 @@ class Schema
     public static function apartmentNumber(): StringType
     {
         return JsonSchema::string()->withMinLength(1);
+    }
+
+    public static function apartmentAttributeLabelList(): ArrayType
+    {
+        return JsonSchema::array(self::apartmentAttributeLabel());
+    }
+
+    public static function apartmentAttributeLabel(): TypeRef
+    {
+        return JsonSchema::typeRef(Type::APARTMENT_ATTRIBUTE_LABEL);
+    }
+
+    public static function apartmentAttributeLabelId(): UuidType
+    {
+        return JsonSchema::uuid();
+    }
+
+    public static function apartmentAttributeLabelValue(): StringType
+    {
+        return JsonSchema::string();
+    }
+
+    public static function apartmentAttributeValue(): StringType
+    {
+        return JsonSchema::string();
     }
 
     /**

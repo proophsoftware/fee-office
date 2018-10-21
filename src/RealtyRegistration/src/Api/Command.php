@@ -15,6 +15,7 @@ class Command implements EventMachineDescription
     const ADD_ENTRANCE = Message::CTX.'AddEntrance';
     const CORRECT_ENTRANCE_ADDRESS = Message::CTX.'CorrectEntranceAddress';
     const ADD_APARTMENT = Message::CTX.'AddApartment';
+    const ASSIGN_APARTMENT_ATTRIBUTE = Message::CTX.'AssignApartmentAttribute';
 
     /**
      * @param EventMachine $eventMachine
@@ -77,6 +78,15 @@ class Command implements EventMachineDescription
                 Payload::APARTMENT_ID => Schema::apartmentId(),
                 Payload::ENTRANCE_ID => Schema::entranceId(),
                 Payload::APARTMENT_NUMBER => Schema::apartmentNumber(),
+            ])
+        );
+
+        $eventMachine->registerCommand(
+            Command::ASSIGN_APARTMENT_ATTRIBUTE,
+            JsonSchema::object([
+                Payload::APARTMENT_ID => Schema::apartmentId(),
+                Payload::LABEL => Schema::apartmentAttributeLabelId(),
+                Payload::VALUE => Schema::apartmentAttributeValue(),
             ])
         );
     }

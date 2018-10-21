@@ -30,4 +30,7 @@ class Payload
     const ADDRESS = 'address';
     const APARTMENT_ID = 'apartmentId';
     const APARTMENT_NUMBER = 'apartmentNumber';
+
+    const LABEL = 'label';
+    const VALUE = 'value';
 }

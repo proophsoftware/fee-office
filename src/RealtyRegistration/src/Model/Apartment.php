@@ -5,6 +5,9 @@ namespace FeeOffice\RealtyRegistration\Model;
 
 use FeeOffice\RealtyRegistration\Api\Event;
 use FeeOffice\RealtyRegistration\Api\Payload;
+use FeeOffice\RealtyRegistration\Model\Apartment\ApartmentAttribute;
+use FeeOffice\RealtyRegistration\Model\Apartment\ApartmentAttributeLabel;
+use FeeOffice\RealtyRegistration\Model\Apartment\ApartmentAttributeValue;
 use FeeOffice\RealtyRegistration\Model\Apartment\ApartmentId;
 use FeeOffice\RealtyRegistration\Model\Apartment\ApartmentNumber;
 use FeeOffice\RealtyRegistration\Model\Entrance\EntranceApartments;
@@ -43,5 +46,37 @@ final class Apartment
     public static function whenApartmentAdded(Message $apartmentAdded): Apartment\State
     {
         return Apartment\State::fromArray($apartmentAdded->payload());
+    }
+
+    public static function assignApartmentAttribute(Apartment\State $apartment, Message $assignApartmentAttribute): \Generator
+    {
+        $attribute = ApartmentAttribute::fromLabelAndValue(
+            ApartmentAttributeLabel::fromString($assignApartmentAttribute->get(Payload::LABEL)),
+            ApartmentAttributeValue::fromString($assignApartmentAttribute->get(Payload::VALUE))
+        );
+
+        if($apartment->attributes()->contains($attribute->label())) {
+            yield [
+                Event::APARTMENT_ATTRIBUTE_VALUE_CHANGED,
+                $assignApartmentAttribute->payload()
+            ];
+        } else {
+            yield [
+                Event::APARTMENT_ATTRIBUTE_ASSIGNED,
+                $assignApartmentAttribute->payload()
+            ];
+        }
+    }
+
+    public static function whenApartmentAttributeAssignedOrValueChanged(Apartment\State $apartment, Message $event): Apartment\State
+    {
+        $attribute = ApartmentAttribute::fromLabelAndValue(
+            ApartmentAttributeLabel::fromString($event->get(Payload::LABEL)),
+            ApartmentAttributeValue::fromString($event->get(Payload::VALUE))
+        );
+
+        return $apartment->with([
+            Apartment\State::ATTRIBUTES => $apartment->attributes()->set($attribute)
+        ]);
     }
 }

@@ -134,6 +134,13 @@ final class ServiceFactory
         });
     }
 
+    public function apartmentAttributeLabelsResolver(): Resolver\ApartmentAttributeLabels
+    {
+        return $this->makeSingleton(Resolver\ApartmentAttributeLabels::class, function () {
+            return new Resolver\ApartmentAttributeLabels();
+        });
+    }
+
     //Finders
     public function apartmentFinder(): ApartmentFinder
     {

@@ -15,6 +15,8 @@ class Event implements EventMachineDescription
     const ENTRANCE_ADDED = Message::CTX.'EntranceAdded';
     const ENTRANCE_ADDRESS_CORRECTED = Message::CTX.'EntranceAddressCorrected';
     const APARTMENT_ADDED = Message::CTX.'ApartmentAdded';
+    const APARTMENT_ATTRIBUTE_ASSIGNED = Message::CTX.'ApartmentAttributeAssigned';
+    const APARTMENT_ATTRIBUTE_VALUE_CHANGED = Message::CTX.'ApartmentAttributeValueChanged';
 
     /**
      * @param EventMachine $eventMachine
@@ -75,6 +77,24 @@ class Event implements EventMachineDescription
                 Payload::APARTMENT_ID => Schema::apartmentId(),
                 Payload::ENTRANCE_ID => Schema::entranceId(),
                 Payload::APARTMENT_NUMBER => Schema::apartmentNumber(),
+            ])
+        );
+
+        $eventMachine->registerEvent(
+            self::APARTMENT_ATTRIBUTE_ASSIGNED,
+            JsonSchema::object([
+                Payload::APARTMENT_ID => Schema::apartmentId(),
+                Payload::LABEL => Schema::apartmentAttributeLabelId(),
+                Payload::VALUE => Schema::apartmentAttributeValue(),
+            ])
+        );
+
+        $eventMachine->registerEvent(
+            self::APARTMENT_ATTRIBUTE_VALUE_CHANGED,
+            JsonSchema::object([
+                Payload::APARTMENT_ID => Schema::apartmentId(),
+                Payload::LABEL => Schema::apartmentAttributeLabelId(),
+                Payload::VALUE => Schema::apartmentAttributeValue(),
             ])
         );
     }

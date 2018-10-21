@@ -16,6 +16,14 @@ final class State implements ImmutableRecord
     const APARTMENT_ID = Payload::APARTMENT_ID;
     const ENTRANCE_ID = Payload::ENTRANCE_ID;
     const APARTMENT_NUMBER = Payload::APARTMENT_NUMBER;
+    const ATTRIBUTES = 'attributes';
+
+    private function init(): void
+    {
+        if(null === $this->attributes) {
+            $this->attributes = ApartmentAttributeMap::asEmptyMap();
+        }
+    }
 
     /**
      * @var ApartmentId
@@ -31,6 +39,11 @@ final class State implements ImmutableRecord
      * @var ApartmentNumber
      */
     private $apartmentNumber;
+
+    /**
+     * @var ApartmentAttributeMap|null
+     */
+    private $attributes = null;
 
     /**
      * @return ApartmentId
@@ -54,5 +67,13 @@ final class State implements ImmutableRecord
     public function apartmentNumber(): ApartmentNumber
     {
         return $this->apartmentNumber;
+    }
+
+    /**
+     * @return ApartmentAttributeMap
+     */
+    public function attributes(): ApartmentAttributeMap
+    {
+        return $this->attributes;
     }
 }

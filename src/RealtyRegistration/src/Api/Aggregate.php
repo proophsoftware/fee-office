@@ -71,5 +71,13 @@ class Aggregate implements EventMachineDescription
             ->handle([Apartment::class, 'add'])
             ->recordThat(Event::APARTMENT_ADDED)
             ->apply([Apartment::class, 'whenApartmentAdded']);
+
+        $eventMachine->process(Command::ASSIGN_APARTMENT_ATTRIBUTE)
+            ->withExisting(self::APARTMENT)
+            ->handle([Apartment::class, 'assignApartmentAttribute'])
+            ->recordThat(Event::APARTMENT_ATTRIBUTE_ASSIGNED)
+            ->apply([Apartment::class, 'whenApartmentAttributeAssignedOrValueChanged'])
+            ->orRecordThat(Event::APARTMENT_ATTRIBUTE_VALUE_CHANGED)
+            ->apply([Apartment::class, 'whenApartmentAttributeAssignedOrValueChanged']);
     }
 }

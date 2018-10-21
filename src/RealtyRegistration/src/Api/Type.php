@@ -41,6 +41,7 @@ class Type implements EventMachineDescription
     const HEALTH_CHECK = 'HealthCheck';
     const BUILDING = 'Building';
     const BUILDING_LIST_ITEM = 'BuildingListItem';
+    const APARTMENT_ATTRIBUTE_LABEL = 'ApartmentAttributeLabel';
 
     private static function healthCheck(): ObjectType
     {
@@ -83,6 +84,14 @@ class Type implements EventMachineDescription
         ]);
     }
 
+    private static function apartmentAttributeLabel(): ObjectType
+    {
+        return JsonSchema::object([
+            Apartment\ApartmentAttribute::LABEL_ID => Schema::apartmentAttributeLabelId(),
+            Apartment\ApartmentAttribute::LABEL => Schema::apartmentAttributeLabelValue(),
+        ]);
+    }
+
     /**
      * @param EventMachine $eventMachine
      */
@@ -94,5 +103,7 @@ class Type implements EventMachineDescription
         $eventMachine->registerType(self::BUILDING, self::building());
 
         $eventMachine->registerType(self::BUILDING_LIST_ITEM, self::buildingListItem());
+
+        $eventMachine->registerType(self::APARTMENT_ATTRIBUTE_LABEL, self::apartmentAttributeLabel());
     }
 }
