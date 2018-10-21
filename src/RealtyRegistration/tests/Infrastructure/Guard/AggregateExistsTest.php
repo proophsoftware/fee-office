@@ -9,7 +9,6 @@ use FeeOffice\RealtyRegistration\Api\Payload;
 use FeeOffice\RealtyRegistration\Infrastructure\Guard\AggregateExists;
 use FeeOfficeTest\RealtyRegistration\BaseTestCase;
 use Prooph\EventMachine\EventMachine;
-use Prooph\EventStore\EventStore;
 use Prooph\EventStore\StreamName;
 
 class AggregateExistsTest extends BaseTestCase
@@ -25,14 +24,14 @@ class AggregateExistsTest extends BaseTestCase
     {
         parent::setUp();
 
-        $this->eventMachine->bootstrapInTestMode([
+        $container = $this->eventMachine->bootstrapInTestMode([
             $this->message(Event::BUILDING_REGISTERED, [
                 Payload::BUILDING_ID => self::BUILDING_ID,
                 Payload::NAME => 'Test Building'
             ])
         ]);
 
-        $eventStore = $this->accessEventStore($this->eventMachine);
+        $eventStore = $container->get(EventMachine::SERVICE_ID_EVENT_STORE);
 
         $this->guard = new AggregateExists($eventStore, new StreamName($this->eventMachine->writeModelStreamName()));
     }
@@ -44,16 +43,5 @@ class AggregateExistsTest extends BaseTestCase
     {
         $this->assertTrue($this->guard->isKnownAggregate(Aggregate::BUILDING, self::BUILDING_ID));
         $this->assertFalse($this->guard->isKnownAggregate(Aggregate::ENTRANCE, self::BUILDING_ID));
-    }
-
-    private function accessEventStore(EventMachine $eventMachine): EventStore
-    {
-        $refObj = new \ReflectionObject($eventMachine);
-
-        $refProp = $refObj->getProperty('container');
-
-        $refProp->setAccessible(true);
-
-        return $refProp->getValue($eventMachine)->get(EventMachine::SERVICE_ID_EVENT_STORE);
     }
 }

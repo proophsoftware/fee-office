@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace FeeOffice\RealtyRegistration\Api;
 
 use FeeOffice\RealtyRegistration\Infrastructure\PreProcessor;
+use FeeOffice\RealtyRegistration\Infrastructure\ContextProvider;
+use FeeOffice\RealtyRegistration\Model\Apartment;
 use FeeOffice\RealtyRegistration\Model\Building;
 use FeeOffice\RealtyRegistration\Model\Entrance;
 use Prooph\EventMachine\EventMachine;
@@ -14,6 +16,7 @@ class Aggregate implements EventMachineDescription
 {
     const BUILDING = 'Building';
     const ENTRANCE = 'Entrance';
+    const APARTMENT = 'Apartment';
 
     /**
      * @param EventMachine $eventMachine
@@ -22,6 +25,7 @@ class Aggregate implements EventMachineDescription
     {
         self::describeBuilding($eventMachine);
         self::describeEntrance($eventMachine);
+        self::describeApartment($eventMachine);
     }
 
     private static function describeBuilding(EventMachine $eventMachine): void
@@ -49,5 +53,23 @@ class Aggregate implements EventMachineDescription
             ->handle([Entrance::class, 'add'])
             ->recordThat(Event::ENTRANCE_ADDED)
             ->apply([Entrance::class, 'whenEntranceAdded']);
+
+        $eventMachine->process(Command::CORRECT_ENTRANCE_ADDRESS)
+            ->withExisting(self::ENTRANCE)
+            ->handle([Entrance::class, 'correctAddress'])
+            ->recordThat(Event::ENTRANCE_ADDRESS_CORRECTED)
+            ->apply([Entrance::class, 'whenEntranceAddressCorrected']);
+    }
+
+    private static function describeApartment(EventMachine $eventMachine): void
+    {
+        $eventMachine->preProcess(Command::ADD_APARTMENT, PreProcessor\AddApartment::class);
+        $eventMachine->process(Command::ADD_APARTMENT)
+            ->withNew(self::APARTMENT)
+            ->identifiedBy(Payload::APARTMENT_ID)
+            ->provideContext(ContextProvider\AddApartment::class)
+            ->handle([Apartment::class, 'add'])
+            ->recordThat(Event::APARTMENT_ADDED)
+            ->apply([Apartment::class, 'whenApartmentAdded']);
     }
 }

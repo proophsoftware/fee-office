@@ -6,12 +6,14 @@ namespace FeeOffice\RealtyRegistration\Infrastructure\Guard;
 use FeeOffice\RealtyRegistration\Api\Aggregate;
 use FeeOffice\RealtyRegistration\Model\Building\BuildingExistsGuard;
 use FeeOffice\RealtyRegistration\Model\Building\BuildingId;
+use FeeOffice\RealtyRegistration\Model\Entrance\EntranceExistsGuard;
+use FeeOffice\RealtyRegistration\Model\Entrance\EntranceId;
 use Prooph\EventStore\EventStore;
 use Prooph\EventStore\Metadata\MetadataMatcher;
 use Prooph\EventStore\Metadata\Operator;
 use Prooph\EventStore\StreamName;
 
-final class AggregateExists implements BuildingExistsGuard
+final class AggregateExists implements BuildingExistsGuard, EntranceExistsGuard
 {
     /**
      * @var EventStore
@@ -52,5 +54,10 @@ final class AggregateExists implements BuildingExistsGuard
     public function isKnownBuilding(BuildingId $buildingId): bool
     {
         return $this->isKnownAggregate(Aggregate::BUILDING, $buildingId->toString());
+    }
+
+    public function isKnownEntrance(EntranceId $entranceId): bool
+    {
+        return $this->isKnownAggregate(Aggregate::ENTRANCE, $entranceId->toString());
     }
 }

@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace FeeOffice\RealtyRegistration\Api;
 
+use FeeOffice\RealtyRegistration\Model\Apartment;
+use FeeOffice\RealtyRegistration\Model\Building;
+use FeeOffice\RealtyRegistration\Model\Entrance;
+use FeeOffice\RealtyRegistration\Infrastructure\Resolver;
 use Prooph\EventMachine\EventMachine;
 use Prooph\EventMachine\EventMachineDescription;
 use Prooph\EventMachine\JsonSchema\JsonSchema;
@@ -35,11 +39,47 @@ class Type implements EventMachineDescription
 
 
     const HEALTH_CHECK = 'HealthCheck';
+    const BUILDING = 'Building';
+    const BUILDING_LIST_ITEM = 'BuildingListItem';
 
     private static function healthCheck(): ObjectType
     {
         return JsonSchema::object([
             'system' => JsonSchema::boolean()
+        ]);
+    }
+    
+    private static function building(): ObjectType
+    {
+        return JsonSchema::object([
+            Building\State::BUILDING_ID => Schema::buildingId(),
+            Building\State::NAME => Schema::buildingName(),
+            Resolver\Building::ENTRANCES => JsonSchema::array(self::entrance()),
+        ]);
+    }
+
+    private static function buildingListItem(): ObjectType
+    {
+        return JsonSchema::object([
+            Building\State::BUILDING_ID => Schema::buildingId(),
+            Building\State::NAME => Schema::buildingName(),
+        ]);
+    }
+    
+    private static function entrance(): ObjectType
+    {
+        return JsonSchema::object([
+            Entrance\State::ENTRANCE_ID => Schema::entranceId(),
+            Entrance\State::ADDRESS => Schema::entranceAddress(),
+            Resolver\Building::APARTMENTS => JsonSchema::array(self::apartment()),
+        ]);
+    }
+
+    private static function apartment(): ObjectType
+    {
+        return JsonSchema::object([
+            Apartment\State::APARTMENT_ID => Schema::apartmentId(),
+            Apartment\State::APARTMENT_NUMBER => Schema::apartmentNumber(),
         ]);
     }
 
@@ -50,5 +90,9 @@ class Type implements EventMachineDescription
     {
         //Register the HealthCheck type returned by @see \App\Api\Query::HEALTH_CHECK
         $eventMachine->registerType(self::HEALTH_CHECK, self::healthCheck());
+
+        $eventMachine->registerType(self::BUILDING, self::building());
+
+        $eventMachine->registerType(self::BUILDING_LIST_ITEM, self::buildingListItem());
     }
 }

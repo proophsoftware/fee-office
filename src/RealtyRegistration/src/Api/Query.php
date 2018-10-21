@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace FeeOffice\RealtyRegistration\Api;
 
 use FeeOffice\RealtyRegistration\Infrastructure\System\HealthCheckResolver;
+use FeeOffice\RealtyRegistration\Infrastructure\Resolver;
 use Prooph\EventMachine\EventMachine;
 use Prooph\EventMachine\EventMachineDescription;
 use Prooph\EventMachine\JsonSchema\JsonSchema;
@@ -34,6 +35,18 @@ class Query implements EventMachineDescription
 
     public static function describe(EventMachine $eventMachine): void
     {
+        $eventMachine->registerQuery(self::BUILDINGS)
+            ->resolveWith(Resolver\Buildings::class)
+            ->setReturnType(Schema::buildingList());
+
+        $eventMachine->registerQuery(self::BUILDING, JsonSchema::object([], [
+            Payload::BUILDING_ID => JsonSchema::nullOr(Schema::buildingId()),
+            Payload::ENTRANCE_ID => JsonSchema::nullOr(Schema::entranceId()),
+            Payload::APARTMENT_ID => JsonSchema::nullOr(Schema::apartmentId())
+        ]))
+            ->resolveWith(Resolver\Building::class)
+            ->setReturnType(Schema::building());
+
         //Default query: can be used to check if service is up and running
         $eventMachine->registerQuery(self::HEALTH_CHECK) //<-- Payload schema is optional for queries
             ->resolveWith(HealthCheckResolver::class) //<-- Service id (usually FQCN) to get resolver from DI container

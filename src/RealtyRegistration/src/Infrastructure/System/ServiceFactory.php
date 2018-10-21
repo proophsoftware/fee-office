@@ -4,14 +4,19 @@ declare(strict_types=1);
 namespace FeeOffice\RealtyRegistration\Infrastructure\System;
 
 use Codeliner\ArrayReader\ArrayReader;
+use FeeOffice\RealtyRegistration\Api\Aggregate;
 use FeeOffice\RealtyRegistration\Http\MessageSchemaMiddleware;
 use App\Infrastructure\ServiceBus\CommandBus;
 use App\Infrastructure\ServiceBus\ErrorHandler;
 use App\Infrastructure\ServiceBus\EventBus;
 use App\Infrastructure\ServiceBus\QueryBus;
+use FeeOffice\RealtyRegistration\Infrastructure\ContextProvider;
+use FeeOffice\RealtyRegistration\Infrastructure\Finder\ApartmentFinder;
 use FeeOffice\RealtyRegistration\Infrastructure\Guard\AggregateExists;
-use FeeOffice\RealtyRegistration\Infrastructure\PreProcessor\AddEntrance;
+use FeeOffice\RealtyRegistration\Infrastructure\PreProcessor;
+use FeeOffice\RealtyRegistration\Infrastructure\Resolver;
 use FeeOffice\RealtyRegistration\Model\Building\BuildingExistsGuard;
+use FeeOffice\RealtyRegistration\Model\Entrance\EntranceExistsGuard;
 use Prooph\Common\Event\ProophActionEventEmitter;
 use Prooph\EventMachine\Container\ContainerChain;
 use Prooph\EventMachine\Container\EventMachineContainer;
@@ -53,15 +58,35 @@ final class ServiceFactory
         $this->container = $container;
     }
 
-    //Command pre processor
-    public function addEntrancePreProcessor(): AddEntrance
+    //ContextProvider
+    public function addApartmentContextProvider(): ContextProvider\AddApartment
     {
-        return $this->makeSingleton(AddEntrance::class, function () {
-            return new AddEntrance($this->buildingExistsGuard());
+        return $this->makeSingleton(ContextProvider\AddApartment::class, function () {
+            return new ContextProvider\AddApartment($this->apartmentFinder());
+        });
+    }
+
+    //Command pre processor
+    public function addEntrancePreProcessor(): PreProcessor\AddEntrance
+    {
+        return $this->makeSingleton(PreProcessor\AddEntrance::class, function () {
+            return new PreProcessor\AddEntrance($this->buildingExistsGuard());
+        });
+    }
+
+    public function addApartmentPreProcessor(): PreProcessor\AddApartment
+    {
+        return $this->makeSingleton(PreProcessor\AddApartment::class, function () {
+            return new PreProcessor\AddApartment($this->entranceExistsGuard());
         });
     }
 
     //Guards
+    public function entranceExistsGuard(): EntranceExistsGuard
+    {
+        return $this->aggregateExistsGuard();
+    }
+
     public function buildingExistsGuard(): BuildingExistsGuard
     {
         return $this->aggregateExistsGuard();
@@ -71,6 +96,55 @@ final class ServiceFactory
     {
         return $this->makeSingleton(AggregateExists::class, function () {
             return new AggregateExists($this->eventStore(), new StreamName($this->eventMachine()->writeModelStreamName()));
+        });
+    }
+
+    //Resolvers
+    public function buildingsResolver(): Resolver\Buildings
+    {
+        return $this->makeSingleton(Resolver\Buildings::class, function () {
+            return new Resolver\Buildings(
+                AggregateProjector::aggregateCollectionName(
+                    $this->eventMachine()->appVersion(),
+                    Aggregate::BUILDING
+                ),
+                $this->documentStore()
+            );
+        });
+    }
+
+    public function buildingResolver(): Resolver\Building
+    {
+        return $this->makeSingleton(Resolver\Building::class, function () {
+            return new Resolver\Building(
+                $this->documentStore(),
+                AggregateProjector::aggregateCollectionName(
+                    $this->eventMachine()->appVersion(),
+                    Aggregate::BUILDING
+                ),
+                AggregateProjector::aggregateCollectionName(
+                    $this->eventMachine()->appVersion(),
+                    Aggregate::ENTRANCE
+                ),
+                AggregateProjector::aggregateCollectionName(
+                    $this->eventMachine()->appVersion(),
+                    Aggregate::APARTMENT
+                )
+            );
+        });
+    }
+
+    //Finders
+    public function apartmentFinder(): ApartmentFinder
+    {
+        return $this->makeSingleton(ApartmentFinder::class, function () {
+            return new ApartmentFinder(
+                AggregateProjector::aggregateCollectionName(
+                    $this->eventMachine()->appVersion(),
+                    Aggregate::APARTMENT
+                ),
+                $this->documentStore()
+            );
         });
     }
 

@@ -28,5 +28,8 @@ class Projection implements EventMachineDescription
 
         $eventMachine->watch(Stream::ofWriteModel())
             ->withAggregateProjection(Aggregate::ENTRANCE);
+
+        $eventMachine->watch(Stream::ofWriteModel())
+            ->withAggregateProjection(Aggregate::APARTMENT);
     }
 }

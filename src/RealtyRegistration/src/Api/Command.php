@@ -23,6 +23,7 @@ class Command implements EventMachineDescription
     {
         self::describeBuildingCommands($eventMachine);
         self::describeEntranceCommands($eventMachine);
+        self::describeApartmentCommands($eventMachine);
     }
 
     private static function describeBuildingCommands(EventMachine $eventMachine): void
@@ -64,6 +65,18 @@ class Command implements EventMachineDescription
             JsonSchema::object([
                 Payload::ENTRANCE_ID => Schema::entranceId(),
                 Payload::ADDRESS => Schema::entranceAddress(),
+            ])
+        );
+    }
+
+    private static function describeApartmentCommands(EventMachine $eventMachine): void
+    {
+        $eventMachine->registerCommand(
+            Command::ADD_APARTMENT,
+            JsonSchema::object([
+                Payload::APARTMENT_ID => Schema::apartmentId(),
+                Payload::ENTRANCE_ID => Schema::entranceId(),
+                Payload::APARTMENT_NUMBER => Schema::apartmentNumber(),
             ])
         );
     }

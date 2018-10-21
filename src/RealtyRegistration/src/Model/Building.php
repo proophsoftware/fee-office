@@ -5,7 +5,6 @@ namespace FeeOffice\RealtyRegistration\Model;
 
 use FeeOffice\RealtyRegistration\Api\Event;
 use FeeOffice\RealtyRegistration\Api\Payload;
-use FeeOffice\RealtyRegistration\Model\Building\State;
 use Prooph\EventMachine\Messaging\Message;
 
 final class Building
@@ -15,7 +14,7 @@ final class Building
         yield [Event::BUILDING_REGISTERED, $addBuilding->payload()];
     }
 
-    public static function rename(State $building, Message $renameBuilding): \Generator
+    public static function rename(Building\State $building, Message $renameBuilding): \Generator
     {
         if($building->name() === $renameBuilding->get(Payload::NAME)) {
             yield null;
@@ -25,15 +24,15 @@ final class Building
         yield [Event::BUILDING_RENAMED, $renameBuilding->payload()];
     }
 
-    public static function whenBuildingRegistered(Message $buildingRegistered): State
+    public static function whenBuildingRegistered(Message $buildingRegistered): Building\State
     {
-        return State::fromArray($buildingRegistered->payload());
+        return Building\State::fromArray($buildingRegistered->payload());
     }
 
-    public static function whenBuildingRenamed(State $building, Message $buildingRenamed): State
+    public static function whenBuildingRenamed(Building\State $building, Message $buildingRenamed): Building\State
     {
         return $building->with([
-            'name' => $buildingRenamed->get(Payload::NAME)
+            Building\State::NAME => $buildingRenamed->get(Payload::NAME)
         ]);
     }
 }

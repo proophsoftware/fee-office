@@ -144,7 +144,7 @@
             "dist": {
                 "type": "path",
                 "url": "src/RealtyRegistration",
-                "reference": "9823d9a05a814f1298590e66a487404b5d773204",
+                "reference": "599953f038279f4b5086cd60fa07d68fb1d9336d",
                 "shasum": null
             },
             "require": {
@@ -153,7 +153,7 @@
                 "php": "^7.1",
                 "prooph/humus-amqp-producer": "^2.0",
                 "prooph/pdo-event-store": "^1.0",
-                "proophsoftware/event-machine": "^v0.18",
+                "proophsoftware/event-machine": "^v0.19",
                 "proophsoftware/postgres-document-store": "^0.3",
                 "psr/http-server-middleware": "^1.0",
                 "psr/log": "^1.0",
@@ -1179,16 +1179,16 @@
         },
         {
             "name": "proophsoftware/event-machine",
-            "version": "v0.18.1",
+            "version": "v0.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/proophsoftware/event-machine.git",
-                "reference": "37b28e013b7151849de8bd0ce3d9c4b16f43b5e8"
+                "reference": "cfe630efa860a7e636bfa09ab61fd2413c175ce3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/proophsoftware/event-machine/zipball/37b28e013b7151849de8bd0ce3d9c4b16f43b5e8",
-                "reference": "37b28e013b7151849de8bd0ce3d9c4b16f43b5e8",
+                "url": "https://api.github.com/repos/proophsoftware/event-machine/zipball/cfe630efa860a7e636bfa09ab61fd2413c175ce3",
+                "reference": "cfe630efa860a7e636bfa09ab61fd2413c175ce3",
                 "shasum": ""
             },
             "require": {
@@ -1242,7 +1242,7 @@
             ],
             "description": "Opinionated Event Sourcing Framework based on prooph components",
             "homepage": "http://prooph.de/",
-            "time": "2018-09-19T20:41:10+00:00"
+            "time": "2018-10-21T10:19:30+00:00"
         },
         {
             "name": "proophsoftware/postgres-document-store",

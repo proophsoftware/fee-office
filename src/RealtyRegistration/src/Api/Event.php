@@ -14,11 +14,19 @@ class Event implements EventMachineDescription
     const BUILDING_RENAMED = Message::CTX.'BuildingRenamed';
     const ENTRANCE_ADDED = Message::CTX.'EntranceAdded';
     const ENTRANCE_ADDRESS_CORRECTED = Message::CTX.'EntranceAddressCorrected';
+    const APARTMENT_ADDED = Message::CTX.'ApartmentAdded';
 
     /**
      * @param EventMachine $eventMachine
      */
     public static function describe(EventMachine $eventMachine): void
+    {
+        self::describeBuildingEvents($eventMachine);
+        self::describeEntranceEvents($eventMachine);
+        self::describeApartmentEvents($eventMachine);
+    }
+
+    private static function describeBuildingEvents(EventMachine $eventMachine): void
     {
         $eventMachine->registerEvent(
             self::BUILDING_REGISTERED,
@@ -37,7 +45,10 @@ class Event implements EventMachineDescription
                 Payload::NAME => Schema::buildingName(),
             ])
         );
+    }
 
+    private static function describeEntranceEvents(EventMachine $eventMachine): void
+    {
         $eventMachine->registerEvent(
             self::ENTRANCE_ADDED,
             JsonSchema::object([
@@ -52,6 +63,18 @@ class Event implements EventMachineDescription
             JsonSchema::object([
                 Payload::ENTRANCE_ID => Schema::entranceId(),
                 Payload::ADDRESS => Schema::entranceAddress(),
+            ])
+        );
+    }
+
+    private static function describeApartmentEvents(EventMachine $eventMachine): void
+    {
+        $eventMachine->registerEvent(
+            self::APARTMENT_ADDED,
+            JsonSchema::object([
+                Payload::APARTMENT_ID => Schema::apartmentId(),
+                Payload::ENTRANCE_ID => Schema::entranceId(),
+                Payload::APARTMENT_NUMBER => Schema::apartmentNumber(),
             ])
         );
     }

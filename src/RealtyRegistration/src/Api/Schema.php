@@ -12,17 +12,36 @@ use Prooph\EventMachine\JsonSchema\Type\UuidType;
 
 class Schema
 {
+    //Building
+
     public static function buildingId(): UuidType
     {
         return JsonSchema::uuid();
     }
 
-    public static function entranceId(): UuidType
+    public static function buildingName(): StringType
     {
-        return JsonSchema::uuid();
+        return JsonSchema::string()->withMinLength(1);
     }
 
-    public static function apartmentId(): UuidType
+    public static function building(): TypeRef
+    {
+        return JsonSchema::typeRef(Type::BUILDING);
+    }
+
+    public static function buildingListItem(): TypeRef
+    {
+        return JsonSchema::typeRef(Type::BUILDING_LIST_ITEM);
+    }
+
+    public static function buildingList(): ArrayType
+    {
+        return JsonSchema::array(self::buildingListItem());
+    }
+
+    //Entrance
+
+    public static function entranceId(): UuidType
     {
         return JsonSchema::uuid();
     }
@@ -32,24 +51,16 @@ class Schema
         return JsonSchema::string();
     }
 
-    public static function buildingName(): StringType
+    //Apartment
+
+    public static function apartmentId(): UuidType
+    {
+        return JsonSchema::uuid();
+    }
+
+    public static function apartmentNumber(): StringType
     {
         return JsonSchema::string()->withMinLength(1);
-    }
-
-    public static function buildingNameFilter(): StringType
-    {
-        return JsonSchema::string()->withMinLength(1);
-    }
-
-    public static function building(): TypeRef
-    {
-        return JsonSchema::typeRef(Aggregate::BUILDING);
-    }
-
-    public static function buildingList(): ArrayType
-    {
-        return JsonSchema::array(self::building());
     }
 
     /**

@@ -6,6 +6,7 @@ namespace FeeOffice\RealtyRegistration\Model;
 use FeeOffice\RealtyRegistration\Api\Event;
 use FeeOffice\RealtyRegistration\Api\Payload;
 use FeeOffice\RealtyRegistration\Model\Building\BuildingId;
+use FeeOffice\RealtyRegistration\Model\Entrance\Address;
 use FeeOffice\RealtyRegistration\Model\Entrance\EntranceId;
 use Prooph\EventMachine\Messaging\Message;
 
@@ -24,8 +25,32 @@ final class Entrance
         ]];
     }
 
+    public static function correctAddress(Entrance\State $entrance, Message $correctAddress): \Generator
+    {
+        $address = Entrance\Address::fromString($correctAddress->get(Payload::ADDRESS));
+
+        if($address->equals($entrance->address())) {
+            yield null;
+            return;
+        }
+
+        yield [
+            Event::ENTRANCE_ADDRESS_CORRECTED, [
+                Payload::ENTRANCE_ID => $entrance->entranceId()->toString(),
+                Payload::ADDRESS => $address->toString(),
+            ]
+        ];
+    }
+
     public static function whenEntranceAdded(Message $entranceAdded): Entrance\State
     {
         return Entrance\State::fromArray($entranceAdded->payload());
+    }
+
+    public static function whenEntranceAddressCorrected(Entrance\State $entrance, Message $entranceAddressCorrected): Entrance\State
+    {
+        return $entrance->with([
+            Entrance\State::ADDRESS => Address::fromString($entranceAddressCorrected->get(Payload::ADDRESS))
+        ]);
     }
 }
