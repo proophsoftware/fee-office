@@ -644,7 +644,7 @@ The installer is a composer plugin registered in the root <code>composer.json</c
 <p>The application layer uses the <code>App</code> namespace.</p>
 <h2 id="1-3-3">Modules</h2>
 <p>A module has its own namespace. For example the <em>RealtyRegistration</em> module uses the namespace <code>FeeOffice\RealtyRegistration</code>.
-The namespace maps to the path <code>src/RealtyRegistration/src</code>.</p>
+The namespace maps to the path <code>src/RealtyRegistration</code>.</p>
 <p>A module also has its own <code>composer.json</code> where all dependencies of the module should be defined.</p>
 <p class="alert alert-danger">A module is not allowed to use dependencies that are not defined in its own composer.json. The only exception are global dependencies (client libraries)
 provided or imported by the application layer. At the moment this is a convention and needs to be ensured by code reviews. In the future we might
