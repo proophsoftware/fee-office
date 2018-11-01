@@ -11,7 +11,7 @@ final class ApartmentAttributeLabel
     public const AREA = 'area';
 
     public const BODY_COUNT_ID = '7489e2b5-42ee-4ae6-b023-8cf791188b13';
-    public const BODY_COUNT = 'bodyCount';
+    public const BODY_COUNT = 'body_count';
 
     public const MAP = [
         self::AREA_ID => self::AREA,
