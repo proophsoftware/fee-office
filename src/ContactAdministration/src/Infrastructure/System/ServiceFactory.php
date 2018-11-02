@@ -6,6 +6,7 @@ namespace FeeOffice\ContactAdministration\Infrastructure\System;
 use Codeliner\ArrayReader\ArrayReader;
 use FeeOffice\ContactAdministration\Api\AddCompany;
 use FeeOffice\ContactAdministration\Api\AddPerson;
+use FeeOffice\ContactAdministration\Api\AttachBankAccount;
 use FeeOffice\ContactAdministration\Api\ContactCardByNameSearch;
 use FeeOffice\ContactAdministration\Api\GetContactCard;
 use FeeOffice\ContactAdministration\Infrastructure\Persistence\ContactCardDocumentStore;
@@ -45,6 +46,16 @@ final class ServiceFactory
     {
         return $this->makeSingleton(AddCompany::class, function () {
             return new AddCompany($this->contactCardCollection(), $this->resourceUriFactory());
+        });
+    }
+
+    public function attachBankAccount(): AttachBankAccount
+    {
+        return $this->makeSingleton(AttachBankAccount::class, function () {
+            return new AttachBankAccount(
+                $this->contactCardCollection(),
+                $this->resourceUriFactory()
+            );
         });
     }
 

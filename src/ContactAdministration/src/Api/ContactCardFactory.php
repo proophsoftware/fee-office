@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace FeeOffice\ContactAdministration\Api;
 
+use FeeOffice\ContactAdministration\Model\BankAccount;
 use FeeOffice\ContactAdministration\Model\ContactCard;
 use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -13,26 +14,14 @@ final class ContactCardFactory
     {
         $data = $request->getParsedBody();
 
-        $contactCardId = $data[ContactCard::CONTACT_CARD_ID] ?? null;
-        $firstName = $data[ContactCard::FIRST_NAME] ?? null;
-        $lastName = $data[ContactCard::LAST_NAME] ?? null;
-
-        if(!$contactCardId) {
-            throw new \InvalidArgumentException("Missing contactCardId", StatusCodeInterface::STATUS_BAD_REQUEST);
-        }
-
-        if(!$firstName) {
-            throw new \InvalidArgumentException("Missing firstName", StatusCodeInterface::STATUS_BAD_REQUEST);
-        }
-
-        if(!$lastName) {
-            throw new \InvalidArgumentException("Missing lastName", StatusCodeInterface::STATUS_BAD_REQUEST);
-        }
+        self::assertIsset(ContactCard::CONTACT_CARD_ID, $data);
+        self::assertIsset(ContactCard::FIRST_NAME, $data);
+        self::assertIsset(ContactCard::LAST_NAME, $data);
 
         return ContactCard::forPerson(
-            ContactCard\ContactCardId::fromString((string)$contactCardId),
-            ContactCard\FirstName::fromString((string)$firstName),
-            ContactCard\LastName::fromString((string)$lastName)
+            ContactCard\ContactCardId::fromString($data[ContactCard::CONTACT_CARD_ID]),
+            ContactCard\FirstName::fromString($data[ContactCard::FIRST_NAME]),
+            ContactCard\LastName::fromString($data[ContactCard::LAST_NAME])
         );
     }
 
@@ -40,20 +29,32 @@ final class ContactCardFactory
     {
         $data = $request->getParsedBody();
 
-        $contactCardId = $data[ContactCard::CONTACT_CARD_ID] ?? null;
-        $company = $data[ContactCard::COMPANY] ?? null;
-
-        if(!$contactCardId) {
-            throw new \InvalidArgumentException("Missing contactCardId", StatusCodeInterface::STATUS_BAD_REQUEST);
-        }
-
-        if(!$company) {
-            throw new \InvalidArgumentException("Missing company", StatusCodeInterface::STATUS_BAD_REQUEST);
-        }
+        self::assertIsset(ContactCard::CONTACT_CARD_ID, $data);
+        self::assertIsset(ContactCard::COMPANY, $data);
 
         return ContactCard::forCompany(
-            ContactCard\ContactCardId::fromString((string)$contactCardId),
-            ContactCard\Company::fromString((string)$company)
+            ContactCard\ContactCardId::fromString($data[ContactCard::CONTACT_CARD_ID]),
+            ContactCard\Company::fromString($data[ContactCard::COMPANY])
         );
+    }
+
+    public static function bankAccountFromRequest(ServerRequestInterface $request): BankAccount
+    {
+        $data = $request->getParsedBody();
+
+        self::assertIsset(BankAccount::IBAN, $data);
+        self::assertIsset(BankAccount::BIC, $data);
+
+        return BankAccount::fromIbanAndBic(
+            BankAccount\IBAN::fromString($data[BankAccount::IBAN]),
+            BankAccount\BIC::fromString($data[BankAccount::BIC])
+        );
+    }
+
+    private static function assertIsset(string $key, array $reqData): void
+    {
+        if(!array_key_exists($key, $reqData)) {
+            throw new \InvalidArgumentException("Missing $key", StatusCodeInterface::STATUS_BAD_REQUEST);
+        }
     }
 }

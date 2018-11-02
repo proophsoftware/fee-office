@@ -14,9 +14,7 @@ final class StartDate
 
     public static function fromDateTime(\DateTimeImmutable $startDate): self
     {
-        if ($startDate->getTimezone()->getName() !== 'UTC') {
-            $startDate = $startDate->setTimezone(new \DateTimeZone('UTC'));
-        }
+        $startDate = self::ensureUTC($startDate);
 
         return new self($startDate);
     }
@@ -28,6 +26,8 @@ final class StartDate
             $startDate,
             new \DateTimeZone('UTC')
         );
+
+        $startDate = self::ensureUTC($startDate);
 
         return new self($startDate);
     }
@@ -60,5 +60,14 @@ final class StartDate
     public function __toString(): string
     {
         return $this->toString();
+    }
+
+    private static function ensureUTC(\DateTimeImmutable $startDate): \DateTimeImmutable
+    {
+        if ($startDate->getTimezone()->getName() !== 'UTC') {
+            $startDate = $startDate->setTimezone(new \DateTimeZone('UTC'));
+        }
+
+        return $startDate;
     }
 }

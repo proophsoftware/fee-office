@@ -5,6 +5,7 @@ namespace FeeOffice\ContactAdministration;
 
 use FeeOffice\ContactAdministration\Api\AddCompany;
 use FeeOffice\ContactAdministration\Api\AddPerson;
+use FeeOffice\ContactAdministration\Api\AttachBankAccount;
 use FeeOffice\ContactAdministration\Api\ContactCardByNameSearch;
 use FeeOffice\ContactAdministration\Api\GetContactCard;
 use FeeOffice\ContactAdministration\Infrastructure\System\AbstractServiceFactory;
@@ -21,6 +22,9 @@ final class ConfigProvider
     public const URI_PATH_PERSON = '/person';
     public const URI_PATH_COMPANY = '/company';
     public const URI_PATH_CONTACT_CARD = '/contact-card';
+    public const URI_PATH_CONTACT_ID = '/{'.self::REQ_PARAM_CONTACT_ID.':'.self::VALID_UUID_PATTERN.'}';
+    public const URI_PATH_BANK_ACCOUNT = '/bank-account';
+    public const REQ_PARAM_CONTACT_ID = 'contactid';
     private const VALID_UUID_PATTERN = '[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}';
 
     public function __invoke(): array
@@ -48,7 +52,12 @@ final class ConfigProvider
                     'allowed_methods' => ['POST'],
                 ],
                 [
-                    'path' => self::CONTACT_BASE_URL . self::URI_PATH_CONTACT_CARD . '/{id:'.self::VALID_UUID_PATTERN.'}',
+                    'path' => self::CONTACT_BASE_URL . self::URI_PATH_CONTACT_CARD . self::URI_PATH_CONTACT_ID . self::URI_PATH_BANK_ACCOUNT,
+                    'middleware' => AttachBankAccount::class,
+                    'allowed_methods' => ['PUT'],
+                ],
+                [
+                    'path' => self::CONTACT_BASE_URL . self::URI_PATH_CONTACT_CARD . self::URI_PATH_CONTACT_ID,
                     'middleware' => GetContactCard::class,
                     'allowed_methods' => ['GET'],
                 ],

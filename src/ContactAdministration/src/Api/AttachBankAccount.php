@@ -4,24 +4,31 @@ declare(strict_types=1);
 namespace FeeOffice\ContactAdministration\Api;
 
 use FeeOffice\ContactAdministration\ConfigProvider;
+use FeeOffice\ContactAdministration\Infrastructure\System\ResourceUriFactory;
 use FeeOffice\ContactAdministration\Model\ContactCard\ContactCardId;
 use FeeOffice\ContactAdministration\Model\ContactCardCollection;
 use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Diactoros\Response\JsonResponse;
+use Zend\Diactoros\Response\EmptyResponse;
 
-final class GetContactCard implements RequestHandlerInterface
+final class AttachBankAccount implements RequestHandlerInterface
 {
     /**
      * @var ContactCardCollection
      */
     private $contactCardCollection;
 
-    public function __construct(ContactCardCollection $cardCollection)
+    /**
+     * @var ResourceUriFactory
+     */
+    private $resourceUriFactory;
+
+    public function __construct(ContactCardCollection $cardCollection, ResourceUriFactory $resourceUriFactory)
     {
         $this->contactCardCollection = $cardCollection;
+        $this->resourceUriFactory = $resourceUriFactory;
     }
 
     /**
@@ -37,8 +44,16 @@ final class GetContactCard implements RequestHandlerInterface
             throw new \InvalidArgumentException("Missing contact card id", StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR);
         }
 
-        $contactCard = $this->contactCardCollection->get(ContactCardId::fromString($contactCardId));
+        $contactCardId = ContactCardId::fromString($contactCardId);
 
-        return new JsonResponse($contactCard->toArray());
+        $contactCard = $this->contactCardCollection->get($contactCardId);
+
+        $bankAccount = ContactCardFactory::bankAccountFromRequest($request);
+
+        $this->contactCardCollection->replace($contactCard->withBankAccount($bankAccount));
+
+        return new EmptyResponse(StatusCodeInterface::STATUS_CREATED, [
+            'Location' => (string)$this->resourceUriFactory->forReadContactCard($contactCard)
+        ]);
     }
 }
