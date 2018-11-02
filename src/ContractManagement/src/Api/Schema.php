@@ -13,6 +13,41 @@ use Prooph\EventMachine\JsonSchema\Type\UuidType;
 
 class Schema
 {
+    public static function contractId(): UuidType
+    {
+        return JsonSchema::uuid();
+    }
+
+    public static function apartmentId(): UuidType
+    {
+        return JsonSchema::uuid();
+    }
+
+    public static function superiorParty(): UuidType
+    {
+        return JsonSchema::uuid();
+    }
+
+    public static function subordinateParty(): UuidType
+    {
+        return JsonSchema::uuid();
+    }
+
+    public static function startDate(): StringType
+    {
+        return self::iso8601DateTime();
+    }
+
+    public static function endDate(): StringType
+    {
+        return self::iso8601DateTime();
+    }
+
+    public static function contractPeriod(): TypeRef
+    {
+        return JsonSchema::typeRef(Type::CONTRACT_PERIOD);
+    }
+
     /**
      * Common schema definitions that are useful in nearly any application.
      * Add more or remove unneeded depending on project needs.
@@ -22,7 +57,6 @@ class Schema
         //Health check schema is a type reference to the registered Type::HEALTH_CHECK
         return JsonSchema::typeRef(Type::HEALTH_CHECK);
     }
-
 
     /**
      * Can be used as JsonSchema::object() (optional) property definition in query payloads to enable pagination

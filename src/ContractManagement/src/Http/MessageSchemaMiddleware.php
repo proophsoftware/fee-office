@@ -63,9 +63,9 @@ final class MessageSchemaMiddleware implements RequestHandlerInterface
                 ]
             ],
             'info' => [
-                'description' => 'An endpoint for sending messages to realty registration service.',
+                'description' => 'An endpoint for sending messages to contract management service.',
                 'version' => $this->eventMachine->appVersion(),
-                'title' => 'Realty Messagebox'
+                'title' => 'Contract Messagebox'
             ],
             'tags' => [
                 [

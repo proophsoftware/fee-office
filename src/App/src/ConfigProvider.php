@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Infrastructure\ModuleProxy\ContractContactAdministrationProxyFactory;
+use FeeOffice\ContractManagement\Model\Contact as ContractContact;
+
 /**
  * The configuration provider for the App module
  *
@@ -36,6 +39,7 @@ class ConfigProvider
             ],
             'factories'  => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+                ContractContact\ContactAdministration::class => ContractContactAdministrationProxyFactory::class,
             ],
             'delegators' => [
                 \Zend\Expressive\Application::class => [

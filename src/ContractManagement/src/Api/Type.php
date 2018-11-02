@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace FeeOffice\ContractManagement\Api;
 
+use FeeOffice\ContractManagement\Model\Contract\ContractPeriod;
 use FeeOffice\RealtyRegistration\Model\Apartment;
 use FeeOffice\RealtyRegistration\Model\Building;
 use FeeOffice\RealtyRegistration\Model\Entrance;
@@ -39,11 +40,20 @@ class Type implements EventMachineDescription
 
 
     const HEALTH_CHECK = 'HealthCheck';
+    const CONTRACT_PERIOD = 'ContractPeriod';
 
     private static function healthCheck(): ObjectType
     {
         return JsonSchema::object([
             'system' => JsonSchema::boolean()
+        ]);
+    }
+
+    private static function contractPeriod(): ObjectType
+    {
+        return JsonSchema::object([
+            ContractPeriod::START_DATE => Schema::startDate(),
+            ContractPeriod::END_DATE => Schema::endDate(),
         ]);
     }
     
@@ -52,6 +62,8 @@ class Type implements EventMachineDescription
      */
     public static function describe(EventMachine $eventMachine): void
     {
+        $eventMachine->registerType(self::CONTRACT_PERIOD, self::contractPeriod());
+
         //Register the HealthCheck type returned by @see \App\Api\Query::HEALTH_CHECK
         $eventMachine->registerType(self::HEALTH_CHECK, self::healthCheck());
     }

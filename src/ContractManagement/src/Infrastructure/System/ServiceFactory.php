@@ -4,22 +4,17 @@ declare(strict_types=1);
 namespace FeeOffice\ContractManagement\Infrastructure\System;
 
 use Codeliner\ArrayReader\ArrayReader;
-use FeeOffice\RealtyRegistration\Api\Aggregate;
-use FeeOffice\RealtyRegistration\Http\MessageSchemaMiddleware;
 use App\Infrastructure\ServiceBus\CommandBus;
 use App\Infrastructure\ServiceBus\ErrorHandler;
 use App\Infrastructure\ServiceBus\EventBus;
 use App\Infrastructure\ServiceBus\QueryBus;
-use FeeOffice\RealtyRegistration\Infrastructure\ContextProvider;
-use FeeOffice\RealtyRegistration\Infrastructure\Finder\ApartmentFinder;
-use FeeOffice\RealtyRegistration\Infrastructure\Guard\AggregateExists;
-use FeeOffice\RealtyRegistration\Infrastructure\PreProcessor;
-use FeeOffice\RealtyRegistration\Infrastructure\Resolver;
-use FeeOffice\RealtyRegistration\Model\Building\BuildingExistsGuard;
-use FeeOffice\RealtyRegistration\Model\Entrance\EntranceExistsGuard;
+use FeeOffice\ContractManagement\Http\MessageSchemaMiddleware;
+use FeeOffice\ContractManagement\Infrastructure\ContextProvider;
+use FeeOffice\ContractManagement\Model\Contact\ContactAdministration;
 use Prooph\Common\Event\ProophActionEventEmitter;
 use Prooph\EventMachine\Container\ContainerChain;
 use Prooph\EventMachine\Container\EventMachineContainer;
+use Prooph\EventMachine\Container\ServiceNotFound;
 use Prooph\EventMachine\Container\ServiceRegistry;
 use Prooph\EventMachine\EventMachine;
 use Prooph\EventMachine\Http\MessageBox;
@@ -31,7 +26,6 @@ use Prooph\EventStore\Pdo\PersistenceStrategy;
 use Prooph\EventStore\Pdo\PostgresEventStore;
 use Prooph\EventStore\Pdo\Projection\PostgresProjectionManager;
 use Prooph\EventStore\Projection\ProjectionManager;
-use Prooph\EventStore\StreamName;
 use Prooph\EventStore\TransactionalActionEventEmitterEventStore;
 use Psr\Container\ContainerInterface;
 
@@ -46,112 +40,39 @@ final class ServiceFactory
     /**
      * @var ContainerInterface
      */
-    private $container;
+    private $moduleContainer;
 
-    public function __construct(array $appConfig)
+    /**
+     * @var ContainerInterface
+     */
+    private $appContainer;
+
+    public function __construct(array $appConfig, ContainerInterface $appContainer)
     {
         $this->config = new ArrayReader($appConfig);
+        $this->appContainer = $appContainer;
     }
 
-    public function setContainer(ContainerInterface $container): void
+    public function setModuleContainer(ContainerInterface $container): void
     {
-        $this->container = $container;
+        $this->moduleContainer = $container;
     }
 
-    //ContextProvider
-    public function addApartmentContextProvider(): ContextProvider\AddApartment
+    //Module Proxy - provided by application layer through app container
+    public function contactAdministration(): ContactAdministration
     {
-        return $this->makeSingleton(ContextProvider\AddApartment::class, function () {
-            return new ContextProvider\AddApartment($this->apartmentFinder());
-        });
+        if(!$this->appContainer->has(ContactAdministration::class)) {
+            throw ServiceNotFound::withServiceId(ContactAdministration::class);
+        }
+
+        return $this->appContainer->get(ContactAdministration::class);
     }
 
-    //Command pre processor
-    public function addEntrancePreProcessor(): PreProcessor\AddEntrance
+    //Context Provider
+    public function addContractProvider(): ContextProvider\AddContract
     {
-        return $this->makeSingleton(PreProcessor\AddEntrance::class, function () {
-            return new PreProcessor\AddEntrance($this->buildingExistsGuard());
-        });
-    }
-
-    public function addApartmentPreProcessor(): PreProcessor\AddApartment
-    {
-        return $this->makeSingleton(PreProcessor\AddApartment::class, function () {
-            return new PreProcessor\AddApartment($this->entranceExistsGuard());
-        });
-    }
-
-    //Guards
-    public function entranceExistsGuard(): EntranceExistsGuard
-    {
-        return $this->aggregateExistsGuard();
-    }
-
-    public function buildingExistsGuard(): BuildingExistsGuard
-    {
-        return $this->aggregateExistsGuard();
-    }
-
-    public function aggregateExistsGuard(): AggregateExists
-    {
-        return $this->makeSingleton(AggregateExists::class, function () {
-            return new AggregateExists($this->eventStore(), new StreamName($this->eventMachine()->writeModelStreamName()));
-        });
-    }
-
-    //Resolvers
-    public function buildingsResolver(): Resolver\Buildings
-    {
-        return $this->makeSingleton(Resolver\Buildings::class, function () {
-            return new Resolver\Buildings(
-                AggregateProjector::aggregateCollectionName(
-                    $this->eventMachine()->appVersion(),
-                    Aggregate::BUILDING
-                ),
-                $this->documentStore()
-            );
-        });
-    }
-
-    public function buildingResolver(): Resolver\Building
-    {
-        return $this->makeSingleton(Resolver\Building::class, function () {
-            return new Resolver\Building(
-                $this->documentStore(),
-                AggregateProjector::aggregateCollectionName(
-                    $this->eventMachine()->appVersion(),
-                    Aggregate::BUILDING
-                ),
-                AggregateProjector::aggregateCollectionName(
-                    $this->eventMachine()->appVersion(),
-                    Aggregate::ENTRANCE
-                ),
-                AggregateProjector::aggregateCollectionName(
-                    $this->eventMachine()->appVersion(),
-                    Aggregate::APARTMENT
-                )
-            );
-        });
-    }
-
-    public function apartmentAttributeLabelsResolver(): Resolver\ApartmentAttributeLabels
-    {
-        return $this->makeSingleton(Resolver\ApartmentAttributeLabels::class, function () {
-            return new Resolver\ApartmentAttributeLabels();
-        });
-    }
-
-    //Finders
-    public function apartmentFinder(): ApartmentFinder
-    {
-        return $this->makeSingleton(ApartmentFinder::class, function () {
-            return new ApartmentFinder(
-                AggregateProjector::aggregateCollectionName(
-                    $this->eventMachine()->appVersion(),
-                    Aggregate::APARTMENT
-                ),
-                $this->documentStore()
-            );
+        return $this->makeSingleton(ContextProvider\AddContract::class, function () {
+            return new ContextProvider\AddContract($this->contactAdministration());
         });
     }
 
@@ -285,7 +206,7 @@ final class ServiceFactory
                 $eventMachine->load($desc);
             }
             $containerChain = new ContainerChain(
-                $this->container,
+                $this->moduleContainer,
                 new EventMachineContainer($eventMachine)
             );
             $eventMachine->initialize($containerChain);
@@ -295,7 +216,7 @@ final class ServiceFactory
 
     private function assertContainerIsset(): void
     {
-        if(null === $this->container) {
+        if(null === $this->moduleContainer) {
             throw new \RuntimeException("Main container is not set. Use " . __CLASS__ . "::setContainer() to set it.");
         }
     }

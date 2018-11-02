@@ -19,15 +19,15 @@ final class EventMachineFactory
             throw new \RuntimeException("Missing contract service configuration in app container");
         }
 
-        return $this->bootstrapEventMachine($config['contract']);
+        return $this->bootstrapEventMachine($config['contract'], $appContainer);
     }
 
-    private function bootstrapEventMachine(array $config): EventMachine
+    private function bootstrapEventMachine(array $config, ContainerInterface $appContainer): EventMachine
     {
-        $serviceFactory = new ServiceFactory($config);
+        $serviceFactory = new ServiceFactory($config, $appContainer);
 
         //@TODO use cached serviceFactoryMap for production
-        $container = new ReflectionBasedContainer(
+        $moduleContainer = new ReflectionBasedContainer(
             $serviceFactory,
             [
                 \Prooph\EventMachine\EventMachine::SERVICE_ID_EVENT_STORE => \Prooph\EventStore\EventStore::class,
@@ -39,7 +39,7 @@ final class EventMachineFactory
             ]
         );
 
-        $serviceFactory->setContainer($container);
+        $serviceFactory->setModuleContainer($moduleContainer);
 
         $eventMachine = $serviceFactory->eventMachine();
 
