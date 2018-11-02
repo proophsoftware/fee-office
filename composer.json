@@ -43,12 +43,17 @@
         {
             "type": "path",
             "url": "src/ContractManagement"
+        },
+        {
+            "type": "path",
+            "url": "src/ContactAdministration"
         }
     ],
     "require": {
         "php": "^7.1",
         "feeoffice/realty-registration": "*",
         "feeoffice/contract-management": "*",
+        "feeoffice/contact-administration": "*",
         "zendframework/zend-component-installer": "^2.1.1",
         "zendframework/zend-config-aggregator": "^1.0",
         "zendframework/zend-diactoros": "^1.7.1 || ^2.0",

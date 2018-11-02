@@ -64,4 +64,4 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA payment to payment;
 
 GRANT ALL PRIVILEGES ON SEQUENCE payment._4228e4a00331b5d5e751db0481828e22a2c3c8ef_no_seq TO payment;
 
-GRANT ALL PRIVILEGES ON SEQUENCE realty.projections_no_seq TO payment;
+GRANT ALL PRIVILEGES ON SEQUENCE payment.projections_no_seq TO payment;

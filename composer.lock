@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "691ecc7c9cc8ef63eacc180cb47547cd",
+    "content-hash": "d8e6fe9906cbb425df00ecfc0f76207c",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -137,6 +137,68 @@
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "feeoffice/contact-administration",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "src/ContactAdministration",
+                "reference": "e968d24c9f8c40fa3f0b825d6b85f203d92e7538",
+                "shasum": null
+            },
+            "require": {
+                "monolog/monolog": "^1.21",
+                "nikic/fast-route": "^1.0",
+                "php": "^7.1",
+                "prooph/humus-amqp-producer": "^2.0",
+                "proophsoftware/event-machine": "^v0.19",
+                "proophsoftware/postgres-document-store": "^0.3",
+                "psr/http-server-middleware": "^1.0",
+                "psr/log": "^1.0",
+                "roave/security-advisories": "dev-master",
+                "zendframework/zend-config-aggregator": "^1.0",
+                "zendframework/zend-expressive-helpers": "^5.0",
+                "zendframework/zend-problem-details": "^1.0",
+                "zendframework/zend-stdlib": "^3.1.0",
+                "zendframework/zend-stratigility": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "config-provider": "FeeOffice\\ContactAdministration\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FeeOffice\\ContactAdministration\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "FeeOfficeTest\\ContactAdministration\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Miertsch",
+                    "email": "contact@prooph.de",
+                    "homepage": "http://www.prooph.de"
+                }
+            ],
+            "description": "Contact Administration context of the Fee Office",
+            "homepage": "http://prooph.de/"
         },
         {
             "name": "feeoffice/contract-management",
@@ -1309,16 +1371,16 @@
         },
         {
             "name": "proophsoftware/postgres-document-store",
-            "version": "v0.3.0",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/proophsoftware/postgres-document-store.git",
-                "reference": "1e8dacd14f13635188f7f3d963a5b34bb025209d"
+                "reference": "671eeb71f5bea4c5f7ba059ef2929396bd926d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/proophsoftware/postgres-document-store/zipball/1e8dacd14f13635188f7f3d963a5b34bb025209d",
-                "reference": "1e8dacd14f13635188f7f3d963a5b34bb025209d",
+                "url": "https://api.github.com/repos/proophsoftware/postgres-document-store/zipball/671eeb71f5bea4c5f7ba059ef2929396bd926d9b",
+                "reference": "671eeb71f5bea4c5f7ba059ef2929396bd926d9b",
                 "shasum": ""
             },
             "require": {
@@ -1358,7 +1420,7 @@
             ],
             "description": "PostgreSQL Document Store for Event Machine",
             "homepage": "http://prooph.de/",
-            "time": "2018-06-29T14:44:48+00:00"
+            "time": "2018-11-02T12:41:22+00:00"
         },
         {
             "name": "psr/container",
@@ -1777,7 +1839,7 @@
                 "drupal/core": ">=7,<7.60|>=8,<8.5.8|>=8.6,<8.6.2",
                 "drupal/drupal": ">=7,<7.60|>=8,<8.5.8|>=8.6,<8.6.2",
                 "erusev/parsedown": "<1.7",
-                "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.4|>=5.4,<5.4.12.1|>=2017.8,<2017.8.1.1|>=2017.12,<2017.12.4.1|>=2018.6,<2018.6.1.2|>=2018.9,<2018.9.1.1",
+                "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.5|>=5.4,<5.4.12.2|>=2017.8,<2017.8.1.1|>=2017.12,<2017.12.4.2|>=2018.6,<2018.6.1.3|>=2018.9,<2018.9.1.2",
                 "ezyang/htmlpurifier": "<4.1.1",
                 "firebase/php-jwt": "<2",
                 "fooman/tcpdf": "<6.2.22",
@@ -1923,7 +1985,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-10-31T17:25:17+00:00"
+            "time": "2018-11-01T18:39:28+00:00"
         },
         {
             "name": "spatie/array-to-xml",

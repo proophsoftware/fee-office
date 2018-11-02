@@ -13,6 +13,7 @@ $cacheConfig = [
 ];
 
 $aggregator = new ConfigAggregator([
+    \FeeOffice\ContactAdministration\ConfigProvider::class,
     \FeeOffice\ContractManagement\ConfigProvider::class,
     \FeeOffice\RealtyRegistration\ConfigProvider::class,
     \Zend\ProblemDetails\ConfigProvider::class,

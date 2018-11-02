@@ -64,4 +64,4 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA accounting to accounting;
 
 GRANT ALL PRIVILEGES ON SEQUENCE accounting._4228e4a00331b5d5e751db0481828e22a2c3c8ef_no_seq TO accounting;
 
-GRANT ALL PRIVILEGES ON SEQUENCE realty.projections_no_seq TO accounting;
+GRANT ALL PRIVILEGES ON SEQUENCE accounting.projections_no_seq TO accounting;
