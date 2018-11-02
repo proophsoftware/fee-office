@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\ModuleProxy;
 
-use FeeOffice\ContractManagement\Model\Contact as ContractContact;
+use FeeOffice\ContractManagement\Model\Contact as Contract;
 use FeeOffice\ContactAdministration\Model as ContactAdministration;
 use FeeOffice\ContractManagement\Model\Exception\ContactNotFound;
 
-final class ContractContactAdministrationProxy implements ContractContact\ContactAdministration
+final class ContractContactAdministrationProxy implements Contract\ContactAdministration
 {
     /**
      * @var ContactAdministration\ContactCardCollection;
@@ -22,7 +22,7 @@ final class ContractContactAdministrationProxy implements ContractContact\Contac
     /**
      * @inheritdoc
      */
-    public function getContacts(ContractContact\ContactId ...$ids): iterable
+    public function getContacts(Contract\ContactId ...$ids): iterable
     {
         foreach ($ids as $id) {
             $cardId = ContactAdministration\ContactCard\ContactCardId::fromString($id->toString());
@@ -30,9 +30,9 @@ final class ContractContactAdministrationProxy implements ContractContact\Contac
             try {
                 $contactCard = $this->contactCardCollection->get($cardId);
 
-                yield ContractContact\Contact::fromArray([
-                    ContractContact\Contact::CONTACT_ID => $cardId->toString(),
-                    ContractContact\Contact::HAS_BANK_ACCOUNT => $contactCard->bankAccount() !== null,
+                yield Contract\Contact::fromArray([
+                    Contract\Contact::CONTACT_ID => $cardId->toString(),
+                    Contract\Contact::HAS_BANK_ACCOUNT => $contactCard->bankAccount() !== null,
                 ]);
             } catch (ContactAdministration\Exception\ContactCardNotFound $exception) {
                 throw ContactNotFound::withContactId($id);
