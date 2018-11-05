@@ -3,9 +3,13 @@ declare(strict_types=1);
 
 namespace FeeOffice\ContactAdministration\Api;
 
+use App\Util\Swagger;
 use FeeOffice\ContactAdministration\Infrastructure\System\ResourceUriFactory;
+use FeeOffice\ContactAdministration\Model\ContactCard;
 use FeeOffice\ContactAdministration\Model\ContactCardCollection;
 use Fig\Http\Message\StatusCodeInterface;
+use Prooph\EventMachine\JsonSchema\JsonSchema;
+use Prooph\EventMachine\JsonSchema\Type\ObjectType;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -43,5 +47,39 @@ final class AddPerson implements RequestHandlerInterface
         return new EmptyResponse(StatusCodeInterface::STATUS_CREATED, [
             'Location' => (string)$this->resourceUriFactory->forReadContactCard($contactCard)
         ]);
+    }
+
+    public static function schema(): array
+    {
+        return [
+            Swagger::SUMMARY => 'Add person contact card',
+            Swagger::TAGS => ['Contact Card'],
+            Swagger::REQUEST_BODY => [
+                Swagger::DESCRIPTION => 'Subset of contact card properties',
+                Swagger::REQUIRED => true,
+                Swagger::CONTENT => [
+                    Swagger::APPLICATION_JSON => [
+                        Swagger::SCHEMA => Swagger::jsonSchemaToOpenApiSchema(
+                            JsonSchema::object([
+                                ContactCard::CONTACT_CARD_ID => Schema::contactCardId(),
+                                ContactCard::FIRST_NAME => Schema::firstName(),
+                                ContactCard::LAST_NAME => Schema::lastName(),
+                            ])->toArray()
+                        )
+                    ]
+                ]
+            ],
+            Swagger::RESPONSES => [
+                '201' => [
+                    Swagger::DESCRIPTION => 'Created',
+                    Swagger::HEADERS => [
+                        'Location' => [
+                            Swagger::SCHEMA => Swagger::jsonSchemaToOpenApiSchema(JsonSchema::string()->toArray()),
+                            Swagger::DESCRIPTION => 'Provides resource URL to newly created contact card'
+                        ]
+                    ]
+                ]
+            ]
+        ];
     }
 }

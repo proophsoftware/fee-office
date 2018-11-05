@@ -3,8 +3,12 @@ declare(strict_types=1);
 
 namespace FeeOffice\ContactAdministration\Model\BankAccount;
 
+use FeeOffice\ContactAdministration\Model\Exception\InvalidBIC;
+
 final class BIC
 {
+    public const VALID_PATTERN = '/^[a-z]{6}[2-9a-z][0-9a-np-z]([a-z0-9]{3}|x{3})?$/i';
+
     private $bic;
 
     public static function fromString(string $bic): self
@@ -14,7 +18,10 @@ final class BIC
 
     private function __construct(string $bic)
     {
-        //@TODO add BIC validation
+        if(!preg_match(self::VALID_PATTERN, $bic)) {
+            throw InvalidBIC::formatCheckFailed($bic);
+        }
+
         $this->bic = $bic;
     }
 
@@ -36,5 +43,4 @@ final class BIC
     {
         return $this->bic;
     }
-
 }

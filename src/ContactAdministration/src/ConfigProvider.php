@@ -8,6 +8,7 @@ use FeeOffice\ContactAdministration\Api\AddPerson;
 use FeeOffice\ContactAdministration\Api\AttachBankAccount;
 use FeeOffice\ContactAdministration\Api\ContactCardByNameSearch;
 use FeeOffice\ContactAdministration\Api\GetContactCard;
+use FeeOffice\ContactAdministration\Api\SwaggerSchema;
 use FeeOffice\ContactAdministration\Infrastructure\System\AbstractServiceFactory;
 use FeeOffice\ContactAdministration\Infrastructure\System\ContactContextContainerFactory;
 use Prooph\EventMachine\EventMachine;
@@ -19,6 +20,7 @@ final class ConfigProvider
 {
     public const SERVICE_CONTACT_CONTAINER = 'contact.container';
     public const CONTACT_BASE_URL = '/contact';
+    public const URI_PATH_SWAGGER_SCHEMA = '/contact-schema';
     public const URI_PATH_PERSON = '/person';
     public const URI_PATH_COMPANY = '/company';
     public const URI_PATH_CONTACT_CARD = '/contact-card';
@@ -64,6 +66,11 @@ final class ConfigProvider
                 [
                     'path' => self::CONTACT_BASE_URL . self::URI_PATH_CONTACT_CARD,
                     'middleware' => ContactCardByNameSearch::class,
+                    'allowed_methods' => ['GET'],
+                ],
+                [
+                    'path' => self::URI_PATH_SWAGGER_SCHEMA,
+                    'middleware' => SwaggerSchema::class,
                     'allowed_methods' => ['GET'],
                 ]
 //                [

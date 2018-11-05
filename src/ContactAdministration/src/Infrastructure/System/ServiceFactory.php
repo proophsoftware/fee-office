@@ -9,6 +9,8 @@ use FeeOffice\ContactAdministration\Api\AddPerson;
 use FeeOffice\ContactAdministration\Api\AttachBankAccount;
 use FeeOffice\ContactAdministration\Api\ContactCardByNameSearch;
 use FeeOffice\ContactAdministration\Api\GetContactCard;
+use FeeOffice\ContactAdministration\Api\SwaggerSchema;
+use FeeOffice\ContactAdministration\ConfigProvider;
 use FeeOffice\ContactAdministration\Infrastructure\Persistence\ContactCardDocumentStore;
 use FeeOffice\ContactAdministration\Model\ContactCardCollection;
 use Prooph\EventMachine\Container\ServiceRegistry;
@@ -70,6 +72,13 @@ final class ServiceFactory
     {
         return $this->makeSingleton(ContactCardByNameSearch::class, function () {
             return new ContactCardByNameSearch($this->contactCardCollection());
+        });
+    }
+
+    public function swaggerSchema(): SwaggerSchema
+    {
+        return $this->makeSingleton(SwaggerSchema::class, function () {
+            return new SwaggerSchema((new ConfigProvider())->__invoke()['routes']);
         });
     }
 
