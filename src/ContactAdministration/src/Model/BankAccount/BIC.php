@@ -7,7 +7,7 @@ use FeeOffice\ContactAdministration\Model\Exception\InvalidBIC;
 
 final class BIC
 {
-    public const VALID_PATTERN = '/^[a-z]{6}[2-9a-z][0-9a-np-z]([a-z0-9]{3}|x{3})?$/i';
+    public const VALID_PATTERN = '^[a-z]{6}[2-9a-z][0-9a-np-z]([a-z0-9]{3}|x{3})?$';
 
     private $bic;
 
@@ -18,7 +18,7 @@ final class BIC
 
     private function __construct(string $bic)
     {
-        if(!preg_match(self::VALID_PATTERN, $bic)) {
+        if(!preg_match('/' . self::VALID_PATTERN . '/i', $bic)) {
             throw InvalidBIC::formatCheckFailed($bic);
         }
 

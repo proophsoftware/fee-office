@@ -33,12 +33,17 @@ final class SwaggerSchema implements RequestHandlerInterface
         /** @var UriInterface $uri */
         $uri = $request->getAttribute('original_uri', $request->getUri());
         $serverUrl = $uri->withPath(str_replace('-schema', '', $uri->getPath()));
+        $basePathLength = strlen($serverUrl->getPath());
         $paths = [];
 
         foreach ($this->routes as $route) {
             $this->assertRoute($route);
 
             if(!method_exists($route['middleware'], 'schema')) continue;
+
+            if(strpos($route['path'], $serverUrl->getPath()) === 0) {
+                $route['path'] = substr($route['path'], $basePathLength);
+            }
 
             $operations = Swagger::fastRouteToOperations($route['path'], $route['allowed_methods'][0]);
 

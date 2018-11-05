@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Util;
 
 use App\Util\Swagger\Operation;
+use Prooph\EventMachine\JsonSchema\JsonSchema;
 
 final class Swagger
 {
@@ -46,7 +47,13 @@ final class Swagger
             if($containsNull) {
                 $jsonSchema['nullable'] = true;
             }
+        } else if (isset($jsonSchema['oneOf'])
+            && count($jsonSchema['oneOf']) === 2
+            && $jsonSchema['oneOf'][0]['type'] ?? '' === JsonSchema::TYPE_NULL) {
+            $jsonSchema = $jsonSchema['oneOf'][1];
+            $jsonSchema['nullable'] = true;
         }
+
         if(isset($jsonSchema['properties']) && is_array($jsonSchema['properties'])) {
             foreach ($jsonSchema['properties'] as $propName => $propSchema) {
                 $jsonSchema['properties'][$propName] = self::jsonSchemaToOpenApiSchema($propSchema);

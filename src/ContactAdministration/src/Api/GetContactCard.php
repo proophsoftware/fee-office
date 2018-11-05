@@ -3,10 +3,12 @@ declare(strict_types=1);
 
 namespace FeeOffice\ContactAdministration\Api;
 
+use App\Util\Swagger;
 use FeeOffice\ContactAdministration\ConfigProvider;
 use FeeOffice\ContactAdministration\Model\ContactCard\ContactCardId;
 use FeeOffice\ContactAdministration\Model\ContactCardCollection;
 use Fig\Http\Message\StatusCodeInterface;
+use Prooph\EventMachine\JsonSchema\JsonSchema;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -40,5 +42,25 @@ final class GetContactCard implements RequestHandlerInterface
         $contactCard = $this->contactCardCollection->get(ContactCardId::fromString($contactCardId));
 
         return new JsonResponse($contactCard->toArray());
+    }
+
+    public static function schema(): array
+    {
+        return [
+            Swagger::SUMMARY => 'Get a contact card',
+            Swagger::TAGS => ['Contact Card'],
+            Swagger::RESPONSES => [
+                '200' => [
+                    Swagger::DESCRIPTION => 'Ok',
+                    Swagger::CONTENT => [
+                        Swagger::APPLICATION_JSON => [
+                            Swagger::SCHEMA => Swagger::jsonSchemaToOpenApiSchema(
+                                JsonSchema::typeRef(Type::CONTACT_CARD)->toArray()
+                            )
+                        ]
+                    ]
+                ]
+            ]
+        ];
     }
 }
